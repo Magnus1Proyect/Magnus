@@ -66,6 +66,10 @@ Intrigada por un tomo con borde plateado y letras doradas decide curiosear y abr
 
 ##Flujo de Juego
 
+Al ingresar a cada nivel, Tulsi debe hacerle frente a una serie de enemigos y de obstáculos que le plantea cada historia en específico. Para hacerle frente a todas las dificultades, le aparecerán una serie de poderes durante el recorrido del nivel (representados por un ícono), los cuales ella deberá elegir o bien ignorar, según lo que considere más adecuado.
+
+El ir atravesando cada nivel permitirá obtener coleccionables y elementos ocultos, referentes a los diferentes libros. Para finalizar cada nivel se debe terminar la historia. El juego se concluye cuando Magnus logra despertar en Tulsi el interés por la lectura (es decir, cuando ella logra atravesar los diferentes niveles con que cuenta el juego).
+
 
 ***
 
