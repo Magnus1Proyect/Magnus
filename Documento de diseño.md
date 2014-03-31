@@ -1,21 +1,14 @@
-![](https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-frc1/t1.0-9/1976959_10203676119802471_212604512_n.jpg)
+![Magnus](https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-frc1/t1.0-9/1976959_10203676119802471_212604512_n.jpg)
 
-#### Integrantes:
-
-- Kenneth Fonseca
-- Gabriel Coto Barquero
-- William Soto
-
-
-![](https://scontent-a-lga.xx.fbcdn.net/hphotos-ash3/t1.0-9/1920430_10203676319687468_1409221105_n.jpg)
+![Menú del juego](https://scontent-a-lga.xx.fbcdn.net/hphotos-ash3/t1.0-9/1920430_10203676319687468_1409221105_n.jpg)
 
 ****
 
 ### Descripción:
 
-Bienvenidos al maravilloso mundo de Magnus, donde un libro tratará de cautivar a la pequeña Tulsi dentro del universo literario. 
+Bienvenidos al maravilloso mundo de Magnus, donde un libro tratará de cautivar a la pequeña Tulsi dentro del universo literario.
 
-Tulsi se aventurará a través de las historias que Magnus le muestre con la sola ayuda de su astucia y su espíritu cambiante. 
+Tulsi se aventurará a través de las historias que Magnus le muestre con la sola ayuda de su astucia y su espíritu cambiante.
 
 Magnus estará en un universo 2D y la muchacha tendrá que atravesar los desafíos y la ambientación que se le presentará cada nivel con ayuda de un poder (el espíritu).
 
@@ -24,31 +17,32 @@ Magnus estará en un universo 2D y la muchacha tendrá que atravesar los desafí
 
 ## Ficha técnica:
 
-#### Plataforma: 
+#### Plataforma:
 
 Windows y Linux. Según el tiempo se trabajaría con Android
 
-####Público meta: 
+####Público meta:
 
 Aquellos que quieran pasar un buen rato y sea amigo de los juegos clásicos.
 
-####Juegos similares: 
-Mario, juego web [the pretender](http://www.agame.com/game/the-pretender-part-one) e Indiana Jones y la Última Cruzada (este último es más una inspiración basada en recuerdos). Es distinto de cada uno de estos en diversos aspectos, del juego web en que los niveles van a ser más largos en una pantalla que no es estática. Es distinto de Mario por la historia que tiene y por la mecánica, la pantalla también se está planeando que combine vista aérea con [paralaje](http://upload.wikimedia.org/wikipedia/commons/1/16/Parallax-scroll-example.gif).
+####Juegos similares:
+Mario <span style="background:yellow">¿Super Mario Bros?</span>, [The Pretender](http://www.agame.com/game/the-pretender-part-one) e Indiana Jones y la Última Cruzada (este último es más una inspiración basada en recuerdos). Es distinto de cada uno de estos en diversos aspectos. De The Pretender en que los niveles van a ser más largos en una pantalla que no es estática. Es distinto de Mario por la historia que tiene y por la mecánica, la pantalla también se está planeando que combine vista aérea con [paralaje](http://upload.wikimedia.org/wikipedia/commons/1/16/Parallax-scroll-example.gif).
 
 ***
 
 ### Controles
 
-WASD: movimiento con teclas WASD en visión aérea:
+* WASD: movimiento con teclas WASD en visión aérea:
 
-![](http://img2.wikia.nocookie.net/__cb20110903231601/roblox/images/f/fc/Controls.png) 
+* En el caso de ser la de paralaje W será para saltar y la S no tiene uso previsto.
 
-En el caso de ser la de paralaje W será para saltar y la S no tiene uso previsto. 
+* Letra P: Uso de poder
 
-
-####Uso de poder: letra P
+![Controles](http://img2.wikia.nocookie.net/__cb20110903231601/roblox/images/f/fc/Controls.png)
 
 ![](http://ashleyee.com/media/blogs/rice/images/p1010689.jpg)
+
+<span style="background:yellow">Sugerencia: crear un imagen con Inkscape, donde se incluya WASD y la P. Luego eliminar estas dos imágenes.</span>
 
 ****
 
@@ -64,39 +58,39 @@ Intrigada por un tomo con borde plateado y letras doradas decide curiosear y abr
 
 ***
 
-##Flujo de Juego
+## Flujo de Juego
 
 Al ingresar a cada nivel, Tulsi debe hacerle frente a una serie de enemigos y de obstáculos que le plantea cada historia en específico. Para hacerle frente a todas las dificultades, le aparecerán una serie de poderes durante el recorrido del nivel (representados por un ícono), los cuales ella deberá elegir o bien ignorar, según lo que considere más adecuado.
 
 El ir atravesando cada nivel permitirá obtener coleccionables y elementos ocultos, referentes a los diferentes libros. Para finalizar cada nivel se debe terminar la historia. El juego se concluye cuando Magnus logra despertar en Tulsi el interés por la lectura (es decir, cuando ella logra atravesar los diferentes niveles con que cuenta el juego).
+
+<span style="background:yellow">Es importante agregar una imagen, aunque sea poco diseñada o hecha a mano, para explicar cómo aparecen los poderes o como se aplican</span>
 
 
 ***
 
 ## Personajes
 
-###Tulsi: 
+### Tulsi:
 
-El jugador interactua mediante la figura de una niña de 11-15 años. Es pequeña, talvez pelirroja/castaña. Ropa casual. 
-
-Es una niña curiosa,  sin experiencia en el mundo literario.  
+El jugador interactua <span style="background:yellow">interacciona? actúa?</span> mediante la figura de una niña de 11-15 años. Es pequeña, talvez pelirroja/castaña. Ropa casual. Es una niña curiosa, sin experiencia en el mundo literario.
 
 Sus habilidades en el juego varían según el poder que tenga en el momento. Durante el recorrido de historias se planea tener objetos "ocultos", uno de estos podría ser un cambio de ropa ambientado.
 
-###Magnus: 
 
-Es el ente superior del libro, su función es guiar a Tulsi en su travesía y es el alma del libro.
+### Magnus: 
+
+Es el ente superior del libro. Su función es guiar a Tulsi en su travesía y es el alma del libro.
 
 ***
 
 ##Gameplay
 
-El género del juego sería de aventura y de rol. Aventura por ir explorando historias y rol al interpretar el papel de una niña curiosa.
+El género del juego sería de aventura y de rol. Aventura por ir explorando historias y rol al interpretar el papel de una niña curiosa. <span style="background:yellow">Puede haber más de un jugador a la vez? De lo contrario es poco estructurado como juego de rol. Parece más aventura o acción-aventura.</span>
 
 Los escenarios en específico, libros, están en discusión. 
 
-Se puede presentar como ejemplo ilustrativo del gameplay asumir que el primer nivel esta basado en la famosa historia de Moby-Dick, donde nuestra protagonista participa en la historia. 
+Se puede presentar como ejemplo ilustrativo del gameplay asumir que el primer nivel esta basado en la famosa historia de Moby-Dick, donde nuestra protagonista participa en la historia.
 
-
-
+<span style="background:yellow">IMPORTANTE. Falta mucho detalle e imágenes. Aún no es claro cómo realmente va a ser el juego, cuáles son los poderes, cómo avanza la niña por los libros, qué tanto se debe leer para poder avanzar, etc.</span>
 
