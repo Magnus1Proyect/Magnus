@@ -36,17 +36,15 @@ Super Mario Bros, [The Pretender](http://www.agame.com/game/the-pretender-part-o
 
 ### Controles
 
-* WASD: movimiento con teclas WASD en visión aérea:
+* WASD: movimiento con teclas WASD en visión aérea/isométrica:
 
 * En el caso de ser la de paralaje W será para saltar y la S no tiene uso previsto.
 
 * Letra P: Uso de poder
 
-![Controles](http://img2.wikia.nocookie.net/__cb20110903231601/roblox/images/f/fc/Controls.png)
 
-![](http://ashleyee.com/media/blogs/rice/images/p1010689.jpg)
+![Keyboard](https://github.com/Magnus1Proyect/Magnus/blob/master/Graphics/Teclado.png?raw=true)
 
-<span style="background:yellow">Sugerencia: crear un imagen con Inkscape, donde se incluya WASD y la P. Luego eliminar estas dos imágenes.</span>
 
 ****
 
@@ -66,7 +64,7 @@ Intrigada por un tomo con borde plateado y letras doradas decide curiosear y abr
 
 Al ingresar a cada nivel, Tulsi debe hacerle frente a una serie de enemigos y de obstáculos que le plantea cada historia en específico. Para hacerle frente a todas las dificultades, le aparecerán una serie de poderes durante el recorrido del nivel (representados por un ícono), los cuales ella deberá elegir o bien ignorar, según lo que considere más adecuado.
 
-El ir atravesando cada nivel permitirá obtener coleccionables y elementos ocultos, referentes a los diferentes libros. Para finalizar cada nivel se debe terminar la historia. El juego se concluye cuando Magnus logra despertar en Tulsi el interés por la lectura (es decir, cuando ella logra atravesar los diferentes niveles con que cuenta el juego).
+El ir atravesando cada nivel permitirá obtener coleccionables y elementos ocultos, referentes a los diferentes libros. Para finalizar cada nivel se debe terminar la historia correspondiente. El juego se concluye cuando Magnus logra despertar en Tulsi el interés por la lectura (es decir, cuando ella logra atravesar los diferentes niveles con que cuenta el juego).
 
 <span style="background:yellow">Es importante agregar una imagen, aunque sea poco diseñada o hecha a mano, para explicar cómo aparecen los poderes o como se aplican</span>
 
@@ -90,11 +88,23 @@ Es el alma y el ente superior del libro que lleva su nombre. El personaje es imp
 
 ##Gameplay
 
-El género del juego sería de aventura y de rol. Aventura por ir explorando historias y rol al interpretar el papel de una niña curiosa. <span style="background:yellow">Puede haber más de un jugador a la vez? De lo contrario es poco estructurado como juego de rol. Parece más aventura o acción-aventura.</span>
+El género del juego sería de aventura y de rol. Aventura por ir explorando historias y superando obstáculos de diversas maneras, y rol al interpretar el papel de una niña curiosa y de cómo esta se va involucrando con cada relato. 
+
+Se puede presentar como ejemplo ilustrativo del gameplay asumir que el primer nivel esta basado en la famosa historia de Moby-Dick, donde Tulsi deberá interacturar con los desafíos que encuentre en la historia y vencer a Moby Dick.... hundiéndose.... para saltar a la siguiente historia.
 
 Los escenarios en específico, libros, están en discusión. 
 
-Se puede presentar como ejemplo ilustrativo del gameplay asumir que el primer nivel esta basado en la famosa historia de Moby-Dick, donde nuestra protagonista participa en la historia.
+En general el gameplay va a ser de superar obstáculos de diversas maneras, sea con un poder o con otro, de explorar el terreno y probablemente se pueden encontrar ciertas pistas escritas que soplen la ubicación de objetos del juego o cómo superar un obstáculo. 
+
+En ciertos puntos se tendrá que vencer a un oponente npc y será de gran ayuda tener algún conocimiento de la historia para poder avanzar.
+
+Los poderes planteados por ahora son:
+
+* Volar
+* Hielo (creación de puentes por ejemplo para pasar sobre un río)
+* Fuego (derretir obstáculos que sean vulnerables a este)
+* Picazón por lectura (viabilidad desconocida, esta planteado para que haga relucir pistas de cómo avanzar en esa historia, este poder sería con tiempo pero conforme se avance o el desempeño del jugador, su duración sería mayor)
+
 
 <span style="background:yellow">IMPORTANTE. Falta mucho detalle e imágenes. Aún no es claro cómo realmente va a ser el juego, cuáles son los poderes, cómo avanza la niña por los libros, qué tanto se debe leer para poder avanzar, etc.</span>
 
