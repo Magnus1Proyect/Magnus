@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
@@ -7,46 +8,60 @@ AppDelegate::AppDelegate() {
 
 }
 
-AppDelegate::~AppDelegate() 
+AppDelegate::~AppDelegate()
 {
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
-    // initialize director
-    auto director = Director::getInstance();
-    auto glview = director->getOpenGLView();
-    if(!glview) {
-        glview = GLView::create("My Game");
-        director->setOpenGLView(glview);
-    }
+	// initialize director
+	auto director = Director::getInstance();
+	auto glview = director->getOpenGLView();
+	if (!glview) {
+		glview = GLView::create("Magnus");
+		director->setOpenGLView(glview);
+	}
 
-    // turn on display FPS
-    director->setDisplayStats(true);
+	// Los graficos estan disennados para 1024x768
+	glview->setDesignResolutionSize(1024, 768, ResolutionPolicy::EXACT_FIT);
 
-    // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+	// En PC se puede cambiar el tamanno de la ventana, en dispositivos moviles el tamanno es fijo
+	glview->setFrameSize(1024, 768);
+#endif
 
-    // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+#if (COCOS2D_DEBUG == 1)
+	// turn on display FPS only in debug mode
+	director->setDisplayStats(true);
+#endif
 
-    // run
-    director->runWithScene(scene);
+	// set FPS. the default value is 1.0/60 if you don't call this
+	director->setAnimationInterval(1.0 / 60);
 
-    return true;
+	// create a scene. it's an autorelease object
+	auto scene = HelloWorld::createScene();
+
+	// run
+	director->runWithScene(scene);
+
+	return true;
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
-void AppDelegate::applicationDidEnterBackground() {
-    Director::getInstance()->stopAnimation();
+void AppDelegate::applicationDidEnterBackground()
+{
+	Director::getInstance()->stopAnimation();
 
-    // if you use SimpleAudioEngine, it must be pause
-    // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+	// if you use SimpleAudioEngine, it must be pause
+	CocosDenshion::SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 }
 
 // this function will be called when the app is active again
-void AppDelegate::applicationWillEnterForeground() {
-    Director::getInstance()->startAnimation();
+void AppDelegate::applicationWillEnterForeground()
+{
+	Director::getInstance()->startAnimation();
 
-    // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+	// if you use SimpleAudioEngine, it must resume here
+	// SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+	CocosDenshion::SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
+
