@@ -78,11 +78,11 @@ void HelloWorld::createGameTitle()
 
 	// Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
 	auto animation = Animation::create();
-	for (int i = 0; i < 5; ++i)
+	for (int i = 0; i < 3; ++i)
 		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
 	// Y luego regresarla a su estado inicial
-	for (int i = 4; i >= 0; --i)
+	for (int i = 2; i >= 0; --i)
 		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
 	// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
@@ -121,21 +121,26 @@ void HelloWorld::createGameMenu()
 	buttonOptionsMenu->setPosition(Point::ZERO);
 	this->addChild(buttonOptionsMenu, 2);
 
-
-	// Boton de trofeos, situado debajo del boton anterior
-	auto buttonAwards = MenuItemImage::create("GameMenu/004-LoadGame.png", "GameMenu/004-LoadGame.png", CC_CALLBACK_1(HelloWorld::showAwards, this));
-	buttonAwards->setPosition(Point(buttonOptions->getPositionX(), buttonOptions->getPositionY() - buttonOptions->getContentSize().height - 10));
-	auto buttonAwardsMenu = Menu::create(buttonAwards, NULL);
-	buttonAwardsMenu->setPosition(Point::ZERO);
-	this->addChild(buttonAwardsMenu, 2);
-
+	// Boton de Achievments, situado debajo del boton anterior
+	auto buttonAchievments = MenuItemImage::create("GameMenu/Achievments01.png", "GameMenu/Achievments02.png", CC_CALLBACK_1(HelloWorld::showAchievments, this));
+	buttonAchievments->setPosition(Point(buttonOptions->getPositionX(), buttonOptions->getPositionY() - buttonOptions->getContentSize().height - 10));
+	auto buttonAchievmentsMenu = Menu::create(buttonAchievments, NULL);
+	buttonAchievmentsMenu->setPosition(Point::ZERO);
+	this->addChild(buttonAchievmentsMenu, 2);
 
 	// Boton de exit, situado debajo del boton anterior (de ultimo)
 	auto buttonExit = MenuItemImage::create("GameMenu/006-Exit.png", "GameMenu/006-Exit01.png", CC_CALLBACK_1(HelloWorld::exitGame, this));
-	buttonExit->setPosition(Point(buttonAwards->getPositionX(), buttonAwards->getPositionY() - buttonAwards->getContentSize().height - 10));
+	buttonExit->setPosition(Point(buttonAchievments->getPositionX(), buttonAchievments->getPositionY() - buttonAchievments->getContentSize().height - 10));
 	auto buttonExitMenu = Menu::create(buttonExit, NULL);
 	buttonExitMenu->setPosition(Point::ZERO);
 	this->addChild(buttonExitMenu, 1);
+
+	// Boton de About
+	auto buttonAbout = MenuItemImage::create("GameMenu/About01.png", "GameMenu/About02.png", CC_CALLBACK_1(HelloWorld::showAbout, this));
+	buttonAbout->setPosition(Point(visibleSize.width / 10, origin.y + visibleSize.height * 0.12f));
+	auto buttonAboutMenu = Menu::create(buttonAbout, NULL);
+	buttonAboutMenu->setPosition(Point::ZERO);
+	this->addChild(buttonAboutMenu, 2);
 }
 
 #include "LevelSelectScene.h"
@@ -153,7 +158,7 @@ void HelloWorld::loadGame(Ref *pSender)
 }
 
 
-void HelloWorld::showAwards(Ref *pSender)
+void HelloWorld::showAchievments(Ref *pSender)
 {
 }
 
@@ -170,3 +175,6 @@ void HelloWorld::exitGame(Ref* pSender)
 #endif
 }
 
+void HelloWorld::showAbout(Ref *pSender)
+{
+}

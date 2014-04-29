@@ -22,11 +22,13 @@ public:
 	void showOptions(cocos2d::Ref* pSender);
 
 	/// Se invoca cuando el jugador presiona el boton 'Trofeos'
-	void showAwards(cocos2d::Ref* pSender);
+	void showAchievments(cocos2d::Ref* pSender);
 
 	// selector para exit
 	void exitGame(cocos2d::Ref* pSender);
 
+	// selector para about
+	void showAbout(cocos2d::Ref* pSender);
 
 	// implement the "static create()" method manually
 	CREATE_FUNC(HelloWorld);
