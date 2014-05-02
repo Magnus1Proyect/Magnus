@@ -1,15 +1,15 @@
-#include "LevelSelectScene.h"
+#include "AboutScene.h"
 #include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
-Scene* LevelSelectScene::createScene()
+Scene* AboutScene::createScene()
 {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
 	// 'layer' is an autorelease object
-	auto layer = LevelSelectScene::create();
+	auto layer = AboutScene::create();
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -19,7 +19,7 @@ Scene* LevelSelectScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool LevelSelectScene::init()
+bool AboutScene::init()
 {
 	//////////////////////////////
 	// 1. super init first
@@ -37,7 +37,7 @@ bool LevelSelectScene::init()
 	// add a label shows "Hello World"
 	// create and initialize a label
 
-	auto label = LabelTTF::create("Seleccionar nivel", "Arial", 24);
+	auto label = LabelTTF::create("Créditos", "Arial", 24);
 
 	// position the label on the center of the screen
 	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .64f));
@@ -61,18 +61,18 @@ bool LevelSelectScene::init()
 	// ilustrativos
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
+	sound->playBackgroundMusic("Music/About.mp3", true);
 
 	return true;
 }
 
-void LevelSelectScene::createMenu()
+void AboutScene::createMenu()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
 	// Boton Logo, para retornar al menu del juego, ubicado en la esquina superior izquierda (cambiar segunda imagen)
-	auto buttonHome = MenuItemImage::create("000-Logo.png", "000-Logo.png", CC_CALLBACK_1(LevelSelectScene::returnGameMenu, this));
+	auto buttonHome = MenuItemImage::create("000-Logo.png", "000-Logo.png", CC_CALLBACK_1(AboutScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
 	auto buttonHomeMenu = Menu::create(buttonHome, NULL);
 	buttonHomeMenu->setPosition(Point::ZERO);
@@ -80,7 +80,7 @@ void LevelSelectScene::createMenu()
 }
 
 #include "HelloWorldScene.h"
-void LevelSelectScene::returnGameMenu(Ref* pSender)
+void AboutScene::returnGameMenu(Ref* pSender)
 {
 	auto newScene = HelloWorld::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));

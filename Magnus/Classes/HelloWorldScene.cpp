@@ -61,7 +61,7 @@ bool HelloWorld::init()
 	// Reproducir la musica del menu principal
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/trivia.mp3", true);
+	sound->playBackgroundMusic("Music/Magnus.mp3", true);
 
 	return true;
 }
@@ -146,11 +146,27 @@ void HelloWorld::createGameMenu()
 #include "LevelSelectScene.h"
 void HelloWorld::newGame(Ref* pSender)
 {
-		
-	// AQUI DEBE IR ANIMACIÓN DE PUERTAS
+	//ANIMACIÓN DE PUERTAS
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
 
+	auto animPuertas = Sprite::create("AnimacionPuerta/0001.jpg");
+	animPuertas->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	this->addChild(animPuertas, 0);
+
+	auto animation = Animation::create();
+	for (int i = 2; i < 6; ++i)
+		animation->addSpriteFrameWithFile(String::createWithFormat("AnimacionPuerta/000%i.jpg", i)->getCString());
+	animation->setDelayPerUnit(0.10f);
+	animPuertas->runAction(Animate::create(animation));
+	// FIN DE ANIMACION PUERTAS
+
+	// IMPORTANTE: PREGUNTAR A PROFE COMO VARIAR ESTO PARA QUE EL REPLACESCENE SE CORRA HASTA CONCLUIDA LA ANIMACION
+	// DADO QUE SE ESTÁN CORRIENDO CASI QUE DE FORMA SIMULTÁNEA.
+	// EN ESTE CASO SE ESTÁ JUGANDO CON EL TIEMPO DE LA CCTRANSITIONFADE (CON ESE 1.60f) Y ASÍ SE ESTÁ LOGRANDO
+	// PERO NO ES LO INDICADO (DEBERÍA DE SABERSE CUANDO SE CONLUYE LA ANIMACIÓN PARA CORRER LUEGO EL REPLACESCENE)
 	auto newScene = LevelSelectScene::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
+	Director::getInstance()->replaceScene(CCTransitionFade::create(1.60f, newScene));
 }
 
 void HelloWorld::loadGame(Ref *pSender)
@@ -175,6 +191,9 @@ void HelloWorld::exitGame(Ref* pSender)
 #endif
 }
 
+#include "AboutScene.h"
 void HelloWorld::showAbout(Ref *pSender)
 {
+	auto newScene = AboutScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }
