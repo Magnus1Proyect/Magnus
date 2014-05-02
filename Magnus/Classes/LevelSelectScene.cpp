@@ -34,7 +34,7 @@ bool LevelSelectScene::init()
 	/////////////////////////////
 	// 3. add your codes below...
 
-	// add a label shows "Hello World"
+	// add a label shows "Menu Inicio"
 	// create and initialize a label
 
 	auto label = LabelTTF::create("Seleccionar nivel", "Arial", 24);
@@ -79,9 +79,9 @@ void LevelSelectScene::createMenu()
 	this->addChild(buttonHomeMenu, 2);
 }
 
-#include "HelloWorldScene.h"
+#include "MenuInicio.h"
 void LevelSelectScene::returnGameMenu(Ref* pSender)
 {
-	auto newScene = HelloWorld::createScene();
+	auto newScene = MenuInicio::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }

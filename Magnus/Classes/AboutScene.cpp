@@ -79,9 +79,9 @@ void AboutScene::createMenu()
 	this->addChild(buttonHomeMenu, 2);
 }
 
-#include "HelloWorldScene.h"
+#include "MenuInicio.h"
 void AboutScene::returnGameMenu(Ref* pSender)
 {
-	auto newScene = HelloWorld::createScene();
+	auto newScene = MenuInicio::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }
