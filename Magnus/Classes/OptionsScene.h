@@ -4,28 +4,43 @@
 #include "cocos2d.h"
 
 /**
-@brief   
-
-The reason for implement as private inheritance is to hide some interface call by Director.
+@brief  Here you modify the options so you can enjoy more the game
 */
 
 class OptionsScene : public cocos2d::Layer {
 public:
-	//We return the class instance pointer, its id
-	static cocos2d::Scene* createScene();
 
-	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-	virtual bool init();
+	/**
+	@brief    We prepare our scene
+	@return instance pointer We return the id (Identification)
+	*/
+	
+	static cocos2d::Scene* createScene(); //We return the class instance pointer, its id
 
-	/// We call this when the player hit the "regresar al inicio", what it does is return to the front, the menu
+	/**
+	@brief   Options Scene is prepared and created/displayed if everything goes fine
+	@return true    Initialize success, program continues.
+	@return false   Initialize failed, program terminates.
+	*/
+	virtual bool init(); /// We call this when the player hit the "regresar al inicio", what it does is return to the front, the menu
+	
+	/**
+	@brief If the logo is clicked then we return to the Game Menu
+	@param reference We require the reference of the game menu
+	*/
 	void returnGameMenu(cocos2d::Ref* pSender);
 
-	// implement the "static create()" method manually
+	/**
+	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
+	@param class type We need the class type to create the layer.
+	*/
 	CREATE_FUNC(OptionsScene);
 
-private:
-	/// We create the options of the menu, so as the icon.
-	void createMenu();
+private: 
+	/**
+	@brief We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created.
+	*/
+	void createMenu(); /// We create the options of the menu, so as the icon.
 };
 
 #endif // OptionsScene_h

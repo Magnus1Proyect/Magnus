@@ -19,7 +19,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "virtual bool \fBinit\fP ()"
 .br
-.RI "\fIThe \fBMenuInicio\fP Scene is prepared and created if everything goes fine\&. \fP"
+.RI "\fIThe \fBMenuInicio\fP Scene is prepared and created/displayed if everything goes fine\&. \fP"
 .ti -1c
 .RI "void \fBnewGame\fP (cocos2d::Ref *pSender)"
 .br
@@ -55,6 +55,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "static cocos2d::Scene * \fBcreateScene\fP ()"
 .br
+.RI "\fIWe prepare our scene\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -68,11 +69,20 @@ We create a function, basically we will do a layer above the background, this wi
 .PP
 \fBParameters:\fP
 .RS 4
-\fIWe\fP need the class type to create the layer\&. 
+\fIclass\fP type We need the class type to create the layer\&. 
 .RE
 .PP
 
 .SS "Scene * MenuInicio::createScene ()\fC [static]\fP"
+
+.PP
+We prepare our scene\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+instance pointer We return the id (Identification) 
+.RE
+.PP
 
 .SS "void MenuInicio::exitGame (cocos2d::Ref *pSender)"
 
@@ -81,14 +91,14 @@ Its void, what is does is a button so when clicked it will end the program\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIIt\fP needs the reference where he will go when clicked, in this case he will exit 
+\fIreference\fP It needs the reference where he will go when clicked, in this case he will exit 
 .RE
 .PP
 
 .SS "bool MenuInicio::init ()\fC [virtual]\fP"
 
 .PP
-The \fBMenuInicio\fP Scene is prepared and created if everything goes fine\&. 
+The \fBMenuInicio\fP Scene is prepared and created/displayed if everything goes fine\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -105,7 +115,7 @@ Its void, what is does is a button so when clicked it will change scene\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'cargar juego' 
+\fIreference\fP It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'cargar juego' 
 .RE
 .PP
 
@@ -116,7 +126,7 @@ Its void, what is does is a button so when clicked it will change scene\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'nuevo juego' 
+\fIreference\fP It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'nuevo juego' 
 .RE
 .PP
 
@@ -127,7 +137,7 @@ Its void, what is does is a button so when clicked it will change scene\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIIt\fP needs the reference where he will go when clicked 
+\fIreference\fP It needs the reference where he will go when clicked 
 .RE
 .PP
 
@@ -138,7 +148,7 @@ Its void, what is does is a button so when clicked it will change scene\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Trofeos' 
+\fIreference\fP It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Trofeos' 
 .RE
 .PP
 
@@ -149,7 +159,7 @@ Its void, what is does is a button so when clicked it will change scene\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Opciones' 
+\fIreference\fP It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Opciones' 
 .RE
 .PP
 

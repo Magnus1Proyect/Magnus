@@ -19,7 +19,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "virtual bool \fBinit\fP ()"
 .br
-.RI "\fIThe Load Game Scene is prepared and created if everything goes fine\&. \fP"
+.RI "\fIThe Load Game Scene is prepared and created/displayed if everything goes fine\&. \fP"
 .ti -1c
 .RI "void \fBreturnGameMenu\fP (cocos2d::Ref *pSender)"
 .br
@@ -35,6 +35,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "static cocos2d::Scene * \fBcreateScene\fP ()"
 .br
+.RI "\fIWe prepare our scene\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -54,10 +55,19 @@ We create a function, basically we will do a layer above the background, this wi
 
 .SS "Scene * LevelSelectScene::createScene ()\fC [static]\fP"
 
+.PP
+We prepare our scene\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+instance pointer We return the id (Identification) 
+.RE
+.PP
+
 .SS "bool LevelSelectScene::init ()\fC [virtual]\fP"
 
 .PP
-The Load Game Scene is prepared and created if everything goes fine\&. 
+The Load Game Scene is prepared and created/displayed if everything goes fine\&. 
 .PP
 \fBReturns:\fP
 .RS 4

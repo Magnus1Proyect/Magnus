@@ -9,8 +9,13 @@
 
 class AboutScene : public cocos2d::Layer {
 public:
-	//We return the class instance pointer, its id
-	static cocos2d::Scene* createScene();
+
+	/**
+	@brief    The About Scene is prepared.
+	@return instance pointer We return the id (Identification)
+	*/
+	
+	static cocos2d::Scene* createScene(); //We return the class instance pointer, its id
 
 	/**
 	@brief    The About Scene is prepared and created if everything goes fine
@@ -23,13 +28,13 @@ public:
 
 	/**
 	@brief If the logo is clicked then we return to the Game Menu
-	@param We require the reference of the game menu
+	@param reference We require the reference of the game menu
 	*/
 	void returnGameMenu(cocos2d::Ref* pSender);
 
 	/**
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
-	@param We need the class type to create the layer.
+	@param class type We need the class type to create the layer.
 	*/
 	CREATE_FUNC(AboutScene);
 

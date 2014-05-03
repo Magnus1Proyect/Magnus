@@ -109,7 +109,7 @@ Inheritance diagram for MenuInicio:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a75aea9c864e74bf3e73b5a9ffa3c077f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_inicio.html#a75aea9c864e74bf3e73b5a9ffa3c077f">init</a> ()</td></tr>
-<tr class="memdesc:a75aea9c864e74bf3e73b5a9ffa3c077f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_menu_inicio.html" title="The is the main menu class, here you can choose to play a new game, load a previous one...">MenuInicio</a> Scene is prepared and created if everything goes fine.  <a href="#a75aea9c864e74bf3e73b5a9ffa3c077f">More...</a><br /></td></tr>
+<tr class="memdesc:a75aea9c864e74bf3e73b5a9ffa3c077f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_menu_inicio.html" title="The is the main menu class, here you can choose to play a new game, load a previous one...">MenuInicio</a> Scene is prepared and created/displayed if everything goes fine.  <a href="#a75aea9c864e74bf3e73b5a9ffa3c077f">More...</a><br /></td></tr>
 <tr class="separator:a75aea9c864e74bf3e73b5a9ffa3c077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe5a2b1b646cc835753a61302158b83c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_inicio.html#afe5a2b1b646cc835753a61302158b83c">newGame</a> (cocos2d::Ref *pSender)</td></tr>
 <tr class="memdesc:afe5a2b1b646cc835753a61302158b83c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Its void, what is does is a button so when clicked it will change scene.  <a href="#afe5a2b1b646cc835753a61302158b83c">More...</a><br /></td></tr>
@@ -136,6 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6169dc9dabe9bbe9d979fbae4018a05"><td class="memItemLeft" align="right" valign="top">static cocos2d::Scene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_inicio.html#ad6169dc9dabe9bbe9d979fbae4018a05">createScene</a> ()</td></tr>
+<tr class="memdesc:ad6169dc9dabe9bbe9d979fbae4018a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">We prepare our scene.  <a href="#ad6169dc9dabe9bbe9d979fbae4018a05">More...</a><br /></td></tr>
 <tr class="separator:ad6169dc9dabe9bbe9d979fbae4018a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -158,7 +159,7 @@ Static Public Member Functions</h2></td></tr>
 <p>We create a function, basically we will do a layer above the background, this will allow us to use it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">We</td><td>need the class type to create the layer. </td></tr>
+    <tr><td class="paramname">class</td><td>type We need the class type to create the layer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,6 +187,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>We prepare our scene. </p>
+<dl class="section return"><dt>Returns</dt><dd>instance pointer We return the id (Identification) </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a7b2475b314cd5b8bc19306228f3f1afe"></a>
@@ -205,7 +209,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Its void, what is does is a button so when clicked it will end the program. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">It</td><td>needs the reference where he will go when clicked, in this case he will exit </td></tr>
+    <tr><td class="paramname">reference</td><td>It needs the reference where he will go when clicked, in this case he will exit </td></tr>
   </table>
   </dd>
 </dl>
@@ -233,7 +237,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The <a class="el" href="class_menu_inicio.html" title="The is the main menu class, here you can choose to play a new game, load a previous one...">MenuInicio</a> Scene is prepared and created if everything goes fine. </p>
+<p>The <a class="el" href="class_menu_inicio.html" title="The is the main menu class, here you can choose to play a new game, load a previous one...">MenuInicio</a> Scene is prepared and created/displayed if everything goes fine. </p>
 <dl class="section return"><dt>Returns</dt><dd>true Initialize success, program continues. </dd>
 <dd>
 false Initialize failed, program terminates. </dd></dl>
@@ -257,7 +261,7 @@ false Initialize failed, program terminates. </dd></dl>
 <p>Its void, what is does is a button so when clicked it will change scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">It</td><td>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'cargar juego' </td></tr>
+    <tr><td class="paramname">reference</td><td>It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'cargar juego' </td></tr>
   </table>
   </dd>
 </dl>
@@ -281,7 +285,7 @@ false Initialize failed, program terminates. </dd></dl>
 <p>Its void, what is does is a button so when clicked it will change scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">It</td><td>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'nuevo juego' </td></tr>
+    <tr><td class="paramname">reference</td><td>It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'nuevo juego' </td></tr>
   </table>
   </dd>
 </dl>
@@ -305,7 +309,7 @@ false Initialize failed, program terminates. </dd></dl>
 <p>Its void, what is does is a button so when clicked it will change scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">It</td><td>needs the reference where he will go when clicked </td></tr>
+    <tr><td class="paramname">reference</td><td>It needs the reference where he will go when clicked </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,7 +333,7 @@ false Initialize failed, program terminates. </dd></dl>
 <p>Its void, what is does is a button so when clicked it will change scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">It</td><td>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Trofeos' </td></tr>
+    <tr><td class="paramname">reference</td><td>It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Trofeos' </td></tr>
   </table>
   </dd>
 </dl>
@@ -353,7 +357,7 @@ false Initialize failed, program terminates. </dd></dl>
 <p>Its void, what is does is a button so when clicked it will change scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">It</td><td>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Opciones' </td></tr>
+    <tr><td class="paramname">reference</td><td>It needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Opciones' </td></tr>
   </table>
   </dd>
 </dl>
@@ -367,7 +371,7 @@ false Initialize failed, program terminates. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 00:06:35 for Magnus by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 01:08:12 for Magnus by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

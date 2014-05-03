@@ -10,11 +10,15 @@ your achievements and exit.
 
 class MenuInicio : public cocos2d::Layer {
 public:
-	// We return the class instance pointer, its id.
-	static cocos2d::Scene* createScene();
+	
+	/**
+	@brief    We prepare our scene
+	@return instance pointer We return the id (Identification)
+	*/
+	static cocos2d::Scene* createScene(); // We return the class instance pointer, its id.
 
 	/**
-	@brief    The MenuInicio Scene is prepared and created if everything goes fine
+	@brief    The MenuInicio Scene is prepared and created/displayed if everything goes fine
 	@return true    Initialize success, program continues.
 	@return false   Initialize failed, program terminates.
 	*/
@@ -22,49 +26,49 @@ public:
 
 	/**
 	@brief    Its void, what is does is a button so when clicked it will change scene.
-	@param   It needs the reference where he will go when clicked
+	@param reference  It needs the reference where he will go when clicked
 	*/
 	/// Se invoca cuando el jugador presiona el boton 'nuevo juego'
 	void newGame(cocos2d::Ref* pSender);
 
 	/**
 	@brief    Its void, what is does is a button so when clicked it will change scene.
-	@param   It needs the reference where he will go when clicked
+	@param reference  It needs the reference where he will go when clicked
 	*/
 	/// Se invoca cuando el jugador presiona el boton 'cargar juego'
 	void loadGame(cocos2d::Ref* pSender);
 
 	/**
 	@brief    Its void, what is does is a button so when clicked it will change scene.
-	@param   It needs the reference where he will go when clicked
+	@param  reference It needs the reference where he will go when clicked
 	*/
 	/// Se invoca cuando el jugador presiona el boton 'Opciones'
 	void showOptions(cocos2d::Ref* pSender);
 
 	/**
 	@brief    Its void, what is does is a button so when clicked it will change scene.
-	@param   It needs the reference where he will go when clicked
+	@param  reference It needs the reference where he will go when clicked
 	*/
 	/// Se invoca cuando el jugador presiona el boton 'Trofeos'
 	void showAchievements(cocos2d::Ref* pSender);
 
 	/**
 	@brief    Its void, what is does is a button so when clicked it will end the program
-	@param   It needs the reference where he will go when clicked, in this case he will exit
+	@param  reference It needs the reference where he will go when clicked, in this case he will exit
 	*/
 	// selector para exit
 	void exitGame(cocos2d::Ref* pSender);
 
 	/**
 	@brief    Its void, what is does is a button so when clicked it will change scene.
-	@param   It needs the reference where he will go when clicked
+	@param  reference It needs the reference where he will go when clicked
 	*/
 	// selector para about
 	void showAbout(cocos2d::Ref* pSender);
 
 	/**
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
-	@param We need the class type to create the layer.
+	@param class type We need the class type to create the layer.
 	*/
 	CREATE_FUNC(MenuInicio);
 

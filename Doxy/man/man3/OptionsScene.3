@@ -4,7 +4,7 @@
 .SH NAME
 OptionsScene \- 
 .PP
-The reason for implement as private inheritance is to hide some interface call by Director\&.  
+Here you modify the options so you can enjoy more the game\&.  
 
 .SH SYNOPSIS
 .br
@@ -19,6 +19,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "virtual bool \fBinit\fP ()"
 .br
+.RI "\fIOptions Scene is prepared and created/displayed if everything goes fine\&. \fP"
 .ti -1c
 .RI "void \fBreturnGameMenu\fP (cocos2d::Ref *pSender)"
 .br
@@ -26,6 +27,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "\fBCREATE_FUNC\fP (\fBOptionsScene\fP)"
 .br
+.RI "\fIWe create a function, basically we will do a layer above the background, this will allow us to use it\&. \fP"
 .in -1c
 .SS "Static Public Member Functions"
 
@@ -33,22 +35,59 @@ Inherits Layer\&.
 .ti -1c
 .RI "static cocos2d::Scene * \fBcreateScene\fP ()"
 .br
+.RI "\fIWe prepare our scene\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-The reason for implement as private inheritance is to hide some interface call by Director\&. 
+Here you modify the options so you can enjoy more the game\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "OptionsScene::CREATE_FUNC (\fBOptionsScene\fP)"
 
+.PP
+We create a function, basically we will do a layer above the background, this will allow us to use it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclass\fP type We need the class type to create the layer\&. 
+.RE
+.PP
+
 .SS "Scene * OptionsScene::createScene ()\fC [static]\fP"
 
+.PP
+We prepare our scene\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+instance pointer We return the id (Identification) 
+.RE
+.PP
+
 .SS "bool OptionsScene::init ()\fC [virtual]\fP"
+
+.PP
+Options Scene is prepared and created/displayed if everything goes fine\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Initialize success, program continues\&. 
+.PP
+false Initialize failed, program terminates\&. 
+.RE
+.PP
 
 .SS "void OptionsScene::returnGameMenu (cocos2d::Ref *pSender)"
 
 .PP
-We call this when the player hit the 'regresar al inicio', what it does is return to the front, the menu\&. 
+We call this when the player hit the 'regresar al inicio', what it does is return to the front, the menu\&. If the logo is clicked then we return to the Game Menu 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreference\fP We require the reference of the game menu 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

@@ -95,33 +95,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;cocos2d.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_options_scene.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_options_scene.html">OptionsScene</a> : <span class="keyword">public</span> cocos2d::Layer {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//We return the class instance pointer, its id</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> cocos2d::Scene* <a class="code" href="class_options_scene.html#a1aa395cf23f60dedbf13f5c0ab689a05">createScene</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Here&#39;s a difference. Method &#39;init&#39; in cocos2d-x returns bool, instead of returning &#39;id&#39; in cocos2d-iphone</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_options_scene.html#a1b127cf2827efe8d9c28fce2e34d2eee">init</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_options_scene.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_options_scene.html">OptionsScene</a> : <span class="keyword">public</span> cocos2d::Layer {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> cocos2d::Scene* <a class="code" href="class_options_scene.html#a1aa395cf23f60dedbf13f5c0ab689a05">createScene</a>(); <span class="comment">//We return the class instance pointer, its id</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_options_scene.html#a12db8264eaae0662292a26d29f995329">returnGameMenu</a>(cocos2d::Ref* pSender);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// implement the &quot;static create()&quot; method manually</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_options_scene.html#a0c12a6061225af2719311b33a3fa3c51">CREATE_FUNC</a>(<a class="code" href="class_options_scene.html">OptionsScene</a>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> createMenu();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif // OptionsScene_h</span></div>
-<div class="ttc" id="class_options_scene_html_a1aa395cf23f60dedbf13f5c0ab689a05"><div class="ttname"><a href="class_options_scene.html#a1aa395cf23f60dedbf13f5c0ab689a05">OptionsScene::createScene</a></div><div class="ttdeci">static cocos2d::Scene * createScene()</div><div class="ttdef"><b>Definition:</b> OptionsScene.cpp:6</div></div>
-<div class="ttc" id="class_options_scene_html"><div class="ttname"><a href="class_options_scene.html">OptionsScene</a></div><div class="ttdoc">The reason for implement as private inheritance is to hide some interface call by Director...</div><div class="ttdef"><b>Definition:</b> OptionsScene.h:12</div></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_options_scene.html#a1b127cf2827efe8d9c28fce2e34d2eee">init</a>(); </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_options_scene.html#a12db8264eaae0662292a26d29f995329">returnGameMenu</a>(cocos2d::Ref* pSender);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_options_scene.html#a0c12a6061225af2719311b33a3fa3c51">CREATE_FUNC</a>(<a class="code" href="class_options_scene.html">OptionsScene</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>: </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> createMenu(); </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // OptionsScene_h</span></div>
+<div class="ttc" id="class_options_scene_html_a1aa395cf23f60dedbf13f5c0ab689a05"><div class="ttname"><a href="class_options_scene.html#a1aa395cf23f60dedbf13f5c0ab689a05">OptionsScene::createScene</a></div><div class="ttdeci">static cocos2d::Scene * createScene()</div><div class="ttdoc">We prepare our scene. </div><div class="ttdef"><b>Definition:</b> OptionsScene.cpp:6</div></div>
+<div class="ttc" id="class_options_scene_html"><div class="ttname"><a href="class_options_scene.html">OptionsScene</a></div><div class="ttdoc">Here you modify the options so you can enjoy more the game. </div><div class="ttdef"><b>Definition:</b> OptionsScene.h:10</div></div>
 <div class="ttc" id="class_options_scene_html_a12db8264eaae0662292a26d29f995329"><div class="ttname"><a href="class_options_scene.html#a12db8264eaae0662292a26d29f995329">OptionsScene::returnGameMenu</a></div><div class="ttdeci">void returnGameMenu(cocos2d::Ref *pSender)</div><div class="ttdoc">We call this when the player hit the "regresar al inicio", what it does is return to the front...</div><div class="ttdef"><b>Definition:</b> OptionsScene.cpp:75</div></div>
-<div class="ttc" id="class_options_scene_html_a1b127cf2827efe8d9c28fce2e34d2eee"><div class="ttname"><a href="class_options_scene.html#a1b127cf2827efe8d9c28fce2e34d2eee">OptionsScene::init</a></div><div class="ttdeci">virtual bool init()</div><div class="ttdef"><b>Definition:</b> OptionsScene.cpp:21</div></div>
-<div class="ttc" id="class_options_scene_html_a0c12a6061225af2719311b33a3fa3c51"><div class="ttname"><a href="class_options_scene.html#a0c12a6061225af2719311b33a3fa3c51">OptionsScene::CREATE_FUNC</a></div><div class="ttdeci">CREATE_FUNC(OptionsScene)</div></div>
+<div class="ttc" id="class_options_scene_html_a1b127cf2827efe8d9c28fce2e34d2eee"><div class="ttname"><a href="class_options_scene.html#a1b127cf2827efe8d9c28fce2e34d2eee">OptionsScene::init</a></div><div class="ttdeci">virtual bool init()</div><div class="ttdoc">Options Scene is prepared and created/displayed if everything goes fine. </div><div class="ttdef"><b>Definition:</b> OptionsScene.cpp:21</div></div>
+<div class="ttc" id="class_options_scene_html_a0c12a6061225af2719311b33a3fa3c51"><div class="ttname"><a href="class_options_scene.html#a0c12a6061225af2719311b33a3fa3c51">OptionsScene::CREATE_FUNC</a></div><div class="ttdeci">CREATE_FUNC(OptionsScene)</div><div class="ttdoc">We create a function, basically we will do a layer above the background, this will allow us to use it...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 00:06:35 for Magnus by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 01:08:12 for Magnus by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

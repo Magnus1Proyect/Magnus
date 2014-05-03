@@ -11,12 +11,13 @@
         <argsstring>()</argsstring>
         <name>createScene</name>
         <briefdescription>
-        </briefdescription>
+<para>We prepare our scene. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>instance pointer We return the id (Identification) </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="15" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="6" bodyend="18"/>
+        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="18" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="6" bodyend="18"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -26,12 +27,14 @@
         <argsstring>()</argsstring>
         <name>init</name>
         <briefdescription>
-        </briefdescription>
+<para>Options Scene is prepared and created/displayed if everything goes fine. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>true Initialize success, program continues. </para></simplesect>
+<simplesect kind="return"><para>false Initialize failed, program terminates. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="18" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="21" bodyend="60"/>
+        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="25" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="21" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_options_scene_1a12db8264eaae0662292a26d29f995329" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -45,10 +48,18 @@
         <briefdescription>
 <para>We call this when the player hit the &quot;regresar al inicio&quot;, what it does is return to the front, the menu. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>If the logo is clicked then we return to the Game Menu <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>We require the reference of the game menu </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="21" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="75" bodyend="78"/>
+        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="31" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="75" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="class_options_scene_1a0c12a6061225af2719311b33a3fa3c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -59,12 +70,20 @@
           <type><ref refid="class_options_scene" kindref="compound">OptionsScene</ref></type>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>We create a function, basically we will do a layer above the background, this will allow us to use it. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type We need the class type to create the layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="24" column="1"/>
+        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="37" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -74,16 +93,16 @@
         <argsstring>()</argsstring>
         <name>createMenu</name>
         <briefdescription>
-<para>We create the options of the menu, so as the icon. </para>        </briefdescription>
+<para>We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="28" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="62" bodyend="72"/>
+        <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="43" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.cpp" bodystart="62" bodyend="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>The reason for implement as private inheritance is to hide some interface call by Director. </para>    </briefdescription>
+<para>Here you modify the options so you can enjoy more the game. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -108,7 +127,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="12" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.h" bodystart="12" bodyend="29"/>
+    <location file="D:/Magnus/Magnus/Classes/OptionsScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/OptionsScene.h" bodystart="10" bodyend="44"/>
     <listofallmembers>
       <member refid="class_options_scene_1a0c12a6061225af2719311b33a3fa3c51" prot="public" virt="non-virtual"><scope>OptionsScene</scope><name>CREATE_FUNC</name></member>
       <member refid="class_options_scene_1a5f84928b949cc346c1aa58f7c89ec0dc" prot="private" virt="non-virtual"><scope>OptionsScene</scope><name>createMenu</name></member>

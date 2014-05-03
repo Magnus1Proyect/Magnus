@@ -11,12 +11,13 @@
         <argsstring>()</argsstring>
         <name>createScene</name>
         <briefdescription>
-        </briefdescription>
+<para>We prepare our scene. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>instance pointer We return the id (Identification) </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="13" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="6" bodyend="19"/>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="16" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="6" bodyend="19"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -26,14 +27,14 @@
         <argsstring>()</argsstring>
         <name>init</name>
         <briefdescription>
-<para>The Load Game Scene is prepared and created if everything goes fine. </para>        </briefdescription>
+<para>The Load Game Scene is prepared and created/displayed if everything goes fine. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>true Initialize success, program continues. </para></simplesect>
 <simplesect kind="return"><para>false Initialize failed, program terminates. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="20" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="22" bodyend="64"/>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="23" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="22" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_level_select_scene_1ab062f3b06b76a5e9da8ff8f64d44db15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +59,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="26" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="80" bodyend="84"/>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="29" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="80" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -82,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="32" column="1"/>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="35" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -97,7 +98,7 @@
 <para>We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="39" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="66" bodyend="77"/>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="42" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="66" bodyend="77"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -126,7 +127,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.h" bodystart="10" bodyend="40"/>
+    <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.h" bodystart="10" bodyend="43"/>
     <listofallmembers>
       <member refid="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" prot="public" virt="non-virtual"><scope>LevelSelectScene</scope><name>CREATE_FUNC</name></member>
       <member refid="class_level_select_scene_1a9f161723faff0e984a8b67e3e848b7ab" prot="private" virt="non-virtual"><scope>LevelSelectScene</scope><name>createMenu</name></member>

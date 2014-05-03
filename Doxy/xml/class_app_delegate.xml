@@ -56,10 +56,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>the</parametername>
+<parametername>pointer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer of the application </para></parameterdescription>
+<para>of the application </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -77,10 +77,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>the</parametername>
+<parametername>pointer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer of the application </para></parameterdescription>
+<para>of the application </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

@@ -47,21 +47,21 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="class_about_scene" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_about_scene" kindref="compound">AboutScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>cocos2d::Layer<sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>return<sp/>the<sp/>class<sp/>instance<sp/>pointer,<sp/>its<sp/>id</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cocos2d::Scene*<sp/><ref refid="class_about_scene_1af8f2fce4516040232ab420922ace99d5" kindref="member">createScene</ref>();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_about_scene_1a3f3e50da1f6b5461a0e337bd725302b7" kindref="member">init</ref>();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_about_scene_1af0017dcfe0b4de68235bba9294581ddf" kindref="member">returnGameMenu</ref>(cocos2d::Ref*<sp/>pSender);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_about_scene_1a034acbefcdc213a90c41ab937158653e" kindref="member">CREATE_FUNC</ref>(<ref refid="class_about_scene" kindref="compound">AboutScene</ref>);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createMenu();<sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>AboutScene_h</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cocos2d::Scene*<sp/><ref refid="class_about_scene_1af8f2fce4516040232ab420922ace99d5" kindref="member">createScene</ref>();<sp/></highlight><highlight class="comment">//We<sp/>return<sp/>the<sp/>class<sp/>instance<sp/>pointer,<sp/>its<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_about_scene_1a3f3e50da1f6b5461a0e337bd725302b7" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_about_scene_1af0017dcfe0b4de68235bba9294581ddf" kindref="member">returnGameMenu</ref>(cocos2d::Ref*<sp/>pSender);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_about_scene_1a034acbefcdc213a90c41ab937158653e" kindref="member">CREATE_FUNC</ref>(<ref refid="class_about_scene" kindref="compound">AboutScene</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createMenu();<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>AboutScene_h</highlight></codeline>
     </programlisting>
     <location file="D:/Magnus/Magnus/Classes/AboutScene.h"/>
   </compounddef>

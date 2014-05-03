@@ -35,6 +35,7 @@ Inherits Layer\&.
 .ti -1c
 .RI "static cocos2d::Scene * \fBcreateScene\fP ()"
 .br
+.RI "\fIThe About Scene is prepared\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -48,11 +49,20 @@ We create a function, basically we will do a layer above the background, this wi
 .PP
 \fBParameters:\fP
 .RS 4
-\fIWe\fP need the class type to create the layer\&. 
+\fIclass\fP type We need the class type to create the layer\&. 
 .RE
 .PP
 
 .SS "Scene * AboutScene::createScene ()\fC [static]\fP"
+
+.PP
+The About Scene is prepared\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+instance pointer We return the id (Identification) 
+.RE
+.PP
 
 .SS "bool AboutScene::init ()\fC [virtual]\fP"
 
@@ -74,7 +84,7 @@ We call this when the player hit the 'regresar al inicio', what it does is retur
 .PP
 \fBParameters:\fP
 .RS 4
-\fIWe\fP require the reference of the game menu 
+\fIreference\fP We require the reference of the game menu 
 .RE
 .PP
 

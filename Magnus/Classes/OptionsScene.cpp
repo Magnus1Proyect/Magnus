@@ -32,8 +32,8 @@ bool OptionsScene::init() {
 
 	auto label = LabelTTF::create("Opciones", "Tahoma", 24);
 
-	// position the label on the center of the screen
-	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .64f));
+	// position the label on the upper center of the screen
+	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .84f));
 
 	// add the label as a child to this layer
 	this->addChild(label, 1);
@@ -54,7 +54,7 @@ bool OptionsScene::init() {
 	// ilustrativos
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic(); // this steps are to change tracks.
-	sound->playBackgroundMusic("Music/About.mp3", true); // We use a piece of music we already have and reproduce it for the about scene.
+	sound->playBackgroundMusic("Music/Options.mp3", true); // We use a piece of music we already have and reproduce it for the options scene.
 
 	return true; // we managed to bring frankestein alive, I mean, the game.
 }
@@ -74,5 +74,5 @@ void OptionsScene::createMenu() {
 #include "MenuInicio.h" // We include the big piece, mister menu, so we can return to him when we click the logo in the About Scene
 void OptionsScene::returnGameMenu(Ref* pSender) {
 	auto newScene = MenuInicio::createScene(); // We create the scene we are going to use to replace the one that is active
-	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene)); // we change the screen and we use a fading transition
+	Director::getInstance()->replaceScene(CCTransitionFlipX::create(0.5f, newScene)); //we change the scene by flipping back to the menu.
 }

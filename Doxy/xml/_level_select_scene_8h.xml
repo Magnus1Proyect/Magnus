@@ -47,21 +47,20 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="class_level_select_scene" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_level_select_scene" kindref="compound">LevelSelectScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>cocos2d::Layer<sp/>{<sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>the<sp/>Load<sp/>Game<sp/>Scene</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>there&apos;s<sp/>no<sp/>&apos;id&apos;<sp/>in<sp/>cpp,<sp/>so<sp/>we<sp/>recommend<sp/>returning<sp/>the<sp/>class<sp/>instance<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cocos2d::Scene*<sp/><ref refid="class_level_select_scene_1a0f831f023e9d85f04a2f28467b0cb493" kindref="member">createScene</ref>();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_level_select_scene_1a17d5ddf574ec3f4ad3c9bbb233e367cc" kindref="member">init</ref>();<sp/></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_select_scene_1ab062f3b06b76a5e9da8ff8f64d44db15" kindref="member">returnGameMenu</ref>(cocos2d::Ref*<sp/>pSender);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" kindref="member">CREATE_FUNC</ref>(<ref refid="class_level_select_scene" kindref="compound">LevelSelectScene</ref>);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36"></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createMenu();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>LevelSelectScene_h</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cocos2d::Scene*<sp/><ref refid="class_level_select_scene_1a0f831f023e9d85f04a2f28467b0cb493" kindref="member">createScene</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_level_select_scene_1a17d5ddf574ec3f4ad3c9bbb233e367cc" kindref="member">init</ref>();<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_level_select_scene_1ab062f3b06b76a5e9da8ff8f64d44db15" kindref="member">returnGameMenu</ref>(cocos2d::Ref*<sp/>pSender);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" kindref="member">CREATE_FUNC</ref>(<ref refid="class_level_select_scene" kindref="compound">LevelSelectScene</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createMenu();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>LevelSelectScene_h</highlight></codeline>
     </programlisting>
     <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h"/>
   </compounddef>

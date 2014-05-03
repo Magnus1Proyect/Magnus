@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The reason for implement as private inheritance is to hide some interface call by Director.  
+<p>Here you modify the options so you can enjoy more the game.  
  <a href="class_options_scene.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_options_scene_8h_source.html">OptionsScene.h</a>&gt;</code></p>
@@ -109,20 +109,23 @@ Inheritance diagram for OptionsScene:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b127cf2827efe8d9c28fce2e34d2eee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options_scene.html#a1b127cf2827efe8d9c28fce2e34d2eee">init</a> ()</td></tr>
+<tr class="memdesc:a1b127cf2827efe8d9c28fce2e34d2eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options Scene is prepared and created/displayed if everything goes fine.  <a href="#a1b127cf2827efe8d9c28fce2e34d2eee">More...</a><br /></td></tr>
 <tr class="separator:a1b127cf2827efe8d9c28fce2e34d2eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12db8264eaae0662292a26d29f995329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options_scene.html#a12db8264eaae0662292a26d29f995329">returnGameMenu</a> (cocos2d::Ref *pSender)</td></tr>
 <tr class="memdesc:a12db8264eaae0662292a26d29f995329"><td class="mdescLeft">&#160;</td><td class="mdescRight">We call this when the player hit the "regresar al inicio", what it does is return to the front, the menu.  <a href="#a12db8264eaae0662292a26d29f995329">More...</a><br /></td></tr>
 <tr class="separator:a12db8264eaae0662292a26d29f995329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c12a6061225af2719311b33a3fa3c51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options_scene.html#a0c12a6061225af2719311b33a3fa3c51">CREATE_FUNC</a> (<a class="el" href="class_options_scene.html">OptionsScene</a>)</td></tr>
+<tr class="memdesc:a0c12a6061225af2719311b33a3fa3c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">We create a function, basically we will do a layer above the background, this will allow us to use it.  <a href="#a0c12a6061225af2719311b33a3fa3c51">More...</a><br /></td></tr>
 <tr class="separator:a0c12a6061225af2719311b33a3fa3c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1aa395cf23f60dedbf13f5c0ab689a05"><td class="memItemLeft" align="right" valign="top">static cocos2d::Scene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_options_scene.html#a1aa395cf23f60dedbf13f5c0ab689a05">createScene</a> ()</td></tr>
+<tr class="memdesc:a1aa395cf23f60dedbf13f5c0ab689a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">We prepare our scene.  <a href="#a1aa395cf23f60dedbf13f5c0ab689a05">More...</a><br /></td></tr>
 <tr class="separator:a1aa395cf23f60dedbf13f5c0ab689a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The reason for implement as private inheritance is to hide some interface call by Director. </p>
+<div class="textblock"><p>Here you modify the options so you can enjoy more the game. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a0c12a6061225af2719311b33a3fa3c51"></a>
 <div class="memitem">
@@ -137,6 +140,14 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>We create a function, basically we will do a layer above the background, this will allow us to use it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class</td><td>type We need the class type to create the layer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -161,6 +172,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>We prepare our scene. </p>
+<dl class="section return"><dt>Returns</dt><dd>instance pointer We return the id (Identification) </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a1b127cf2827efe8d9c28fce2e34d2eee"></a>
@@ -184,6 +198,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Options Scene is prepared and created/displayed if everything goes fine. </p>
+<dl class="section return"><dt>Returns</dt><dd>true Initialize success, program continues. </dd>
+<dd>
+false Initialize failed, program terminates. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a12db8264eaae0662292a26d29f995329"></a>
@@ -201,6 +220,12 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>We call this when the player hit the "regresar al inicio", what it does is return to the front, the menu. </p>
+<p>If the logo is clicked then we return to the Game Menu </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reference</td><td>We require the reference of the game menu </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -211,7 +236,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 00:06:35 for Magnus by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 01:08:12 for Magnus by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

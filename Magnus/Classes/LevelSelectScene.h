@@ -9,11 +9,14 @@
 
 class LevelSelectScene : public cocos2d::Layer { // this is the Load Game Scene
 public:
-	// there's no 'id' in cpp, so we recommend returning the class instance pointer
+	/**
+	@brief    We prepare our scene
+	@return instance pointer We return the id (Identification)
+	*/
 	static cocos2d::Scene* createScene();
 
 	/**
-	@brief    The Load Game Scene is prepared and created if everything goes fine
+	@brief    The Load Game Scene is prepared and created/displayed if everything goes fine
 	@return true    Initialize success, program continues.
 	@return false   Initialize failed, program terminates.
 	*/

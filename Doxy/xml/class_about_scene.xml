@@ -11,12 +11,13 @@
         <argsstring>()</argsstring>
         <name>createScene</name>
         <briefdescription>
-        </briefdescription>
+<para>The About Scene is prepared. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>instance pointer We return the id (Identification) </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="13" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="6" bodyend="19"/>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="18" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="6" bodyend="19"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -33,7 +34,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="20" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="22" bodyend="59"/>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="25" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="22" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="class_about_scene_1af0017dcfe0b4de68235bba9294581ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,16 +50,16 @@
         <detaileddescription>
 <para>If the logo is clicked then we return to the Game Menu <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>We</parametername>
+<parametername>reference</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>require the reference of the game menu </para></parameterdescription>
+<para>We require the reference of the game menu </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="28" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="74" bodyend="77"/>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="33" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_about_scene_1a034acbefcdc213a90c41ab937158653e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -73,16 +74,16 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>We</parametername>
+<parametername>class</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>need the class type to create the layer. </para></parameterdescription>
+<para>type We need the class type to create the layer. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="34" column="1"/>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="39" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -97,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="40" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="61" bodyend="71"/>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="45" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="61" bodyend="71"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -126,7 +127,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.h" bodystart="10" bodyend="41"/>
+    <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.h" bodystart="10" bodyend="46"/>
     <listofallmembers>
       <member refid="class_about_scene_1a034acbefcdc213a90c41ab937158653e" prot="public" virt="non-virtual"><scope>AboutScene</scope><name>CREATE_FUNC</name></member>
       <member refid="class_about_scene_1a67ac564dcb408af9d7ababbdb5e7532e" prot="private" virt="non-virtual"><scope>AboutScene</scope><name>createMenu</name></member>

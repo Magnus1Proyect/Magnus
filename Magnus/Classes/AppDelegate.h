@@ -22,13 +22,13 @@ public:
 
 	/**
 	@brief  The function be called when the application enter background
-	@param  the pointer of the application
+	@param  pointer of the application
 	*/
 	virtual void applicationDidEnterBackground();
 
 	/**
 	@brief  The function be called when the application enter foreground, when its active 
-	@param  the pointer of the application
+	@param  pointer of the application
 	*/
 	virtual void applicationWillEnterForeground();
 };
