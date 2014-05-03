@@ -1,0 +1,84 @@
+.TH "AboutScene" 3 "Sat May 3 2014" "Version 0.1" "Magnus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AboutScene \- 
+.PP
+Window where we will explain the game and a bit of ourselves\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AboutScene\&.h>\fP
+.PP
+Inherits Layer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBinit\fP ()"
+.br
+.RI "\fIThe About Scene is prepared and created if everything goes fine\&. \fP"
+.ti -1c
+.RI "void \fBreturnGameMenu\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIWe call this when the player hit the 'regresar al inicio', what it does is return to the front, the menu\&. \fP"
+.ti -1c
+.RI "\fBCREATE_FUNC\fP (\fBAboutScene\fP)"
+.br
+.RI "\fIWe create a function, basically we will do a layer above the background, this will allow us to use it\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static cocos2d::Scene * \fBcreateScene\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Window where we will explain the game and a bit of ourselves\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "AboutScene::CREATE_FUNC (\fBAboutScene\fP)"
+
+.PP
+We create a function, basically we will do a layer above the background, this will allow us to use it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIWe\fP need the class type to create the layer\&. 
+.RE
+.PP
+
+.SS "Scene * AboutScene::createScene ()\fC [static]\fP"
+
+.SS "bool AboutScene::init ()\fC [virtual]\fP"
+
+.PP
+The About Scene is prepared and created if everything goes fine\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Initialize success, program continues\&. 
+.PP
+false Initialize failed, program terminates\&. 
+.RE
+.PP
+
+.SS "void AboutScene::returnGameMenu (cocos2d::Ref *pSender)"
+
+.PP
+We call this when the player hit the 'regresar al inicio', what it does is return to the front, the menu\&. If the logo is clicked then we return to the Game Menu 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIWe\fP require the reference of the game menu 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Magnus from the source code\&.

@@ -4,20 +4,19 @@
 #include "cocos2d.h"
 
 /**
-@brief    The cocos2d Application.
+@brief    The cocos2d Application, this is the man behind the curtain, Magnus..? =)
 
 The reason for implement as private inheritance is to hide some interface call by Director.
 */
-class  AppDelegate : private cocos2d::Application
-{
+class  AppDelegate : private cocos2d::Application {
 public:
 	AppDelegate();
 	virtual ~AppDelegate();
 
 	/**
 	@brief    Implement Director and Scene init code here.
-	@return true    Initialize success, app continue.
-	@return false   Initialize failed, app terminate.
+	@return true    Initialize success, program continues.
+	@return false   Initialize failed, program terminates.
 	*/
 	virtual bool applicationDidFinishLaunching();
 
@@ -28,7 +27,7 @@ public:
 	virtual void applicationDidEnterBackground();
 
 	/**
-	@brief  The function be called when the application enter foreground
+	@brief  The function be called when the application enter foreground, when its active 
 	@param  the pointer of the application
 	*/
 	virtual void applicationWillEnterForeground();

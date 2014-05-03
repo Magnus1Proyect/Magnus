@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="class_level_select_scene" kind="class" prot="public">
+    <compoundname>LevelSelectScene</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Layer</basecompoundref>
+    <includes refid="_level_select_scene_8h" local="no">LevelSelectScene.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_level_select_scene_1a0f831f023e9d85f04a2f28467b0cb493" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cocos2d::Scene *</type>
+        <definition>Scene * LevelSelectScene::createScene</definition>
+        <argsstring>()</argsstring>
+        <name>createScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="13" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="6" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_level_select_scene_1a17d5ddf574ec3f4ad3c9bbb233e367cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LevelSelectScene::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The Load Game Scene is prepared and created if everything goes fine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Initialize success, program continues. </para></simplesect>
+<simplesect kind="return"><para>false Initialize failed, program terminates. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="20" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="22" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_select_scene_1ab062f3b06b76a5e9da8ff8f64d44db15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LevelSelectScene::returnGameMenu</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>returnGameMenu</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Se invoca cuando el jugador presiona el boton &apos;regresar al inicio&apos;. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the logo is clicked then we return to the Game Menu <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>We</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>require the reference of the game menu </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="26" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LevelSelectScene::CREATE_FUNC</definition>
+        <argsstring>(LevelSelectScene)</argsstring>
+        <name>CREATE_FUNC</name>
+        <param>
+          <type><ref refid="class_level_select_scene" kindref="compound">LevelSelectScene</ref></type>
+        </param>
+        <briefdescription>
+<para>We create a function, basically we will do a layer above the background, this will allow us to use it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>We</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>need the class type to create the layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="32" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_level_select_scene_1a9f161723faff0e984a8b67e3e848b7ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LevelSelectScene::createMenu</definition>
+        <argsstring>()</argsstring>
+        <name>createMenu</name>
+        <briefdescription>
+<para>Crea las opciones del menu, como el icono para regresar al menu del juego. </para>        </briefdescription>
+        <detaileddescription>
+<para>We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="39" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.cpp" bodystart="66" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This the window where you load or select the level you want to play, this unlocks as you advance through the story/game. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>Layer</label>
+      </node>
+      <node id="8">
+        <label>LevelSelectScene</label>
+        <link refid="class_level_select_scene"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>Layer</label>
+      </node>
+      <node id="10">
+        <label>LevelSelectScene</label>
+        <link refid="class_level_select_scene"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Magnus/Magnus/Classes/LevelSelectScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/LevelSelectScene.h" bodystart="10" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" prot="public" virt="non-virtual"><scope>LevelSelectScene</scope><name>CREATE_FUNC</name></member>
+      <member refid="class_level_select_scene_1a9f161723faff0e984a8b67e3e848b7ab" prot="private" virt="non-virtual"><scope>LevelSelectScene</scope><name>createMenu</name></member>
+      <member refid="class_level_select_scene_1a0f831f023e9d85f04a2f28467b0cb493" prot="public" virt="non-virtual"><scope>LevelSelectScene</scope><name>createScene</name></member>
+      <member refid="class_level_select_scene_1a17d5ddf574ec3f4ad3c9bbb233e367cc" prot="public" virt="virtual"><scope>LevelSelectScene</scope><name>init</name></member>
+      <member refid="class_level_select_scene_1ab062f3b06b76a5e9da8ff8f64d44db15" prot="public" virt="non-virtual"><scope>LevelSelectScene</scope><name>returnGameMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

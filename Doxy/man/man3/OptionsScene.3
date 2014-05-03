@@ -1,0 +1,55 @@
+.TH "OptionsScene" 3 "Sat May 3 2014" "Version 0.1" "Magnus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OptionsScene \- 
+.PP
+The reason for implement as private inheritance is to hide some interface call by Director\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <OptionsScene\&.h>\fP
+.PP
+Inherits Layer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBreturnGameMenu\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIWe call this when the player hit the 'regresar al inicio', what it does is return to the front, the menu\&. \fP"
+.ti -1c
+.RI "\fBCREATE_FUNC\fP (\fBOptionsScene\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static cocos2d::Scene * \fBcreateScene\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The reason for implement as private inheritance is to hide some interface call by Director\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "OptionsScene::CREATE_FUNC (\fBOptionsScene\fP)"
+
+.SS "Scene * OptionsScene::createScene ()\fC [static]\fP"
+
+.SS "bool OptionsScene::init ()\fC [virtual]\fP"
+
+.SS "void OptionsScene::returnGameMenu (cocos2d::Ref *pSender)"
+
+.PP
+We call this when the player hit the 'regresar al inicio', what it does is return to the front, the menu\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Magnus from the source code\&.

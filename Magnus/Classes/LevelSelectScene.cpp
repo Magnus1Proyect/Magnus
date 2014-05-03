@@ -21,10 +21,8 @@ Scene* LevelSelectScene::createScene()
 // on "init" you need to initialize your instance
 bool LevelSelectScene::init()
 {
-	//////////////////////////////
 	// 1. super init first
-	if (!Layer::init())
-	{
+	if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch
 		return false;
 	}
 
@@ -32,7 +30,6 @@ bool LevelSelectScene::init()
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/////////////////////////////
-	// 3. add your codes below...
 
 	// add a label shows "Menu Inicio"
 	// create and initialize a label

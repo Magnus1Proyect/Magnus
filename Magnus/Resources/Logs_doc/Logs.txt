@@ -1,0 +1,58 @@
+D:/Magnus/Magnus/Classes/AboutScene.h:31: warning: argument 'We' of command @param is not found in the argument list of AboutScene::CREATE_FUNC(AboutScene)
+D:/Magnus/Magnus/Classes/AboutScene.h:25: warning: argument 'We' of command @param is not found in the argument list of AboutScene::returnGameMenu(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/AboutScene.h:25: warning: The following parameters of AboutScene::returnGameMenu(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/AppDelegate.h:24: warning: argument 'the' of command @param is not found in the argument list of AppDelegate::applicationDidEnterBackground()
+D:/Magnus/Magnus/Classes/AppDelegate.h:30: warning: argument 'the' of command @param is not found in the argument list of AppDelegate::applicationWillEnterForeground()
+D:/Magnus/Magnus/Classes/LevelSelectScene.h:29: warning: argument 'We' of command @param is not found in the argument list of LevelSelectScene::CREATE_FUNC(LevelSelectScene)
+D:/Magnus/Magnus/Classes/LevelSelectScene.h:23: warning: argument 'We' of command @param is not found in the argument list of LevelSelectScene::returnGameMenu(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/LevelSelectScene.h:23: warning: The following parameters of LevelSelectScene::returnGameMenu(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:66: warning: argument 'We' of command @param is not found in the argument list of MenuInicio::CREATE_FUNC(MenuInicio)
+D:/Magnus/Magnus/Classes/MenuInicio.h:52: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::exitGame(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:52: warning: The following parameters of MenuInicio::exitGame(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:34: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::loadGame(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:34: warning: The following parameters of MenuInicio::loadGame(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:27: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::newGame(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:27: warning: The following parameters of MenuInicio::newGame(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:59: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::showAbout(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:59: warning: The following parameters of MenuInicio::showAbout(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:48: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::showAchievements(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:48: warning: The following parameters of MenuInicio::showAchievements(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:41: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::showOptions(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:41: warning: The following parameters of MenuInicio::showOptions(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/AboutScene.h:25: warning: argument 'We' of command @param is not found in the argument list of AboutScene::returnGameMenu(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/AboutScene.h:25: warning: The following parameters of AboutScene::returnGameMenu(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/AboutScene.h:31: warning: argument 'We' of command @param is not found in the argument list of AboutScene::CREATE_FUNC(AboutScene)
+D:/Magnus/Magnus/Classes/AppDelegate.h:24: warning: argument 'the' of command @param is not found in the argument list of AppDelegate::applicationDidEnterBackground()
+D:/Magnus/Magnus/Classes/AppDelegate.h:30: warning: argument 'the' of command @param is not found in the argument list of AppDelegate::applicationWillEnterForeground()
+D:/Magnus/Magnus/Classes/LevelSelectScene.h:23: warning: argument 'We' of command @param is not found in the argument list of LevelSelectScene::returnGameMenu(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/LevelSelectScene.h:23: warning: The following parameters of LevelSelectScene::returnGameMenu(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/LevelSelectScene.h:29: warning: argument 'We' of command @param is not found in the argument list of LevelSelectScene::CREATE_FUNC(LevelSelectScene)
+D:/Magnus/Magnus/Classes/MenuInicio.h:27: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::newGame(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:27: warning: The following parameters of MenuInicio::newGame(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:34: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::loadGame(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:34: warning: The following parameters of MenuInicio::loadGame(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:41: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::showOptions(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:41: warning: The following parameters of MenuInicio::showOptions(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:48: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::showAchievements(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:48: warning: The following parameters of MenuInicio::showAchievements(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:52: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::exitGame(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:52: warning: The following parameters of MenuInicio::exitGame(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:59: warning: argument 'It' of command @param is not found in the argument list of MenuInicio::showAbout(cocos2d::Ref *pSender)
+D:/Magnus/Magnus/Classes/MenuInicio.h:59: warning: The following parameters of MenuInicio::showAbout(cocos2d::Ref *pSender) are not documented:
+  parameter 'pSender'
+D:/Magnus/Magnus/Classes/MenuInicio.h:66: warning: argument 'We' of command @param is not found in the argument list of MenuInicio::CREATE_FUNC(MenuInicio)

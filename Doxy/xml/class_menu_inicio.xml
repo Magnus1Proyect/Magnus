@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="class_menu_inicio" kind="class" prot="public">
+    <compoundname>MenuInicio</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Layer</basecompoundref>
+    <includes refid="_menu_inicio_8h" local="no">MenuInicio.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_menu_inicio_1ad6169dc9dabe9bbe9d979fbae4018a05" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cocos2d::Scene *</type>
+        <definition>Scene * MenuInicio::createScene</definition>
+        <argsstring>()</argsstring>
+        <name>createScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="14" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="6" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_inicio_1a75aea9c864e74bf3e73b5a9ffa3c077f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MenuInicio::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The <ref refid="class_menu_inicio" kindref="compound">MenuInicio</ref> Scene is prepared and created if everything goes fine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Initialize success, program continues. </para></simplesect>
+<simplesect kind="return"><para>false Initialize failed, program terminates. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="21" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="21" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1afe5a2b1b646cc835753a61302158b83c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::newGame</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>newGame</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Its void, what is does is a button so when clicked it will change scene. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>It</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton &apos;nuevo juego&apos; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="28" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="142" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1aff951f1ddc985acd81fa70c8bba3b5bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::loadGame</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>loadGame</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Its void, what is does is a button so when clicked it will change scene. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>It</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton &apos;cargar juego&apos; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="35" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1a7835c8fc84642104f94592cfb6260017" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::showOptions</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>showOptions</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Its void, what is does is a button so when clicked it will change scene. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>It</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton &apos;Opciones&apos; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="42" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="176" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1a7293d048d94753cbcc2e1d9d467fd467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::showAchievements</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>showAchievements</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Its void, what is does is a button so when clicked it will change scene. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>It</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton &apos;Trofeos&apos; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="49" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1a7b2475b314cd5b8bc19306228f3f1afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::exitGame</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>exitGame</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Its void, what is does is a button so when clicked it will end the program. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>It</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needs the reference where he will go when clicked, in this case he will exit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="56" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1a99324dfe207ee28647538212d7955998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::showAbout</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>showAbout</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Its void, what is does is a button so when clicked it will change scene. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>It</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needs the reference where he will go when clicked </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="63" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1a394a7d97a189ad27e9255fb4f4d02305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MenuInicio::CREATE_FUNC</definition>
+        <argsstring>(MenuInicio)</argsstring>
+        <name>CREATE_FUNC</name>
+        <param>
+          <type><ref refid="class_menu_inicio" kindref="compound">MenuInicio</ref></type>
+        </param>
+        <briefdescription>
+<para>We create a function, basically we will do a layer above the background, this will allow us to use it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>We</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>need the class type to create the layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_menu_inicio_1a11d8d3666a5c0bdd55659257ca6e0672" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::createGameTitle</definition>
+        <argsstring>()</argsstring>
+        <name>createGameTitle</name>
+        <briefdescription>
+<para>We create the Game Tittle and animate it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="75" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="64" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_inicio_1a3d3d07adbeae36728e05627e81f4aaf3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuInicio::createGameMenu</definition>
+        <argsstring>()</argsstring>
+        <name>createGameMenu</name>
+        <briefdescription>
+<para>We create the game title and animate it, it doesnt return anything, it just creates it. </para>        </briefdescription>
+        <detaileddescription>
+<para>We create the Game Menu, each option/botton Iniciar, Premios, Opciones... </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="80" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.cpp" bodystart="92" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The is the main menu class, here you can choose to play a new game, load a previous one, modify options, check the about window or your achievements and exit. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>Layer</label>
+      </node>
+      <node id="12">
+        <label>MenuInicio</label>
+        <link refid="class_menu_inicio"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>Layer</label>
+      </node>
+      <node id="14">
+        <label>MenuInicio</label>
+        <link refid="class_menu_inicio"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Magnus/Magnus/Classes/MenuInicio.h" line="11" column="1" bodyfile="D:/Magnus/Magnus/Classes/MenuInicio.h" bodystart="11" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_menu_inicio_1a394a7d97a189ad27e9255fb4f4d02305" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>CREATE_FUNC</name></member>
+      <member refid="class_menu_inicio_1a3d3d07adbeae36728e05627e81f4aaf3" prot="private" virt="non-virtual"><scope>MenuInicio</scope><name>createGameMenu</name></member>
+      <member refid="class_menu_inicio_1a11d8d3666a5c0bdd55659257ca6e0672" prot="private" virt="non-virtual"><scope>MenuInicio</scope><name>createGameTitle</name></member>
+      <member refid="class_menu_inicio_1ad6169dc9dabe9bbe9d979fbae4018a05" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>createScene</name></member>
+      <member refid="class_menu_inicio_1a7b2475b314cd5b8bc19306228f3f1afe" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>exitGame</name></member>
+      <member refid="class_menu_inicio_1a75aea9c864e74bf3e73b5a9ffa3c077f" prot="public" virt="virtual"><scope>MenuInicio</scope><name>init</name></member>
+      <member refid="class_menu_inicio_1aff951f1ddc985acd81fa70c8bba3b5bb" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>loadGame</name></member>
+      <member refid="class_menu_inicio_1afe5a2b1b646cc835753a61302158b83c" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>newGame</name></member>
+      <member refid="class_menu_inicio_1a99324dfe207ee28647538212d7955998" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>showAbout</name></member>
+      <member refid="class_menu_inicio_1a7293d048d94753cbcc2e1d9d467fd467" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>showAchievements</name></member>
+      <member refid="class_menu_inicio_1a7835c8fc84642104f94592cfb6260017" prot="public" virt="non-virtual"><scope>MenuInicio</scope><name>showOptions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

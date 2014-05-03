@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="dir_3e5b416937bb35d43e8dae47e3544203" kind="dir">
+    <compoundname>D:/Magnus/Magnus/Classes</compoundname>
+    <innerfile refid="_about_scene_8cpp">AboutScene.cpp</innerfile>
+    <innerfile refid="_about_scene_8h">AboutScene.h</innerfile>
+    <innerfile refid="_app_delegate_8cpp">AppDelegate.cpp</innerfile>
+    <innerfile refid="_app_delegate_8h">AppDelegate.h</innerfile>
+    <innerfile refid="_level_select_scene_8cpp">LevelSelectScene.cpp</innerfile>
+    <innerfile refid="_level_select_scene_8h">LevelSelectScene.h</innerfile>
+    <innerfile refid="_menu_inicio_8cpp">MenuInicio.cpp</innerfile>
+    <innerfile refid="_menu_inicio_8h">MenuInicio.h</innerfile>
+    <innerfile refid="_options_scene_8cpp">OptionsScene.cpp</innerfile>
+    <innerfile refid="_options_scene_8h">OptionsScene.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Magnus/Magnus/Classes/"/>
+  </compounddef>
+</doxygen>

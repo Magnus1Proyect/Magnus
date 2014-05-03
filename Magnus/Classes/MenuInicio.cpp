@@ -3,28 +3,24 @@
 
 USING_NS_CC;
 
-Scene* MenuInicio::createScene()
-{
-	// 'scene' is an autorelease object
+Scene* MenuInicio::createScene() {
+	// 'scene' is an autorelease object, its the space where the action happens.
 	auto scene = Scene::create();
 
-	// 'layer' is an autorelease object
+	// 'layer' is an autorelease object, each layer represents stages of the action.
 	auto layer = MenuInicio::create();
 
-	// add layer as a child to scene
+	// add layer as a child to scene. Lets see it like a tree, action.
 	scene->addChild(layer);
 
-	// return the scene
+	// return the scene. We put the scene back and now its alive
 	return scene;
 }
 
-// on "init" you need to initialize your instance
-bool MenuInicio::init()
-{
-	//////////////////////////////
+// We  initialize our instance
+bool MenuInicio::init() {
 	// 1. super init first
-	if (!Layer::init())
-	{
+	if (!Layer::init()) 	{  // if there is a mistake then we terminate the program, it couldnt launch
 		return false;
 	}
 
@@ -33,10 +29,8 @@ bool MenuInicio::init()
 
 
 	/////////////////////////////
-	// 3. add your codes below...
 
-	// add a label shows "Hello World"
-	// create and initialize a label
+	// create and initialize a label showing "v0.1"
 
 	auto label = LabelTTF::create("v0.1", "Arial", 16);
 
@@ -46,7 +40,7 @@ bool MenuInicio::init()
 	// add the label as a child to this layer
 	this->addChild(label, 1);
 
-	// Crear el fondo del menu del juego
+	// We create the background of the game menu
 	auto sprite = Sprite::create("GameMenu/0000.jpg");
 
 	// position the sprite on the center of the screen
@@ -55,13 +49,14 @@ bool MenuInicio::init()
 	// add the sprite as a child to this layer
 	this->addChild(sprite, 0);
 
-	createGameTitle();
+	// We put the game title above the background and the game menu right below.
+	createGameTitle(); 
 	createGameMenu();
 
 	// Reproducir la musica del menu principal
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/Magnus.mp3", true);
+	sound->stopBackgroundMusic(); // this steps are to change tracks.
+	sound->playBackgroundMusic("Music/Magnus.mp3", true); // // We start our rock and roll, the Magnus piece of music starts reproducing for this scene.
 
 	return true;
 }
@@ -69,19 +64,19 @@ bool MenuInicio::init()
 void MenuInicio::createGameTitle()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
-	Point origin = Director::getInstance()->getVisibleOrigin();
+	Point origin = Director::getInstance()->getVisibleOrigin(); // We look for a point to start.
 
-	// Colocar la imagen estatica con el titulo o nombre del juego en la pantalla
+	// We set out image with the game menu and the game tittle
 	auto gameTitle = Sprite::create("GameMenu/002-Title0.png");
 	gameTitle->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height - gameTitle->getContentSize().height - 20.0f));
 	this->addChild(gameTitle, 0);
 
-	// Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
+	// We animate the game tittle by making it shake and show it in time
 	auto animation = Animation::create();
 	for (int i = 0; i < 3; ++i)
 		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
-	// Y luego regresarla a su estado inicial
+	// What we are doing is changing picture orientation, we have 3 pictures and we change them accordenly so they appear to be animated.
 	for (int i = 2; i >= 0; --i)
 		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
@@ -177,13 +172,13 @@ void MenuInicio::showAchievements(Ref *pSender)
 {
 }
 
-
-void MenuInicio::showOptions(cocos2d::Ref *pSender)
-{
+#include "OptionsScene.h"
+void MenuInicio::showOptions(cocos2d::Ref *pSender) {
+	auto newScene = OptionsScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }
 
-void MenuInicio::exitGame(Ref* pSender)
-{
+void MenuInicio::exitGame(Ref* pSender) {
 	Director::getInstance()->end();
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -192,8 +187,7 @@ void MenuInicio::exitGame(Ref* pSender)
 }
 
 #include "AboutScene.h"
-void MenuInicio::showAbout(Ref *pSender)
-{
+void MenuInicio::showAbout(Ref *pSender) {
 	auto newScene = AboutScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }

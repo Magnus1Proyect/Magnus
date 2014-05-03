@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="class_about_scene" kind="class" prot="public">
+    <compoundname>AboutScene</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Layer</basecompoundref>
+    <includes refid="_about_scene_8h" local="no">AboutScene.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_about_scene_1af8f2fce4516040232ab420922ace99d5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cocos2d::Scene *</type>
+        <definition>Scene * AboutScene::createScene</definition>
+        <argsstring>()</argsstring>
+        <name>createScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="13" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="6" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_about_scene_1a3f3e50da1f6b5461a0e337bd725302b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AboutScene::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The About Scene is prepared and created if everything goes fine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Initialize success, program continues. </para></simplesect>
+<simplesect kind="return"><para>false Initialize failed, program terminates. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="20" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="22" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_about_scene_1af0017dcfe0b4de68235bba9294581ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AboutScene::returnGameMenu</definition>
+        <argsstring>(cocos2d::Ref *pSender)</argsstring>
+        <name>returnGameMenu</name>
+        <param>
+          <type>cocos2d::Ref *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>We call this when the player hit the &quot;regresar al inicio&quot;, what it does is return to the front, the menu. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the logo is clicked then we return to the Game Menu <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>We</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>require the reference of the game menu </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="28" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_about_scene_1a034acbefcdc213a90c41ab937158653e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AboutScene::CREATE_FUNC</definition>
+        <argsstring>(AboutScene)</argsstring>
+        <name>CREATE_FUNC</name>
+        <param>
+          <type><ref refid="class_about_scene" kindref="compound">AboutScene</ref></type>
+        </param>
+        <briefdescription>
+<para>We create a function, basically we will do a layer above the background, this will allow us to use it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>We</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>need the class type to create the layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="34" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_about_scene_1a67ac564dcb408af9d7ababbdb5e7532e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AboutScene::createMenu</definition>
+        <argsstring>()</argsstring>
+        <name>createMenu</name>
+        <briefdescription>
+<para>We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="40" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.cpp" bodystart="61" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Window where we will explain the game and a bit of ourselves. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Layer</label>
+      </node>
+      <node id="0">
+        <label>AboutScene</label>
+        <link refid="class_about_scene"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Layer</label>
+      </node>
+      <node id="2">
+        <label>AboutScene</label>
+        <link refid="class_about_scene"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Magnus/Magnus/Classes/AboutScene.h" line="10" column="1" bodyfile="D:/Magnus/Magnus/Classes/AboutScene.h" bodystart="10" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_about_scene_1a034acbefcdc213a90c41ab937158653e" prot="public" virt="non-virtual"><scope>AboutScene</scope><name>CREATE_FUNC</name></member>
+      <member refid="class_about_scene_1a67ac564dcb408af9d7ababbdb5e7532e" prot="private" virt="non-virtual"><scope>AboutScene</scope><name>createMenu</name></member>
+      <member refid="class_about_scene_1af8f2fce4516040232ab420922ace99d5" prot="public" virt="non-virtual"><scope>AboutScene</scope><name>createScene</name></member>
+      <member refid="class_about_scene_1a3f3e50da1f6b5461a0e337bd725302b7" prot="public" virt="virtual"><scope>AboutScene</scope><name>init</name></member>
+      <member refid="class_about_scene_1af0017dcfe0b4de68235bba9294581ddf" prot="public" virt="non-virtual"><scope>AboutScene</scope><name>returnGameMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.7">
+  <compound refid="class_about_scene" kind="class"><name>AboutScene</name>
+    <member refid="class_about_scene_1af8f2fce4516040232ab420922ace99d5" kind="function"><name>createScene</name></member>
+    <member refid="class_about_scene_1a3f3e50da1f6b5461a0e337bd725302b7" kind="function"><name>init</name></member>
+    <member refid="class_about_scene_1af0017dcfe0b4de68235bba9294581ddf" kind="function"><name>returnGameMenu</name></member>
+    <member refid="class_about_scene_1a034acbefcdc213a90c41ab937158653e" kind="function"><name>CREATE_FUNC</name></member>
+    <member refid="class_about_scene_1a67ac564dcb408af9d7ababbdb5e7532e" kind="function"><name>createMenu</name></member>
+  </compound>
+  <compound refid="class_app_delegate" kind="class"><name>AppDelegate</name>
+    <member refid="class_app_delegate_1a7d26ade6fbc9d35ecc9185792303f82d" kind="function"><name>AppDelegate</name></member>
+    <member refid="class_app_delegate_1a9f89424b5e296e3668deaa0265fc5ac1" kind="function"><name>~AppDelegate</name></member>
+    <member refid="class_app_delegate_1a68cbaed49edf7581dc59a09d5062fff3" kind="function"><name>applicationDidFinishLaunching</name></member>
+    <member refid="class_app_delegate_1a17cb09777419781698324e0415bffd3a" kind="function"><name>applicationDidEnterBackground</name></member>
+    <member refid="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" kind="function"><name>applicationWillEnterForeground</name></member>
+  </compound>
+  <compound refid="class_level_select_scene" kind="class"><name>LevelSelectScene</name>
+    <member refid="class_level_select_scene_1a0f831f023e9d85f04a2f28467b0cb493" kind="function"><name>createScene</name></member>
+    <member refid="class_level_select_scene_1a17d5ddf574ec3f4ad3c9bbb233e367cc" kind="function"><name>init</name></member>
+    <member refid="class_level_select_scene_1ab062f3b06b76a5e9da8ff8f64d44db15" kind="function"><name>returnGameMenu</name></member>
+    <member refid="class_level_select_scene_1a64ccb6a271e64c15ad16b8154ff03020" kind="function"><name>CREATE_FUNC</name></member>
+    <member refid="class_level_select_scene_1a9f161723faff0e984a8b67e3e848b7ab" kind="function"><name>createMenu</name></member>
+  </compound>
+  <compound refid="class_menu_inicio" kind="class"><name>MenuInicio</name>
+    <member refid="class_menu_inicio_1ad6169dc9dabe9bbe9d979fbae4018a05" kind="function"><name>createScene</name></member>
+    <member refid="class_menu_inicio_1a75aea9c864e74bf3e73b5a9ffa3c077f" kind="function"><name>init</name></member>
+    <member refid="class_menu_inicio_1afe5a2b1b646cc835753a61302158b83c" kind="function"><name>newGame</name></member>
+    <member refid="class_menu_inicio_1aff951f1ddc985acd81fa70c8bba3b5bb" kind="function"><name>loadGame</name></member>
+    <member refid="class_menu_inicio_1a7835c8fc84642104f94592cfb6260017" kind="function"><name>showOptions</name></member>
+    <member refid="class_menu_inicio_1a7293d048d94753cbcc2e1d9d467fd467" kind="function"><name>showAchievements</name></member>
+    <member refid="class_menu_inicio_1a7b2475b314cd5b8bc19306228f3f1afe" kind="function"><name>exitGame</name></member>
+    <member refid="class_menu_inicio_1a99324dfe207ee28647538212d7955998" kind="function"><name>showAbout</name></member>
+    <member refid="class_menu_inicio_1a394a7d97a189ad27e9255fb4f4d02305" kind="function"><name>CREATE_FUNC</name></member>
+    <member refid="class_menu_inicio_1a11d8d3666a5c0bdd55659257ca6e0672" kind="function"><name>createGameTitle</name></member>
+    <member refid="class_menu_inicio_1a3d3d07adbeae36728e05627e81f4aaf3" kind="function"><name>createGameMenu</name></member>
+  </compound>
+  <compound refid="class_options_scene" kind="class"><name>OptionsScene</name>
+    <member refid="class_options_scene_1a1aa395cf23f60dedbf13f5c0ab689a05" kind="function"><name>createScene</name></member>
+    <member refid="class_options_scene_1a1b127cf2827efe8d9c28fce2e34d2eee" kind="function"><name>init</name></member>
+    <member refid="class_options_scene_1a12db8264eaae0662292a26d29f995329" kind="function"><name>returnGameMenu</name></member>
+    <member refid="class_options_scene_1a0c12a6061225af2719311b33a3fa3c51" kind="function"><name>CREATE_FUNC</name></member>
+    <member refid="class_options_scene_1a5f84928b949cc346c1aa58f7c89ec0dc" kind="function"><name>createMenu</name></member>
+  </compound>
+  <compound refid="_about_scene_8cpp" kind="file"><name>AboutScene.cpp</name>
+    <member refid="_about_scene_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_about_scene_8h" kind="file"><name>AboutScene.h</name>
+  </compound>
+  <compound refid="_app_delegate_8cpp" kind="file"><name>AppDelegate.cpp</name>
+    <member refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_app_delegate_8h" kind="file"><name>AppDelegate.h</name>
+  </compound>
+  <compound refid="_level_select_scene_8cpp" kind="file"><name>LevelSelectScene.cpp</name>
+    <member refid="_level_select_scene_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_level_select_scene_8h" kind="file"><name>LevelSelectScene.h</name>
+  </compound>
+  <compound refid="_menu_inicio_8cpp" kind="file"><name>MenuInicio.cpp</name>
+    <member refid="_menu_inicio_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_menu_inicio_8h" kind="file"><name>MenuInicio.h</name>
+  </compound>
+  <compound refid="_options_scene_8cpp" kind="file"><name>OptionsScene.cpp</name>
+    <member refid="_options_scene_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_options_scene_8h" kind="file"><name>OptionsScene.h</name>
+  </compound>
+  <compound refid="dir_3e5b416937bb35d43e8dae47e3544203" kind="dir"><name>D:/Magnus/Magnus/Classes</name>
+  </compound>
+  <compound refid="dir_223562d5691faa9886828fb0f2faffdb" kind="dir"><name>D:/Magnus/Magnus</name>
+  </compound>
+</doxygenindex>

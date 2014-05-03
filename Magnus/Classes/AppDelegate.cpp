@@ -5,18 +5,16 @@
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
-
 }
 
-AppDelegate::~AppDelegate()
-{
+AppDelegate::~AppDelegate() {
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
 	// initialize director
 	auto director = Director::getInstance();
-	auto glview = director->getOpenGLView();
-	if (!glview) {
+	auto glview = director->getOpenGLView(); // we open the window
+	if (!glview) { // if there is no window then we create it.
 		glview = GLView::create("Magnus");
 		director->setOpenGLView(glview);
 	}
@@ -40,22 +38,23 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	// create a scene. it's an autorelease object
 	auto scene = MenuInicio::createScene();
 
-	// run
+	// run the programn, we tell him the scene
 	director->runWithScene(scene);
 
 	return true;
 }
 
-// This function will be called when the app is inactive. When comes a phone call,it's be invoked too
+// This function will be called when the app is inactive. When comes a phone call,it's be invoked too, basically when use alt-tab and/or the game is
+//in someway pushed to the background, well, we stop the music and the animations.
 void AppDelegate::applicationDidEnterBackground()
 {
 	Director::getInstance()->stopAnimation();
 
-	// if you use SimpleAudioEngine, it must be pause
+	// we are using SimpleAudioEngine, so it must be paused, here we do it.
 	CocosDenshion::SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 }
 
-// this function will be called when the app is active again
+// this function will be called when the app is active again, we resume the game.
 void AppDelegate::applicationWillEnterForeground()
 {
 	Director::getInstance()->startAnimation();

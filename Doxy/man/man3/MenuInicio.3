@@ -1,0 +1,159 @@
+.TH "MenuInicio" 3 "Sat May 3 2014" "Version 0.1" "Magnus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MenuInicio \- 
+.PP
+The is the main menu class, here you can choose to play a new game, load a previous one, modify options, check the about window or your achievements and exit\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MenuInicio\&.h>\fP
+.PP
+Inherits Layer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBinit\fP ()"
+.br
+.RI "\fIThe \fBMenuInicio\fP Scene is prepared and created if everything goes fine\&. \fP"
+.ti -1c
+.RI "void \fBnewGame\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIIts void, what is does is a button so when clicked it will change scene\&. \fP"
+.ti -1c
+.RI "void \fBloadGame\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIIts void, what is does is a button so when clicked it will change scene\&. \fP"
+.ti -1c
+.RI "void \fBshowOptions\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIIts void, what is does is a button so when clicked it will change scene\&. \fP"
+.ti -1c
+.RI "void \fBshowAchievements\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIIts void, what is does is a button so when clicked it will change scene\&. \fP"
+.ti -1c
+.RI "void \fBexitGame\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIIts void, what is does is a button so when clicked it will end the program\&. \fP"
+.ti -1c
+.RI "void \fBshowAbout\fP (cocos2d::Ref *pSender)"
+.br
+.RI "\fIIts void, what is does is a button so when clicked it will change scene\&. \fP"
+.ti -1c
+.RI "\fBCREATE_FUNC\fP (\fBMenuInicio\fP)"
+.br
+.RI "\fIWe create a function, basically we will do a layer above the background, this will allow us to use it\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static cocos2d::Scene * \fBcreateScene\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The is the main menu class, here you can choose to play a new game, load a previous one, modify options, check the about window or your achievements and exit\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "MenuInicio::CREATE_FUNC (\fBMenuInicio\fP)"
+
+.PP
+We create a function, basically we will do a layer above the background, this will allow us to use it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIWe\fP need the class type to create the layer\&. 
+.RE
+.PP
+
+.SS "Scene * MenuInicio::createScene ()\fC [static]\fP"
+
+.SS "void MenuInicio::exitGame (cocos2d::Ref *pSender)"
+
+.PP
+Its void, what is does is a button so when clicked it will end the program\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIt\fP needs the reference where he will go when clicked, in this case he will exit 
+.RE
+.PP
+
+.SS "bool MenuInicio::init ()\fC [virtual]\fP"
+
+.PP
+The \fBMenuInicio\fP Scene is prepared and created if everything goes fine\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Initialize success, program continues\&. 
+.PP
+false Initialize failed, program terminates\&. 
+.RE
+.PP
+
+.SS "void MenuInicio::loadGame (cocos2d::Ref *pSender)"
+
+.PP
+Its void, what is does is a button so when clicked it will change scene\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'cargar juego' 
+.RE
+.PP
+
+.SS "void MenuInicio::newGame (cocos2d::Ref *pSender)"
+
+.PP
+Its void, what is does is a button so when clicked it will change scene\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'nuevo juego' 
+.RE
+.PP
+
+.SS "void MenuInicio::showAbout (cocos2d::Ref *pSender)"
+
+.PP
+Its void, what is does is a button so when clicked it will change scene\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIt\fP needs the reference where he will go when clicked 
+.RE
+.PP
+
+.SS "void MenuInicio::showAchievements (cocos2d::Ref *pSender)"
+
+.PP
+Its void, what is does is a button so when clicked it will change scene\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Trofeos' 
+.RE
+.PP
+
+.SS "void MenuInicio::showOptions (cocos2d::Ref *pSender)"
+
+.PP
+Its void, what is does is a button so when clicked it will change scene\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIt\fP needs the reference where he will go when clickedSe invoca cuando el jugador presiona el boton 'Opciones' 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Magnus from the source code\&.

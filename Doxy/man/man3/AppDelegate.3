@@ -1,0 +1,89 @@
+.TH "AppDelegate" 3 "Sat May 3 2014" "Version 0.1" "Magnus" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AppDelegate \- 
+.PP
+The cocos2d Application, this is the man behind the curtain, Magnus\&.\&.? =)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AppDelegate\&.h>\fP
+.PP
+Inherits Application\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppDelegate\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~AppDelegate\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBapplicationDidFinishLaunching\fP ()"
+.br
+.RI "\fIImplement Director and Scene init code here\&. \fP"
+.ti -1c
+.RI "virtual void \fBapplicationDidEnterBackground\fP ()"
+.br
+.RI "\fIThe function be called when the application enter background\&. \fP"
+.ti -1c
+.RI "virtual void \fBapplicationWillEnterForeground\fP ()"
+.br
+.RI "\fIThe function be called when the application enter foreground, when its active\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The cocos2d Application, this is the man behind the curtain, Magnus\&.\&.? =) 
+
+The reason for implement as private inheritance is to hide some interface call by Director\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AppDelegate::AppDelegate ()"
+
+.SS "AppDelegate::~AppDelegate ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void AppDelegate::applicationDidEnterBackground ()\fC [virtual]\fP"
+
+.PP
+The function be called when the application enter background\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIthe\fP pointer of the application 
+.RE
+.PP
+
+.SS "bool AppDelegate::applicationDidFinishLaunching ()\fC [virtual]\fP"
+
+.PP
+Implement Director and Scene init code here\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Initialize success, program continues\&. 
+.PP
+false Initialize failed, program terminates\&. 
+.RE
+.PP
+
+.SS "void AppDelegate::applicationWillEnterForeground ()\fC [virtual]\fP"
+
+.PP
+The function be called when the application enter foreground, when its active\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIthe\fP pointer of the application 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Magnus from the source code\&.
