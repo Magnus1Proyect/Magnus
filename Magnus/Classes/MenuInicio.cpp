@@ -50,7 +50,7 @@ bool MenuInicio::init() {
 	this->addChild(sprite, 0);
 
 	// We put the game title above the background and the game menu right below.
-	createGameTitle(); 
+	createGameTitle();
 	createGameMenu();
 
 	// Reproducir la musica del menu principal
@@ -61,8 +61,7 @@ bool MenuInicio::init() {
 	return true;
 }
 
-void MenuInicio::createGameTitle()
-{
+void MenuInicio::createGameTitle() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin(); // We look for a point to start.
 
@@ -89,8 +88,7 @@ void MenuInicio::createGameTitle()
 	gameTitle->runAction(repeatAnimation);
 }
 
-void MenuInicio::createGameMenu()
-{
+void MenuInicio::createGameMenu() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
@@ -123,12 +121,15 @@ void MenuInicio::createGameMenu()
 	buttonAchievementsMenu->setPosition(Point::ZERO);
 	this->addChild(buttonAchievementsMenu, 2);
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX) // Se esta usando al preprocesador para que el boton de exit no se vea en otra plataforma más que en pc
 	// Boton de exit, situado debajo del boton anterior (de ultimo)
 	auto buttonExit = MenuItemImage::create("GameMenu/006-Exit.png", "GameMenu/006-Exit01.png", CC_CALLBACK_1(MenuInicio::exitGame, this));
 	buttonExit->setPosition(Point(buttonAchievements->getPositionX(), buttonAchievements->getPositionY() - buttonAchievements->getContentSize().height - 10));
 	auto buttonExitMenu = Menu::create(buttonExit, NULL);
 	buttonExitMenu->setPosition(Point::ZERO);
 	this->addChild(buttonExitMenu, 1);
+
+#endif
 
 	// Boton de About
 	auto buttonAbout = MenuItemImage::create("GameMenu/About01.png", "GameMenu/About02.png", CC_CALLBACK_1(MenuInicio::showAbout, this));
@@ -139,8 +140,7 @@ void MenuInicio::createGameMenu()
 }
 
 #include "LevelSelectScene.h"
-void MenuInicio::newGame(Ref* pSender)
-{
+void MenuInicio::newGame(Ref* pSender) {
 	//ANIMACIÓN DE PUERTAS
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -164,12 +164,10 @@ void MenuInicio::newGame(Ref* pSender)
 	Director::getInstance()->replaceScene(CCTransitionFade::create(1.60f, newScene));
 }
 
-void MenuInicio::loadGame(Ref *pSender)
-{
+void MenuInicio::loadGame(Ref *pSender) {
 }
 
-void MenuInicio::showAchievements(Ref *pSender) 
-{
+void MenuInicio::showAchievements(Ref *pSender) {
 }
 
 #include "OptionsScene.h"

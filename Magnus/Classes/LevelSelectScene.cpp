@@ -19,8 +19,7 @@ Scene* LevelSelectScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool LevelSelectScene::init()
-{
+bool LevelSelectScene::init() {
 	// 1. super init first
 	if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch
 		return false;
@@ -63,8 +62,7 @@ bool LevelSelectScene::init()
 	return true;
 }
 
-void LevelSelectScene::createMenu()
-{
+void LevelSelectScene::createMenu() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
@@ -77,8 +75,7 @@ void LevelSelectScene::createMenu()
 }
 
 #include "MenuInicio.h"
-void LevelSelectScene::returnGameMenu(Ref* pSender)
-{
+void LevelSelectScene::returnGameMenu(Ref* pSender) {
 	auto newScene = MenuInicio::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }

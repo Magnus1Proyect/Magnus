@@ -14,7 +14,7 @@ public:
 	@brief    We prepare our scene
 	@return instance pointer We return the id (Identification)
 	*/
-	
+
 	static cocos2d::Scene* createScene(); //We return the class instance pointer, its id
 
 	/**
@@ -23,7 +23,7 @@ public:
 	@return false   Initialize failed, program terminates.
 	*/
 	virtual bool init(); /// We call this when the player hit the "regresar al inicio", what it does is return to the front, the menu
-	
+
 	/**
 	@brief If the logo is clicked then we return to the Game Menu
 	@param reference We require the reference of the game menu
@@ -36,7 +36,7 @@ public:
 	*/
 	CREATE_FUNC(OptionsScene);
 
-private: 
+private:
 	/**
 	@brief We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created.
 	*/

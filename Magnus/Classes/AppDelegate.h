@@ -27,7 +27,7 @@ public:
 	virtual void applicationDidEnterBackground();
 
 	/**
-	@brief  The function be called when the application enter foreground, when its active 
+	@brief  The function be called when the application enter foreground, when its active
 	@param  pointer of the application
 	*/
 	virtual void applicationWillEnterForeground();

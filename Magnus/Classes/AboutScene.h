@@ -14,7 +14,7 @@ public:
 	@brief    The About Scene is prepared.
 	@return instance pointer We return the id (Identification)
 	*/
-	
+
 	static cocos2d::Scene* createScene(); //We return the class instance pointer, its id
 
 	/**

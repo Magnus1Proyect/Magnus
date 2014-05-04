@@ -46,8 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too, basically when use alt-tab and/or the game is
 //in someway pushed to the background, well, we stop the music and the animations.
-void AppDelegate::applicationDidEnterBackground()
-{
+void AppDelegate::applicationDidEnterBackground() {
 	Director::getInstance()->stopAnimation();
 
 	// we are using SimpleAudioEngine, so it must be paused, here we do it.
@@ -55,8 +54,7 @@ void AppDelegate::applicationDidEnterBackground()
 }
 
 // this function will be called when the app is active again, we resume the game.
-void AppDelegate::applicationWillEnterForeground()
-{
+void AppDelegate::applicationWillEnterForeground() {
 	Director::getInstance()->startAnimation();
 
 	// if you use SimpleAudioEngine, it must resume here
