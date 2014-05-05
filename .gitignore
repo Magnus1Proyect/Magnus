@@ -16,3 +16,11 @@
 /Magnus/proj.win32/Debug.win32
 /Magnus/proj.win32/*.sdf
 /Magnus/proj.win32/Magnus.v12.suo
+/Doxy/doxygen_log.txt
+/Doxy/xml
+/Doxy/man
+/Doxy/html
+/Magnus/Resources/Logs_doc
+/Magnus/Resources/CloseNormal.png
+/Magnus/Resources/CloseSelected.png
+/Magnus/Resources/HelloWorld.png
