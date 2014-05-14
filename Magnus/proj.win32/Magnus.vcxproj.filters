@@ -56,4 +56,12 @@
       <Filter>resource</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\MainPage.dox">
+      <Filter>Classes</Filter>
+    </None>
+    <None Include="..\Resources\MainPage.dox">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
 </Project>
