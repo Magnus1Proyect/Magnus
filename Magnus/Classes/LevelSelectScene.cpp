@@ -3,8 +3,7 @@
 
 USING_NS_CC;
 
-Scene* LevelSelectScene::createScene()
-{
+Scene* LevelSelectScene::createScene() {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 

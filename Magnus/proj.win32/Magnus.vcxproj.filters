@@ -10,6 +10,9 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Util">
+      <UniqueIdentifier>{d3cd379a-28a2-494c-9988-7569bba4bc42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -29,6 +32,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\OptionsScene.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PrimerNivel.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Util\TileMap.cpp">
+      <Filter>Classes\Util</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +59,12 @@
     <ClInclude Include="..\Classes\OptionsScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\PrimerNivel.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Util\TileMap.h">
+      <Filter>Classes\Util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
@@ -57,9 +72,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Classes\MainPage.dox">
-      <Filter>Classes</Filter>
-    </None>
     <None Include="..\Resources\MainPage.dox">
       <Filter>resource</Filter>
     </None>
