@@ -14,6 +14,7 @@ class TileMap : public cocos2d::Layer {
 protected:
 	cocos2d::TMXLayer* background;
 	cocos2d::TMXLayer* foreground;
+	cocos2d::TMXLayer* foreground2;
 	cocos2d::TMXLayer* meta; // Upper layer
 	
 	cocos2d::TMXTiledMap* tileMap; // The tilemap handler, we will use this to parse and render the tileMap 
@@ -47,7 +48,7 @@ protected:
 	*/
 
 	virtual void loadMap(const std::string& mapTmx, const std::string& backgroundLayerName, const std::string& frontLayerName
-		, const std::string& metaLayerName, const std::string& objectContainerName);
+		, const std::string& frontLayer2Name, const std::string& metaLayerName, const std::string& objectContainerName);
 	
 	/**
 	* @brief Returns the coord of the clicked tile.

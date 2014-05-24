@@ -21,7 +21,7 @@ void TileMap::setEventHandlers(){
 }
 
 void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
-	const std::string& metaLayerName,	const std::string& objectContainerName) {
+	const std::string& frontLayer2Name, const std::string& metaLayerName, const std::string& objectContainerName) {
 	tileMap = TMXTiledMap::create(mapFile);
 	CCAssert(tileMap != nullptr, "'mapFile' map not found");
 	tileMap->setAnchorPoint(Point(0.0f, 0.0f));
@@ -29,6 +29,8 @@ void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundL
 	CCAssert(background != nullptr, "'backgroundLayerName' not found");
 	foreground = tileMap->getLayer(frontLayerName);
 	CCAssert(foreground != nullptr, "'frontLayerName' not found");
+	foreground2 = tileMap->getLayer(frontLayer2Name);
+	CCAssert(foreground2 != nullptr, "'frontLayer2Name' not found");
 	meta = tileMap->getLayer(metaLayerName);
 	CCAssert(meta != nullptr, "'metaLayerName' not found");
 	obstacules = tileMap->getObjectGroup(objectContainerName);

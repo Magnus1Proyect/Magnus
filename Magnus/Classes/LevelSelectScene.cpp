@@ -65,6 +65,14 @@ void LevelSelectScene::createMenu() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
+
+	auto buttonFirstLevel = MenuItemImage::create("LevelDoor.png", "LevelDoor.png", CC_CALLBACK_1(LevelSelectScene::goToFirstLevel, this));
+	buttonFirstLevel->setPosition(Point(visibleSize.width / 2, origin.y + visibleSize.height * 0.37f));
+	auto buttonFirstLevelMenu = Menu::create(buttonFirstLevel, NULL);
+	buttonFirstLevelMenu->setPosition(Point::ZERO);
+	this->addChild(buttonFirstLevelMenu, 2);
+
+
 	// Boton Logo, para retornar al menu del juego, ubicado en la esquina superior izquierda (cambiar segunda imagen)
 	auto buttonHome = MenuItemImage::create("000-Logo.png", "000-Logo.png", CC_CALLBACK_1(LevelSelectScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
@@ -76,5 +84,11 @@ void LevelSelectScene::createMenu() {
 #include "MenuInicio.h"
 void LevelSelectScene::returnGameMenu(Ref* pSender) {
 	auto newScene = MenuInicio::createScene();
+	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
+}
+
+#include "PrimerNivel.h"
+void LevelSelectScene::goToFirstLevel(Ref* pSender) {
+	auto newScene = PrimerNivel::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }

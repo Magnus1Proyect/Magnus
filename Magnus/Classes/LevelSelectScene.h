@@ -29,6 +29,12 @@ public:
 	void returnGameMenu(cocos2d::Ref* pSender);
 
 	/**
+	@brief If the logo is clicked then we go to Primer Nivel.
+	@param We require the reference of the Primer Nivel
+	*/
+	void goToFirstLevel(cocos2d::Ref* pSender);
+
+	/**
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
 	@param We need the class type to create the layer.
 	*/

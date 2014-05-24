@@ -41,9 +41,9 @@
    eJzt2LEJwDAMRUGt4DW8/4BpXBtCcOLvnOChTlytXlV9Uo3d6v600ez+k2rh7Tfi5+fPjZ+fPzd+fv7c+Pn5c+Pn58+Nn//v/pX/bX7+nePn5//ewZ/ZCf7awMGf2Sn+5LkAHzRmOQ==
   </data>
  </layer>
- <objectgroup name="Objects" width="48" height="48">
+ <objectgroup name="Obstacules" width="48" height="48">
   <object x="203" y="359"/>
-  <object name="player1" x="218" y="374" width="18" height="17"/>
+  <object name="Tulsi" x="218" y="374" width="18" height="17"/>
   <object x="236" y="179"/>
   <object x="11" y="9"/>
  </objectgroup>

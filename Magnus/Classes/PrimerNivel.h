@@ -9,6 +9,8 @@
 */
 
 class PrimerNivel : public TileMap { // this is the First Level Scene with the layer of TileMap
+private:
+	cocos2d::Sprite *spriteTulsi;
 public:
 	/**
 	@brief    We prepare our scene
@@ -41,6 +43,12 @@ private:
 	@brief We create the Menu so we can go back to it when the logo/home button is clicked. The icon is also created.
 	*/
 	void createMenu();
+
+	// Jugador, tulsi
+	/**
+	@brief We bring the player sprite, tulsi
+	*/
+	void bringTulsi();
 };
 
 #endif // PrimerNivel_h
