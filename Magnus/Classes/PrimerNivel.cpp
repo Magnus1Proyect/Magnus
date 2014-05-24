@@ -34,16 +34,17 @@ bool PrimerNivel::init() {
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
 
 	loadMap("Maps/TestPrimerNivel.tmx", "Background", "Foreground", "Foreground2", "Meta", "Obstacules");
-	//bringTulsi();
-	//metaLayerChecker(spriteTulsi->getPosition());
-	//tileMap->addChild(spriteTulsi, -1, 1);
-	//Point View = setPointOfView(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
-	//tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
+	bringTulsi();
+	metaLayerChecker(spriteTulsi->getPosition());
+	tileMap->addChild(spriteTulsi, 1);
+	this->addChild(tileMap, -1, 1);
+	Point View = setPointOfView(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
+	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
 	//background = tileMap->layerNamed("Background");
-	//this->addChild(tileMap, -1); // -1 is Depth I think... http://www.cocos2d-x.org/forums/6/topics/51024
-	//setEventHandlers();
-
+	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
+	
+	setEventHandlers();
 
 
 	return true;
@@ -62,9 +63,6 @@ void PrimerNivel::bringTulsi(){
 	spriteTulsi->setPosition(x + tileMap->getTileSize().width / 2, y + tileMap->getTileSize().height / 2);
 	spriteTulsi->setScale(0.5);
 	
-	addChild(spriteTulsi);
-
-	//addChild(_player);
 	//setViewPointCenter(spriteTulsi->getPosition());
 }
 

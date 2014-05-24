@@ -18,6 +18,17 @@ Point TileMap::setPointOfView(cocos2d::Point element) { // element would be the 
 
 
 void TileMap::setEventHandlers(){
+	//Create a "one by one" touch event listener (processes one touch at a time)
+	//auto listener = EventListenerTouchOneByOne::create();
+	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
+	//listener->setSwallowTouches(true);
+
+	// Example of using a lambda expression to implement onTouchBegan event callback function
+	
+	//listener->onTouchBegan = CC_CALLBACK_2(ChainReactionScene::placeExplosion, this);
+
+	//Add listener
+	//_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 }
 
 void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
