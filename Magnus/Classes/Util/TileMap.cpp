@@ -2,11 +2,11 @@
 
 USING_NS_CC;
 
-Point TileMap::setPointOfView(cocos2d::Point elemento) {
+Point TileMap::setPointOfView(cocos2d::Point element) { // element would be the player itself
 	cocos2d::Size winSize = Director::getInstance()->getWinSize();
 
-	int x = MAX(elemento.x, winSize.width / 2);
-	int y = MAX(elemento.y, winSize.height / 2);
+	int x = MAX(element.x, winSize.width / 2);
+	int y = MAX(element.y, winSize.height / 2);
 	x = MIN(x, (tileMap->getContentSize().width * this->tileMap->getContentSize().width) - winSize.width / 2);
 	y = MIN(y, (tileMap->getContentSize().height * this->tileMap->getContentSize().height) - winSize.height / 2);
 
@@ -16,13 +16,14 @@ Point TileMap::setPointOfView(cocos2d::Point elemento) {
 	return viewPoint;
 }
 
+
 void TileMap::setEventHandlers(){
 }
 
-void TileMap::loadMap(const std::string& mapTmx, const std::string& backgroundLayerName, const std::string& frontLayerName,
+void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
 	const std::string& metaLayerName,	const std::string& objectContainerName) {
-	tileMap = TMXTiledMap::create(mapTmx);
-	CCAssert(tileMap != nullptr, "'mapTmx' map not found");
+	tileMap = TMXTiledMap::create(mapFile);
+	CCAssert(tileMap != nullptr, "'mapFile' map not found");
 	tileMap->setAnchorPoint(Point(0.0f, 0.0f));
 	background = tileMap->getLayer(backgroundLayerName);
 	CCAssert(background != nullptr, "'backgroundLayerName' not found");
@@ -48,18 +49,16 @@ Point TileMap::tileCoordPosition(Point position) {
 
 }
 
-std::string TileMap::metaLayerChecker(Point posicion) {
+std::string TileMap::metaLayerChecker(Point position) {
 	std::string result = "";
-	Point tileCoord = this->tileCoordPosition(posicion);
+	Point tileCoord = this->tileCoordPosition(position);
 	int tileGid = meta->tileGIDAt(tileCoord);
-	if (tileGid)
-	{
+	if (tileGid) {
 		Value properties = tileMap->getPropertiesForGID(tileGid);
 		auto property = properties.asValueMap();
 		auto p = property["collision"].asString();
 
-		if (p.compare("collision") == 0)
-		{
+		if (p.compare("collision") == 0) {
 			log("collision");
 			result = "collision";
 		}

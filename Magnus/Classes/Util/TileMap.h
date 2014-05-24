@@ -64,7 +64,9 @@ protected:
 	* @param meta layer where properties are stored.
 	* @return cocos2d::Point
 	*/
-	std::string metaLayerChecker(cocos2d::Point posicion); \
+	std::string metaLayerChecker(cocos2d::Point posicion); 
+
+	//virtual void setPlayerPosition(cocos2d::Point position);
 		
 };
 #endif // TiledMap_H

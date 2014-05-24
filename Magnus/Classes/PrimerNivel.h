@@ -8,7 +8,7 @@
 @brief This is the first level scene, it uses the tileMap
 */
 
-class PrimerNivel : public cocos2d::Layer { // this is the First Level Scene
+class PrimerNivel : public TileMap { // this is the First Level Scene with the layer of TileMap
 public:
 	/**
 	@brief    We prepare our scene
@@ -21,7 +21,7 @@ public:
 	@return true    Initialize success, program continues.
 	@return false   Initialize failed, program terminates.
 	*/
-	//virtual bool init(); /// Se invoca cuando el jugador presiona el boton 'regresar al inicio'
+	virtual bool init(); /// Se invoca cuando el jugador presiona el boton 'regresar al inicio'
 
 	/**
 	@brief If the logo is clicked then we return to the Game Menu

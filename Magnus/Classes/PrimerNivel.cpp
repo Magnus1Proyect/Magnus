@@ -22,13 +22,23 @@ Scene* PrimerNivel::createScene() {
 }
 
 // on "init" you need to initialize your instance
-//bool PrimerNivel::init() {
+bool PrimerNivel::init() {
 	// 1. super init first
-	//if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch
-		//return false;
-	//}
+	if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch
+		return false;
+	}
+	std::string file = "TestPrimerNivel.tmx";
 
-	//this->addChild(_tileMap);
+	auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
+
+	//loadMap();
+	tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
+	background = tileMap->layerNamed("Background");
+	this->addChild(tileMap, -1); // -1 is Depth I think... http://www.cocos2d-x.org/forums/6/topics/51024
+
+	return true;
+
+}
 
 	//Size visibleSize = Director::getInstance()->getVisibleSize();
 	//Point origin = Director::getInstance()->getVisibleOrigin();
