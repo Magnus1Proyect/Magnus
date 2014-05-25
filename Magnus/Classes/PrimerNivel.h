@@ -2,7 +2,7 @@
 #define PrimerNivel_h
 
 #include "cocos2d.h"
-#include "Util\TileMap.h"
+#include "Util\TileMap.h" // TileMap class we created to deal with those
 
 /**
 @brief This is the first level scene, it uses the tileMap
@@ -46,7 +46,7 @@ private:
 
 	// Jugador, tulsi
 	/**
-	@brief We bring the player sprite, tulsi
+	@brief We bring and set the player Sprite, Tulsi.
 	*/
 	void bringTulsi();
 };

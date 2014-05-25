@@ -4,7 +4,7 @@
 #include "cocos2d.h"
 
 /**
-@brief    This class is the class who we plan will handle the TileMaps, it deals with the interactions with the TileMap.
+@brief  This class is going to handle the TileMaps, it deals with the interactions with the TileMap.
 */
 
 class TileMap : public cocos2d::Layer {
@@ -12,10 +12,10 @@ class TileMap : public cocos2d::Layer {
 	// arbol de nodos al parsear el xml cargado de internet. Después para enviarlo se debe secuenciar y volverlo a parsear de vuelta a xml y enviarlo a internet.
 	// random access file por uno mismo o una base de datos. SQlite
 protected:
-	cocos2d::TMXLayer* background;
+	cocos2d::TMXLayer* background; // background layer
 	cocos2d::TMXLayer* foreground;
-	cocos2d::TMXLayer* foreground2;
-	cocos2d::TMXLayer* meta; // Upper layer
+	cocos2d::TMXLayer* foreground2; // a second layer over the first foreground
+	cocos2d::TMXLayer* meta; // Upper layer with the properties
 	
 	cocos2d::TMXTiledMap* tileMap; // The tilemap handler, we will use this to parse and render the tileMap 
 	
@@ -31,7 +31,7 @@ protected:
 	* @return cocos2d::Point
 	*/
 
-	virtual cocos2d::Point setPointOfView(cocos2d::Point elemento);
+	virtual cocos2d::Point setPointOfViewCenter(cocos2d::Point elemento);
 
 	/**
 	* @brief Handles the events and listen

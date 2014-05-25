@@ -2,7 +2,7 @@
 
 USING_NS_CC;
 
-Point TileMap::setPointOfView(cocos2d::Point element) { // element would be the player itself
+Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would be the player itself
 	cocos2d::Size winSize = Director::getInstance()->getWinSize();
 
 	int x = MAX(element.x, winSize.width / 2);
@@ -19,9 +19,9 @@ Point TileMap::setPointOfView(cocos2d::Point element) { // element would be the 
 
 void TileMap::setEventHandlers(){
 	//Create a "one by one" touch event listener (processes one touch at a time)
-	//auto listener = EventListenerTouchOneByOne::create();
+	auto listener = EventListenerTouchOneByOne::create();
 	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
-	//listener->setSwallowTouches(true);
+	listener->setSwallowTouches(true);
 
 	// Example of using a lambda expression to implement onTouchBegan event callback function
 	
@@ -57,7 +57,6 @@ Point TileMap::tileCoordPosition(Point position) {
 	Size tileSize = tileMap->getTileSize();
 	Size mapSize = tileMap->getMapSize();
 
-	//CCLog("Tile Position %d ,%d",x,y);
 	return Point(x, y);
 
 }

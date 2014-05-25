@@ -3,9 +3,7 @@
 #include "MenuInicio.h" // Para poder regresar al menu Inicio.
 #include <SimpleAudioEngine.h>
 
-
 USING_NS_CC;
-
 
 Scene* PrimerNivel::createScene() {
 	// 'scene' is an autorelease object
@@ -28,7 +26,6 @@ bool PrimerNivel::init() {
 		return false;
 	}
 
-
 	//std::string file = "TestPrimerNivel.tmx";
 
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
@@ -38,7 +35,7 @@ bool PrimerNivel::init() {
 	metaLayerChecker(spriteTulsi->getPosition());
 	tileMap->addChild(spriteTulsi, 1);
 	this->addChild(tileMap, -1, 1);
-	Point View = setPointOfView(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
+	Point View = setPointOfViewCenter(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
 	//background = tileMap->layerNamed("Background");
@@ -56,7 +53,7 @@ void PrimerNivel::bringTulsi(){
 	auto tulsi = obstacules->getObject("Tulsi");
 	CCASSERT(!tulsi.empty(), "Tulsi object not found");
 
-	int x = tulsi["x"].asInt();
+	int x = tulsi["x"].asInt()+1100; // probando valores para que este en el mapa
 	int y = tulsi["y"].asInt();
 
 	spriteTulsi = Sprite::create("029.png");
