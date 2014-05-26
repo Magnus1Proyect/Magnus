@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="20" height="20" tilewidth="64" tileheight="32">
+ <tileset firstgid="1" name="TilesetGround1" tilewidth="64" tileheight="32">
+  <image source="TilesetGround1.png" width="384" height="768"/>
+ </tileset>
+ <tileset firstgid="145" name="meta2" tilewidth="64" tileheight="32">
+  <image source="meta2.png" width="512" height="95"/>
+ </tileset>
+ <layer name="Background" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBzFIx7zY8HUMgefeYTUEWseNdSN4lE8iknDAIzKDts=
+  </data>
+ </layer>
+ <objectgroup name="Obstacules" width="20" height="20">
+  <object name="Tulsi" x="576" y="576" width="32" height="32"/>
+ </objectgroup>
+ <layer name="Foreground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQw0wAzEHFsxGpjk8QMyEBXNh0YPPXk40/dJALALEUmjmIbsfn72caOYIQcXFoOLcWNwvgoSlcKgTR/OTGAN2d0gTqQ7dPEE0d8CwEJnqRsEoGKwAAIQMA60=
+  </data>
+ </layer>
+ <layer name="Foreground2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+cAJiRyC2x6PGmQTzHIDYDohtgNiKRLe4YBGzBWJrILYEYjMSzcMFLIDYHIhNqWTeUAXYwpsegJT0NBTtG0pgoNIAPe0lJv5HQhoBANm0BaE=
+  </data>
+ </layer>
+ <layer name="Meta" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DgwJSBdsAoGAWjgGwAADFeAJU=
+  </data>
+ </layer>
+</map>
