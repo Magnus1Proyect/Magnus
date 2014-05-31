@@ -7,8 +7,8 @@ Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would b
 
 	int x = MAX(element.x, winSize.width / 2);
 	int y = MAX(element.y, winSize.height / 2);
-	x = MIN(x, (tileMap->getContentSize().width * this->tileMap->getContentSize().width) - winSize.width / 2);
-	y = MIN(y, (tileMap->getContentSize().height * this->tileMap->getContentSize().height) - winSize.height / 2);
+	x = MIN(x, (tileMap->getContentSize().width* this->tileMap->getContentSize().width) - winSize.width / 2);
+	y = MIN(y, (tileMap->getContentSize().height* this->tileMap->getContentSize().height) - winSize.height / 2);
 
 	cocos2d::Point actualPosition = Point(x, y);
 	cocos2d::Point centerOfView = Point(winSize.width / 2, winSize.height / 2);
@@ -17,18 +17,24 @@ Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would b
 }
 
 
-void TileMap::setEventHandlers(){
-	//Create a "one by one" touch event listener (processes one touch at a time)
-	auto listener = EventListenerTouchOneByOne::create();
-	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
-	listener->setSwallowTouches(true);
-
-	// Example of using a lambda expression to implement onTouchBegan event callback function
+void TileMap::setEventHandlers(Sprite* player){
+	//Create an event listener. It will listen to the keyboard input.
+	auto keyboardListener = EventListenerKeyboard::create();
 	
-	//listener->onTouchBegan = CC_CALLBACK_2(ChainReactionScene::placeExplosion, this);
+	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
+	//listener->setSwallowTouches(true);
+	
+	// The method who handles when a key is pressed. 
+	keyboardListener->onKeyPressed = CC_CALLBACK_2(TileMap::keyPressed, this);
+	// The method who handles when a key is released. We are using this as the one who actually does something
+	keyboardListener->onKeyReleased = CC_CALLBACK_2(TileMap::keyReleased, this, player);
 
 	//Add listener
-	//_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+	this->_eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener, this);
+}
+
+void TileMap::setPlayerPosition(Point position) {
+	player->setPosition(position);
 }
 
 void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
@@ -60,6 +66,75 @@ Point TileMap::tileCoordPosition(Point position) {
 	return Point(x, y);
 
 }
+
+void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
+	//put this inside keyPressed or keyReleased
+	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{ // north, up
+		log("W key was pressed");
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_S) 	{ // south, down
+		log("S key was pressed");
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_D) 	{ // right
+		log("D key was pressed");
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_A) 	{ // left
+		log("A key was pressed");
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
+		log("Q key was pressed");
+	}
+	
+}
+
+void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, cocos2d::Sprite* player) {
+	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{
+		log("W key was pressed");
+		this->update(player, 10.0f, 'y'); // por ahora se usará el 10, después se trabajará en agregarle una variable relativa al tamano del mapa o el tile
+		
+		// movimiento aqui. Metodo por aparte
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_S) 	{ // south, down
+		log("S key was pressed");
+		this->update(player, -10.0f, 'y');
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_D) 	{ // right
+		log("D key was pressed");
+		this->update(player, 10.0f, 'x');
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_A) 	{ // left
+		log("A key was pressed");
+		this->update(player, -10.0f, 'x');
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
+		log("Q key was pressed");
+	}
+	// Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
+}
+	
+void TileMap::update(cocos2d::Sprite* player, float direction, char axe){
+
+	if (axe == 'y'){ // if we need to move the y
+		player->setPositionY(player->getPositionY() + direction);//, player->setPositionY(player->getPositionY() + 1);
+	}
+	else if (axe == 'x'){ // if we need to move the x
+		player->setPositionX(player->getPositionX() + direction);//, player->setPositionY(player->getPositionY() + 1);
+	}
+	
+	
+		/**
+	* @brief Este metodo va a refrescar la vista despues de cada keyreleased, ahi es llamado.
+	
+	Lo que va a hacer es ver la posicion inicial del personaje y actuar acorde a lo que reciba. 
+	Lo que va a recibir son los int que representan el cambio en las coordenadas. 
+	Ejemplo: Si es un w significa que va para arriba, en teoría se movería a la pos columna, fila+1
+	http://wenku.baidu.com/view/ade69359be23482fb4da4c44.html
+	http://www.cocos2d-x.org/forums/6/topics/22892
+	*/
+	
+	}
+
+
 
 std::string TileMap::metaLayerChecker(Point position) {
 	std::string result = "";

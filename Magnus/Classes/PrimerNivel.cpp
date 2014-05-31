@@ -22,7 +22,7 @@ Scene* PrimerNivel::createScene() {
 // on "init" you need to initialize your instance
 bool PrimerNivel::init() {
 	// 1. super init first
-	if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch
+	if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch 
 		return false;
 	}
 
@@ -30,7 +30,7 @@ bool PrimerNivel::init() {
 
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
 
-	loadMap("TileMaps/TestPrimerNivel.tmx", "Background", "Foreground", "Foreground2", "Meta", "Obstacules");
+	loadMap("TileMaps/PrimerNivel.tmx", "Background", "Foreground", "Foreground2", "Meta", "Obstacules");
 	bringTulsi();
 	metaLayerChecker(spriteTulsi->getPosition());
 	tileMap->addChild(spriteTulsi, 1);
@@ -41,11 +41,9 @@ bool PrimerNivel::init() {
 	//background = tileMap->layerNamed("Background");
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
 	
-	setEventHandlers();
-
+	setEventHandlers(spriteTulsi);
 
 	return true;
-
 }
 
 void PrimerNivel::bringTulsi(){
@@ -53,14 +51,14 @@ void PrimerNivel::bringTulsi(){
 	auto tulsi = obstacules->getObject("Tulsi");
 	CCASSERT(!tulsi.empty(), "Tulsi object not found");
 
-	int x = tulsi["x"].asInt()+1100; // probando valores para que este en el mapa
+	int x = tulsi["x"].asInt(); // probando valores para que este en el mapa, antes habia un +1000 en el otro mapa, averiguar problema y corregirlo
 	int y = tulsi["y"].asInt();
 
-	spriteTulsi = Sprite::create("029.png");
+	spriteTulsi = Sprite::create("tulsi.png", Rect(0, 0, 45, 45));
 	spriteTulsi->setPosition(x + tileMap->getTileSize().width / 2, y + tileMap->getTileSize().height / 2);
-	spriteTulsi->setScale(0.5);
+	//spriteTulsi->setScale(0.5);
 	
-	//setViewPointCenter(spriteTulsi->getPosition());
+	//setViewOfPointCenter(spriteTulsi->getPosition());
 }
 
 	//Size visibleSize = Director::getInstance()->getVisibleSize();

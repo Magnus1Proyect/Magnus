@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 
+
 /**
 @brief  This class is going to handle the TileMaps, it deals with the interactions with the TileMap.
 */
@@ -22,6 +23,8 @@ protected:
 	cocos2d::TMXObjectGroup* obstacules; // This will be the objects Tulsi will have to deal with. Example: river
 	
 	cocos2d::Sprite* player; // Tulsi
+
+	float direction; // We are using this to move the sprite, it will be 10
 	
 	/**
 	* @brief Sets the Point of View using an element as reference.
@@ -34,16 +37,20 @@ protected:
 	virtual cocos2d::Point setPointOfViewCenter(cocos2d::Point elemento);
 
 	/**
-	* @brief Handles the events and listen
+	* @brief Handles the events and listen.
 	* @param tileMap active.
 	*
 	*/
-	virtual void setEventHandlers();
-	/**
-	* @brief It loads the .tmx , the tilemap and it properties
-	* @param mapTmx the .tmx path
+	virtual void setEventHandlers(cocos2d::Sprite* player);
 
-	* @param metaLayerName the layer we use to deal with properties
+	void setPlayerPosition(cocos2d::Point position);
+	/**
+	* @brief It loads the .tmx , the tilemap and it properties. We read "load the tilemap" as loading each of its layers, sprites, etc. This is of the .tmx
+	* @param mapTmx the .tmx path
+	* @param backgroundLayerName layer of .tmx, the background one
+	* @param frontLayerName layer of .tmx, the frontLayer one
+	* @param frontLayer2Name layer of .tmx. This ones adds depth into the first frontLayer. It is a frontLayer as well.
+	* @param metaLayerName the layer we use to deal with properties, the objects with colisision are painted here, such to speak
 	* @param objectGroupName container with the tileMap objects
 	*/
 
@@ -68,6 +75,21 @@ protected:
 	std::string metaLayerChecker(cocos2d::Point posicion); 
 
 	//virtual void setPlayerPosition(cocos2d::Point position);
+
+	void keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event);
+
+	/**
+	* @brief This method listens when a key is pressed and checks if it matches the ones he handles, if so, then it reacts according to that key.
+	The first he receives is the keycode from the pressed key, the second one is the event in memory	
+	* @param cocos2d::EventKeyboard::KeyCode keycode. 
+	* @param cocos2d::Event *event
+	*/
+
+	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, cocos2d::Sprite* player);
+	
+	virtual void update(cocos2d::Sprite* player, float direction, char axe);
+
+	//void KeyMovement(.....) { }
 		
 };
 #endif // TiledMap_H
