@@ -43,7 +43,7 @@ protected:
 	*/
 	virtual void setEventHandlers(cocos2d::Sprite* player);
 
-	void setPlayerPosition(cocos2d::Point position);
+	void setPlayerPosition(cocos2d::Point position, cocos2d::Sprite* player);
 	/**
 	* @brief It loads the .tmx , the tilemap and it properties. We read "load the tilemap" as loading each of its layers, sprites, etc. This is of the .tmx
 	* @param mapTmx the .tmx path

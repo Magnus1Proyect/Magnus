@@ -33,8 +33,30 @@ void TileMap::setEventHandlers(Sprite* player){
 	this->_eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener, this);
 }
 
-void TileMap::setPlayerPosition(Point position) {
-	player->setPosition(position);
+void TileMap::setPlayerPosition(Point position, cocos2d::Sprite* player)
+{
+	Point tileCoord = this->tileCoordPosition(position);
+	int tileGid = meta->getTileGIDAt(tileCoord);
+	if (tileGid) {
+		auto properties = tileMap->getPropertiesForGID(tileGid).asValueMap();
+		if (!properties.empty()) {
+			auto collision = properties["Blockage"].asString();
+			if ("true" == collision) {
+				log("Blocked");
+				return;
+			}
+			else if ("mid" == collision){
+				log("Water");
+			}
+			else if ("false" == collision)
+			{
+				player->setPosition(position);
+				log(player->getPositionX());
+				log("nomnom");
+			}
+		}
+	}
+	
 }
 
 void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
@@ -49,6 +71,7 @@ void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundL
 	foreground2 = tileMap->getLayer(frontLayer2Name);
 	CCAssert(foreground2 != nullptr, "'frontLayer2Name' not found");
 	meta = tileMap->getLayer(metaLayerName);
+	meta->setVisible(false);
 	CCAssert(meta != nullptr, "'metaLayerName' not found");
 	obstacules = tileMap->getObjectGroup(objectContainerName);
 	CCAssert(obstacules != nullptr, "'obstacules' object container not found");
@@ -88,23 +111,30 @@ void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event
 }
 
 void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, cocos2d::Sprite* player) {
+	int xx = player->getPositionX();
+	int yy = player->getPositionY();
+
 	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{
 		log("W key was pressed");
-		this->update(player, 10.0f, 'y'); // por ahora se usará el 10, después se trabajará en agregarle una variable relativa al tamano del mapa o el tile
+		this->setPlayerPosition(Point(xx+32,yy+16), player);
+		//this->update(player, 10.0f, 'y'); // por ahora se usará el 10, después se trabajará en agregarle una variable relativa al tamano del mapa o el tile
 		
 		// movimiento aqui. Metodo por aparte
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_S) 	{ // south, down
 		log("S key was pressed");
-		this->update(player, -10.0f, 'y');
+		this->setPlayerPosition(Point(xx-32,yy-16), player);
+		//this->update(player, -10.0f, 'y');
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_D) 	{ // right
 		log("D key was pressed");
-		this->update(player, 10.0f, 'x');
+		this->setPlayerPosition(Point(xx + 32, yy -16), player);
+		//this->update(player, 10.0f, 'x');
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_A) 	{ // left
 		log("A key was pressed");
-		this->update(player, -10.0f, 'x');
+		this->setPlayerPosition(Point(xx - 32, yy + 16),  player);
+		//this->update(player, -10.0f, 'x');
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
 		log("Q key was pressed");

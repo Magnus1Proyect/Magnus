@@ -2,6 +2,7 @@
 #include "PrimerNivel.h"
 #include "MenuInicio.h" // Para poder regresar al menu Inicio.
 #include <SimpleAudioEngine.h>
+#define COCOS2D_DEBUG 1
 
 USING_NS_CC;
 
@@ -34,7 +35,7 @@ bool PrimerNivel::init() {
 	bringTulsi();
 	metaLayerChecker(spriteTulsi->getPosition());
 	tileMap->addChild(spriteTulsi, 1);
-	this->addChild(tileMap, -1, 1);
+	this->addChild(tileMap, 0, 0);
 	Point View = setPointOfViewCenter(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
@@ -54,9 +55,9 @@ void PrimerNivel::bringTulsi(){
 	int x = tulsi["x"].asInt(); // probando valores para que este en el mapa, antes habia un +1000 en el otro mapa, averiguar problema y corregirlo
 	int y = tulsi["y"].asInt();
 
+	//spriteTulsi = Sprite::create("xD.png");
 	spriteTulsi = Sprite::create("tulsi.png", Rect(0, 0, 45, 45));
-	spriteTulsi->setPosition(x + tileMap->getTileSize().width / 2, y + tileMap->getTileSize().height / 2);
-	//spriteTulsi->setScale(0.5);
+	spriteTulsi->setPosition(x+160,y+16);
 	
 	//setViewOfPointCenter(spriteTulsi->getPosition());
 }
