@@ -27,19 +27,16 @@ bool PrimerNivel::init() {
 		return false;
 	}
 
-	//std::string file = "TestPrimerNivel.tmx";
-
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
 
 	loadMap("TileMaps/PrimerNivel.tmx", "Background", "Foreground", "Foreground2", "Meta", "Obstacules");
 	bringTulsi();
 	metaLayerChecker(spriteTulsi->getPosition());
 	tileMap->addChild(spriteTulsi, 1);
-	this->addChild(tileMap, 0, 0);
+	this->addChild(tileMap, -1, 1);
 	Point View = setPointOfViewCenter(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
-	//background = tileMap->layerNamed("Background");
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
 	
 	setEventHandlers(spriteTulsi);
@@ -59,21 +56,9 @@ void PrimerNivel::bringTulsi(){
 	spriteTulsi = Sprite::create("tulsi.png", Rect(0, 0, 45, 45));
 	spriteTulsi->setPosition(x+160,y+16);
 	
-	//setViewOfPointCenter(spriteTulsi->getPosition());
+	setPointOfViewCenter(spriteTulsi->getPosition());
 }
 
-	//Size visibleSize = Director::getInstance()->getVisibleSize();
-	//Point origin = Director::getInstance()->getVisibleOrigin();
-
-	/////////////////////////////
-
-	// add a label shows "Menu Inicio"
-	// create and initialize a label
-
-	//auto label = LabelTTF::create("Seleccionar nivel", "Arial", 24);
-
-	// position the label on the center of the screen
-//	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .64f));
 
 	// add the label as a child to this layer
 	//this->addChild(label, 1);

@@ -16,47 +16,20 @@ Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would b
 	return viewPoint;
 }
 
-
 void TileMap::setEventHandlers(Sprite* player){
 	//Create an event listener. It will listen to the keyboard input.
 	auto keyboardListener = EventListenerKeyboard::create();
 	
 	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
 	//listener->setSwallowTouches(true);
-	
 	// The method who handles when a key is pressed. 
 	keyboardListener->onKeyPressed = CC_CALLBACK_2(TileMap::keyPressed, this);
+
 	// The method who handles when a key is released. We are using this as the one who actually does something
 	keyboardListener->onKeyReleased = CC_CALLBACK_2(TileMap::keyReleased, this, player);
 
 	//Add listener
 	this->_eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener, this);
-}
-
-void TileMap::setPlayerPosition(Point position, cocos2d::Sprite* player)
-{
-	Point tileCoord = this->tileCoordPosition(position);
-	int tileGid = meta->getTileGIDAt(tileCoord);
-	if (tileGid) {
-		auto properties = tileMap->getPropertiesForGID(tileGid).asValueMap();
-		if (!properties.empty()) {
-			auto collision = properties["Blockage"].asString();
-			if ("true" == collision) {
-				log("Blocked");
-				return;
-			}
-			else if ("mid" == collision){
-				log("Water");
-			}
-			else if ("false" == collision)
-			{
-				player->setPosition(position);
-				log(player->getPositionX());
-				log("nomnom");
-			}
-		}
-	}
-	
 }
 
 void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
@@ -77,18 +50,65 @@ void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundL
 	CCAssert(obstacules != nullptr, "'obstacules' object container not found");
 }
 
+void TileMap::setPlayerPosition(Point position, cocos2d::Sprite* player) {
+	std::string pathAhead = this->metaLayerChecker(position);
+	if (pathAhead == "No_collision"){
+		player->setPosition(position);
+	}
+	else if(pathAhead == "Water") {
+		//player->setPosition(this->tileCoordPosition(position)); // aqui esta el error
+	}
+	else{
+	// other cases of collision, we are going to use them with the class Object, first called Power
+	}
+}
+
+std::string TileMap::metaLayerChecker(Point position) {
+	std::string result = "No_collision"; // no colisiona
+	Point tileCoord = this->tileCoordPosition(position); // Aqui esta el problema, tenemos otro tile
+	int tileGid = meta->tileGIDAt(tileCoord);
+		if (tileGid) {
+			//Value properties = tileMap->getPropertiesForGID(tileGid); Se decidió hacer en una sola línea
+			auto properties = tileMap->getPropertiesForGID(tileGid).asValueMap();
+			if (!properties.empty()) {
+				auto collision = properties["Blockage"].asString();
+
+				if ("Rock" == collision) {
+					log("Blocked");
+					result = "collision";
+				}
+				else if ("Water" == collision) {
+					log("Water");
+					//result = "water";
+				}
+			}
+		}
+	return result;
+}
 
 Point TileMap::tileCoordPosition(Point position) {
 	int x = position.x / tileMap->getTileSize().width;
 	int y = ((tileMap->getMapSize().height * tileMap->getTileSize().height) - position.y) / tileMap->getTileSize().height;
 
-
 	Size tileSize = tileMap->getTileSize();
 	Size mapSize = tileMap->getMapSize();
 
-	return Point(x, y);
+	log("x" + x);
+	log("y" + y);
 
-}
+	float halfMapWidth = mapSize.width * 0.5f;
+	float mapHeight = tileMap->getMapSize().width;
+	float tileWidth = tileMap->getTileSize().width  / CC_CONTENT_SCALE_FACTOR();
+	float tileHeight = tileMap->getTileSize().height  / CC_CONTENT_SCALE_FACTOR();
+
+	Point tilePosDiv = Point(position.x / tileWidth, position.y / tileHeight);
+	float mapHeightDiff = mapHeight - tilePosDiv.y;
+
+	int posX = (mapHeightDiff + tilePosDiv.x - halfMapWidth);
+	int posY = (mapHeightDiff - tilePosDiv.x + halfMapWidth);
+
+	return Point(posX, posY);
+	}
 
 void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
 	//put this inside keyPressed or keyReleased
@@ -107,7 +127,6 @@ void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
 		log("Q key was pressed");
 	}
-	
 }
 
 void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, cocos2d::Sprite* player) {
@@ -118,8 +137,6 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 		log("W key was pressed");
 		this->setPlayerPosition(Point(xx+32,yy+16), player);
 		//this->update(player, 10.0f, 'y'); // por ahora se usará el 10, después se trabajará en agregarle una variable relativa al tamano del mapa o el tile
-		
-		// movimiento aqui. Metodo por aparte
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_S) 	{ // south, down
 		log("S key was pressed");
@@ -150,36 +167,7 @@ void TileMap::update(cocos2d::Sprite* player, float direction, char axe){
 	else if (axe == 'x'){ // if we need to move the x
 		player->setPositionX(player->getPositionX() + direction);//, player->setPositionY(player->getPositionY() + 1);
 	}
-	
-	
-		/**
-	* @brief Este metodo va a refrescar la vista despues de cada keyreleased, ahi es llamado.
-	
-	Lo que va a hacer es ver la posicion inicial del personaje y actuar acorde a lo que reciba. 
-	Lo que va a recibir son los int que representan el cambio en las coordenadas. 
-	Ejemplo: Si es un w significa que va para arriba, en teoría se movería a la pos columna, fila+1
-	http://wenku.baidu.com/view/ade69359be23482fb4da4c44.html
-	http://www.cocos2d-x.org/forums/6/topics/22892
-	*/
-	
-	}
-
-
-
-std::string TileMap::metaLayerChecker(Point position) {
-	std::string result = "";
-	Point tileCoord = this->tileCoordPosition(position);
-	int tileGid = meta->tileGIDAt(tileCoord);
-	if (tileGid) {
-		Value properties = tileMap->getPropertiesForGID(tileGid);
-		auto property = properties.asValueMap();
-		auto p = property["collision"].asString();
-
-		if (p.compare("collision") == 0) {
-			log("collision");
-			result = "collision";
-		}
-	}
-	return result;
 }
+
+
 

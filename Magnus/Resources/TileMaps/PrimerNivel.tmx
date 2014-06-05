@@ -12,12 +12,12 @@
   </tile>
   <tile id="2">
    <properties>
-    <property name="Blockage" value="true"/>
+    <property name="Blockage" value="Rock"/>
    </properties>
   </tile>
   <tile id="3">
    <properties>
-    <property name="Blockage" value="mid"/>
+    <property name="Blockage" value="Water"/>
    </properties>
   </tile>
  </tileset>
