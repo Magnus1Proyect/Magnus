@@ -2,9 +2,11 @@
 
 USING_NS_CC;
 
+//POWERS LIST
+
 Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would be the player itself
 	cocos2d::Size winSize = Director::getInstance()->getWinSize();
-
+	
 	int x = MAX(element.x, winSize.width / 2);
 	int y = MAX(element.y, winSize.height / 2);
 	x = MIN(x, (tileMap->getContentSize().width* this->tileMap->getContentSize().width) - winSize.width / 2);
@@ -14,9 +16,10 @@ Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would b
 	cocos2d::Point centerOfView = Point(winSize.width / 2, winSize.height / 2);
 	cocos2d::Point viewPoint = centerOfView - actualPosition; // ccp(actual.x - center.x, actual.y - center.y); deprecated
 	return viewPoint;
+
 }
 
-void TileMap::setEventHandlers(Sprite* player){
+void TileMap::setEventHandlers(Player player){
 	//Create an event listener. It will listen to the keyboard input.
 	auto keyboardListener = EventListenerKeyboard::create();
 	
@@ -50,40 +53,54 @@ void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundL
 	CCAssert(obstacules != nullptr, "'obstacules' object container not found");
 }
 
-void TileMap::setPlayerPosition(Point position, cocos2d::Sprite* player) {
+void TileMap::setPlayerPosition(Point position, Player player) {
 	std::string pathAhead = this->metaLayerChecker(position);
-	if (pathAhead == "No_collision"){
-		player->setPosition(position);
+	
+	if (pathAhead == "Edge") {
+		log("Stoped by the Edge of the map");
 	}
-	else if(pathAhead == "Water") {
-		//player->setPosition(this->tileCoordPosition(position)); // aqui esta el error
+	else if ((pathAhead == "Solid") && (player.getPower().getSolid() == false)) {
+		log("Stoped by Solid");
+	}
+	else if ((pathAhead == "Water") && (player.getPower().getWater()==false)) {
+		log("Stoped by Water");
+	}
+	else if ((pathAhead == "Ice") && (player.getPower().getIce() == false)) {
+		log("Stoped by Ice");
+	}
+	else if ((pathAhead == "Fire") && (player.getPower().getFire() == false)) {
+		log("Stoped by Fire");
 	}
 	else{
-	// other cases of collision, we are going to use them with the class Object, first called Power
+		player.setPosition(position);
 	}
 }
 
 std::string TileMap::metaLayerChecker(Point position) {
-	std::string result = "No_collision"; // no colisiona
+	std::string result = ""; // no colisiona
 	Point tileCoord = this->tileCoordPosition(position); // Aqui esta el problema, tenemos otro tile
 	int tileGid = meta->tileGIDAt(tileCoord);
 		if (tileGid) {
 			//Value properties = tileMap->getPropertiesForGID(tileGid); Se decidió hacer en una sola línea
 			auto properties = tileMap->getPropertiesForGID(tileGid).asValueMap();
 			if (!properties.empty()) {
-				auto collision = properties["Blockage"].asString();
-
-				if ("Rock" == collision) {
-					log("Blocked");
-					result = "collision";
-				}
-				else if ("Water" == collision) {
-					log("Water");
-					//result = "water";
-				}
+				result = properties["Blockage"].asString();
 			}
 		}
 	return result;
+}
+
+void TileMap::metaLayerChanger(Point position, std::string value) {
+	std::string result = ""; // no colisiona
+	Point tileCoord = this->tileCoordPosition(position); // Aqui esta el problema, tenemos otro tile
+	int tileGid = meta->tileGIDAt(tileCoord);
+	if (tileGid) {
+		//Value properties = tileMap->getPropertiesForGID(tileGid); Se decidió hacer en una sola línea
+		auto properties = tileMap->getPropertiesForGID(tileGid).asValueMap();
+		if (!properties.empty()) {
+			properties["Blockage"]=value;
+		}
+	}
 }
 
 Point TileMap::tileCoordPosition(Point position) {
@@ -129,9 +146,9 @@ void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event
 	}
 }
 
-void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, cocos2d::Sprite* player) {
-	int xx = player->getPositionX();
-	int yy = player->getPositionY();
+void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, Player player) {
+	int xx = player.getSprite()->getPositionX();
+	int yy = player.getSprite()->getPositionY();
 
 	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{
 		log("W key was pressed");
@@ -157,6 +174,23 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 		log("Q key was pressed");
 	}
 	// Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
+
+	if (keyCode == EventKeyboard::KeyCode::KEY_P) 	{ // power
+		//this->applyPower(xx, yy, player);
+		log("P key was pressed");
+	}
+}
+
+void TileMap::applyPower(float x, float y, Player player){
+	std::string pathAhead;
+
+	if (player.getPower().getName() == "Icepower"){
+		log("Icepower activated");
+		pathAhead = this->metaLayerChecker(Point(x + 32, y + 16));
+		if (pathAhead=="Water"){
+			metaLayerChanger(Point(x + 32, y + 16), "Ice");
+		}
+	}
 }
 	
 void TileMap::update(cocos2d::Sprite* player, float direction, char axe){

@@ -70,22 +70,22 @@ void MenuInicio::createGameTitle() {
 	gameTitle->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height - gameTitle->getContentSize().height - 20.0f));
 	this->addChild(gameTitle, 0);
 
-	// We animate the game tittle by making it shake and show it in time
-	auto animation = Animation::create();
-	for (int i = 0; i < 3; ++i)
-		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
+	//// We animate the game tittle by making it shake and show it in time
+	//auto animation = Animation::create();
+	//for (int i = 0; i < 3; ++i)
+	//	animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
-	// What we are doing is changing picture orientation, we have 3 pictures and we change them accordenly so they appear to be animated.
-	for (int i = 2; i >= 0; --i)
-		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
+	//// What we are doing is changing picture orientation, we have 3 pictures and we change them accordenly so they appear to be animated.
+	//for (int i = 2; i >= 0; --i)
+	//	animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
-	// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
-	animation->setDelayPerUnit(0.1333f);
+	//// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
+	//animation->setDelayPerUnit(0.1333f);
 
-	// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de
-	// menu del juego este visible
-	auto repeatAnimation = RepeatForever::create(Animate::create(animation));
-	gameTitle->runAction(repeatAnimation);
+	//// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de
+	//// menu del juego este visible
+	//auto repeatAnimation = RepeatForever::create(Animate::create(animation));
+	//gameTitle->runAction(repeatAnimation);
 }
 
 void MenuInicio::createGameMenu() {

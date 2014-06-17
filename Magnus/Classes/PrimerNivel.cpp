@@ -2,6 +2,7 @@
 #include "PrimerNivel.h"
 #include "MenuInicio.h" // Para poder regresar al menu Inicio.
 #include <SimpleAudioEngine.h>
+
 #define COCOS2D_DEBUG 1
 
 USING_NS_CC;
@@ -30,21 +31,21 @@ bool PrimerNivel::init() {
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
 
 	loadMap("TileMaps/PrimerNivel.tmx", "Background", "Foreground", "Foreground2", "Meta", "Obstacules");
-	bringTulsi();
-	metaLayerChecker(spriteTulsi->getPosition());
-	tileMap->addChild(spriteTulsi, 1);
+	loadPlayer();
+	metaLayerChecker(Tulsi.getPosition());
+	tileMap->addChild(Tulsi.getSprite(), 1);
 	this->addChild(tileMap, -1, 1);
-	Point View = setPointOfViewCenter(Point (spriteTulsi->getPositionX(), spriteTulsi -> getPositionY()));
+	Point View = setPointOfViewCenter(Point (Tulsi.getSprite()->getPositionX(), Tulsi.getSprite() -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
 	
-	setEventHandlers(spriteTulsi);
+	setEventHandlers(Tulsi);
 
 	return true;
 }
 
-void PrimerNivel::bringTulsi(){
+void PrimerNivel::loadPlayer(){
 	//Load the object into the map.
 	auto tulsi = obstacules->getObject("Tulsi");
 	CCASSERT(!tulsi.empty(), "Tulsi object not found");
@@ -53,10 +54,10 @@ void PrimerNivel::bringTulsi(){
 	int y = tulsi["y"].asInt();
 
 	//spriteTulsi = Sprite::create("xD.png");
-	spriteTulsi = Sprite::create("tulsi.png", Rect(0, 0, 45, 45));
-	spriteTulsi->setPosition(x+160,y+16);
-	
-	setPointOfViewCenter(spriteTulsi->getPosition());
+	Tulsi.loadSprite("tulsi.png", 0, 0, 45, 45);
+	Tulsi.setPosition(x+160,y+16);
+		
+	setPointOfViewCenter(Tulsi.getPosition());
 }
 
 

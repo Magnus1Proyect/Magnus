@@ -2,6 +2,7 @@
 #define TiledMap_H
 
 #include "cocos2d.h"
+#include "Player.h"
 
 /**
 @brief  This class is going to handle the TileMaps, it deals with the interactions with the TileMap.
@@ -38,7 +39,7 @@ protected:
 	* @brief Handles the events and listen.
 	* @param cocos2d::Sprite* The sprite of Tulsi in this case.
 	*/
-	virtual void setEventHandlers(cocos2d::Sprite* player);
+	virtual void setEventHandlers(Player player);
 
 	/**
 	* @brief It loads the .tmx , the tilemap and it properties. We read "load the tilemap" as loading each of its layers, sprites, etc. This is of the .tmx
@@ -59,7 +60,7 @@ protected:
 	we want our player.
 	* @param cocos2d:Sprite* player, we send the pointer to the player.
 	*/
-	virtual void setPlayerPosition(cocos2d::Point position, cocos2d::Sprite* player);
+	virtual void setPlayerPosition(cocos2d::Point position, Player player);
 	
 	/**
 	* @brief Checks the properties (meta) of the touched tile
@@ -70,6 +71,9 @@ protected:
 	* @return cocos2d::Point
 	*/
 	std::string metaLayerChecker(cocos2d::Point posicion);
+
+	//Changer
+	void metaLayerChanger(cocos2d::Point posicion, std::string value);
 
 	/**
 	* @brief Returns the coord of the clicked tile.
@@ -95,7 +99,7 @@ protected:
 	* @param cocos2d::Sprite* player
 	*/
 
-	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, cocos2d::Sprite* player);
+	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, Player player);
 	
 	/**
 	* @brief Este metodo va a refrescar la vista despues de cada keyreleased, ahi es llamado. También llamará el
@@ -109,6 +113,8 @@ protected:
 	virtual void update(cocos2d::Sprite* player, float direction, char axe);
 
 	//void KeyMovement(.....) { }
+
+	void TileMap::applyPower(float x, float y, Player player);
 		
 };
 #endif // TiledMap_H

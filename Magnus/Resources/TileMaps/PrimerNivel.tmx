@@ -7,7 +7,7 @@
   <image source="meta2.png" width="512" height="95"/>
   <tile id="0">
    <properties>
-    <property name="Blockage" value="false"/>
+    <property name="Blockage" value="Free"/>
    </properties>
   </tile>
   <tile id="2">
@@ -18,6 +18,21 @@
   <tile id="3">
    <properties>
     <property name="Blockage" value="Water"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="Blockage" value="Edge"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="Blockage" value="Ice"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="Blockage" value="Solid"/>
    </properties>
   </tile>
  </tileset>
@@ -36,12 +51,12 @@
    eJxjYKA+cAJiRyC2x6PGmQTzHIDYDohtgNiKRLe4YBGzBWJrILYEYjMSzcMFLIDYHIhNqWTeUAXYwpsegJT0NBTtG0pgoNIAPe0lJv5HQhoBANm0BaE=
   </data>
  </layer>
- <objectgroup name="Obstacules" width="20" height="20">
+ <objectgroup name="Obstacules" width="20" height="20" visible="0">
   <object name="Tulsi" x="480" y="480" width="32" height="32"/>
  </objectgroup>
  <layer name="Meta" width="20" height="20" opacity="0.45">
   <data encoding="base64" compression="zlib">
-   eJzN1LEKACAIBFD/fwv74KYgxLOUKxpuqXyFUSoiejENJJpb15xYOwN5VdN61mZ4jGS87qTiKaiPvGhfr84bR/3PeDbIm3OoTz/e70vPvolX58vuxfpXkMf8X5j9Y2YAjHPjnA==
+   eJzNlLsOABAMRfv/WxOWfq1JIk0fyo0YzoKeXoRORB2MLLBDNDfRvmx91qeSb4fpY5Bz9SGo+JrBiU+c+sgX9bXqrHFx8lV8Gs/Xgn3+er8vfQL27earvr2bfFYv7UP+L8jzQzIAxnvkwA==
   </data>
  </layer>
 </map>

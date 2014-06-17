@@ -2,6 +2,7 @@
 #define PrimerNivel_h
 
 #include "cocos2d.h"
+#include "Player.h"
 #include "Util\TileMap.h" // TileMap class we created to deal with those
 
 /**
@@ -9,9 +10,11 @@
 */
 
 class PrimerNivel : public TileMap { // this is the First Level Scene with the layer of TileMap
-private:
-	cocos2d::Sprite *spriteTulsi;
+
 public:
+
+	Player Tulsi;
+
 	/**
 	@brief    We prepare our scene
 	@return instance pointer We return the id (Identification)
@@ -48,7 +51,7 @@ private:
 	/**
 	@brief We bring and set the player Sprite, Tulsi.
 	*/
-	void bringTulsi();
+	void loadPlayer();
 };
 
 #endif // PrimerNivel_h
