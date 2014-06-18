@@ -30,7 +30,7 @@ bool PrimerNivel::init() {
 
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
 
-	loadMap("TileMaps/PrimerNivel.tmx", "Background", "Foreground", "Foreground2", "Meta", "Obstacules");
+	loadMap("TileMaps/PrimerNivel.tmx", "Background", "Foreground", "Meta", "Foreground2", "Obstacules");
 	loadPlayer();
 	metaLayerChecker(Tulsi.getPosition());
 	tileMap->addChild(Tulsi.getSprite(), 1);

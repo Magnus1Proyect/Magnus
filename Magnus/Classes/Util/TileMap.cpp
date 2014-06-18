@@ -36,7 +36,7 @@ void TileMap::setEventHandlers(Player player){
 }
 
 void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundLayerName, const std::string& frontLayerName,
-	const std::string& frontLayer2Name, const std::string& metaLayerName, const std::string& objectContainerName) {
+	const std::string& metaLayerName, const std::string& frontLayer2Name, const std::string& objectContainerName) {
 	tileMap = TMXTiledMap::create(mapFile);
 	CCAssert(tileMap != nullptr, "'mapFile' map not found");
 	tileMap->setAnchorPoint(Point(0.0f, 0.0f));
@@ -90,16 +90,18 @@ std::string TileMap::metaLayerChecker(Point position) {
 	return result;
 }
 
-void TileMap::metaLayerChanger(Point position, std::string value) {
-	std::string result = ""; // no colisiona
-	Point tileCoord = this->tileCoordPosition(position); // Aqui esta el problema, tenemos otro tile
-	int tileGid = meta->tileGIDAt(tileCoord);
-	if (tileGid) {
-		//Value properties = tileMap->getPropertiesForGID(tileGid); Se decidió hacer en una sola línea
-		auto properties = tileMap->getPropertiesForGID(tileGid).asValueMap();
-		if (!properties.empty()) {
-			properties["Blockage"]=value;
-		}
+void TileMap::LayerChanger(Point position, std::string value) {
+	std::string pathAhead = this->metaLayerChecker(position);
+	if ((value == "Ice")&&(pathAhead=="Water")){
+		//ChangeMeta
+		Point tileCoord = this->tileCoordPosition(position);
+		auto tileSet = meta->getTileSet();
+		int newGID = (tileSet->_firstGid) + 8;
+		meta->setTileGID(newGID, tileCoord);
+		//ChangeBackground
+		tileSet = background->getTileSet();
+		newGID = (background->getTileGIDAt(tileCoord))+26;
+		background->setTileGID(newGID, tileCoord);
 	}
 }
 
@@ -176,20 +178,21 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 	// Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
 
 	if (keyCode == EventKeyboard::KeyCode::KEY_P) 	{ // power
-		//this->applyPower(xx, yy, player);
+		player.setPower("Icepower", false, false, true, false);
+		this->applyPower(xx, yy, player);
 		log("P key was pressed");
 	}
 }
 
 void TileMap::applyPower(float x, float y, Player player){
-	std::string pathAhead;
-
 	if (player.getPower().getName() == "Icepower"){
 		log("Icepower activated");
-		pathAhead = this->metaLayerChecker(Point(x + 32, y + 16));
-		if (pathAhead=="Water"){
-			metaLayerChanger(Point(x + 32, y + 16), "Ice");
-		}
+
+		LayerChanger(Point(x + 32, y - 16), "Ice");
+		LayerChanger(Point(x + 32, y + 16), "Ice");
+		LayerChanger(Point(x,y), "Ice");
+		LayerChanger(Point(x - 32, y + 16), "Ice");
+		LayerChanger(Point(x - 32, y - 16), "Ice");
 	}
 }
 	

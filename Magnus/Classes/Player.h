@@ -17,6 +17,8 @@ public:
 
 	void Player::setPower(Power p);
 
+	void Player::setPower(const char* n, bool so, bool wa, bool ic, bool fi);
+
 	void Player::setPosition(float x, float y);
 
 	void Player::setPosition(cocos2d::Point pos);

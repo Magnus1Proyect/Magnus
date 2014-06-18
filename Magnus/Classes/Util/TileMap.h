@@ -52,7 +52,7 @@ protected:
 	*/
 
 	virtual void loadMap(const std::string& mapTmx, const std::string& backgroundLayerName, const std::string& frontLayerName
-		, const std::string& frontLayer2Name, const std::string& metaLayerName, const std::string& objectContainerName);
+		, const std::string& metaLayerName, const std::string& frontLayer2Name, const std::string& objectContainerName);
 
 	/**
 	* @brief 
@@ -73,7 +73,7 @@ protected:
 	std::string metaLayerChecker(cocos2d::Point posicion);
 
 	//Changer
-	void metaLayerChanger(cocos2d::Point posicion, std::string value);
+	void LayerChanger(cocos2d::Point posicion, std::string value);
 
 	/**
 	* @brief Returns the coord of the clicked tile.
