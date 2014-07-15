@@ -54,7 +54,7 @@ void PrimerNivel::loadPlayer(){
 	int y = tulsi["y"].asInt();
 
 	//spriteTulsi = Sprite::create("xD.png");
-	Tulsi.loadSprite("tulsi.png", 0, 0, 45, 45);
+	Tulsi.loadSprite("ElementalTulsi.png", 0, 0, 48, 48);
 	Tulsi.setPosition(x+160,y+16);
 		
 	setPointOfViewCenter(Tulsi.getPosition());

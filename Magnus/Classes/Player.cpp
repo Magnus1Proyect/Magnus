@@ -8,7 +8,8 @@ Power playerPower;
 cocos2d::Sprite *playerSprite;
 
 void Player::loadSprite(const char* dir, float xStart, float yStart, float xSize, float ySize){
-	playerSprite = cocos2d::Sprite::create(dir, cocos2d::Rect(xStart, yStart, xSize, ySize));	
+	cocos2d::Sprite* temp = cocos2d::Sprite::create(dir, cocos2d::Rect(xStart, yStart, xSize, ySize));
+	playerSprite = temp;
 }
 
 void Player::setSprite(cocos2d::Sprite* s){
@@ -18,6 +19,10 @@ void Player::setSprite(cocos2d::Sprite* s){
 void Player::setPower(Power p){
 	
 	playerPower = p;
+}
+
+void Player::setPower(const char* n, bool so, bool wa, bool ic, bool fi){
+	playerPower.setPower(n, so, wa, ic, fi);
 }
 
 void Player::setPosition(float x, float y){

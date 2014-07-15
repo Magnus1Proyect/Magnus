@@ -17,7 +17,7 @@
   </tile>
   <tile id="2">
    <properties>
-    <property name="Blockage" value="Rock"/>
+    <property name="Blockage" value="Fire"/>
    </properties>
   </tile>
   <tile id="3">
@@ -40,6 +40,31 @@
     <property name="Blockage" value="Solid"/>
    </properties>
   </tile>
+  <tile id="10">
+   <properties>
+    <property name="Blockage" value="flyPower"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="Blockage" value="icePower"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="Blockage" value="firePower"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="Blockage" value="waterPower"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="Blockage" value="ghostPower"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="Background" width="20" height="20">
   <data encoding="base64" compression="zlib">
@@ -48,7 +73,7 @@
  </layer>
  <layer name="Foreground" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFjAPtgFEwCkbBKBiCAAALfAAC
+   eJzzYWBg8BnhmHEQuGEUj+KhgD0GgRtG8eDBAJCadnI=
   </data>
  </layer>
  <objectgroup name="Obstacules" width="20" height="20">
@@ -61,7 +86,7 @@
  </layer>
  <layer name="Meta" width="20" height="20" opacity="0.45">
   <data encoding="base64" compression="zlib">
-   eJy9lMEKACAIQ/3/W1CXvrZLQkhOpdFhECXPKdoQkUHWPNQcoTeV5UXxUZ6Kv4yU10jMk4fUgSo8xEE8L67v+iOenjO87P0MeKguL8b2z+Zj8pC/13lhz1925377q+7ei79bLstj/i/M/jG1ABT05WU=
+   eJytlEsKQCEIRd3/LKiJtNgmTwh5XpXu4ECUHD9US0QWGb0YAejM8L4sPsvTqa+C+QbJefsQE9DxIQ/yRXHz6z/z2briq+5r4kN9RTF+fj4f04fqe70vzPu3Cx5t+Jj1dd/eS31/ubyP+b8w58fkACuk5XA=
   </data>
  </layer>
 </map>
