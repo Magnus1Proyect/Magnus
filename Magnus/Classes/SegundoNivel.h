@@ -1,5 +1,5 @@
-#ifndef PrimerNivel_h
-#define PrimerNivel_h
+#ifndef SegundoNivel_h
+#define SegundoNivel_h
 
 #include "cocos2d.h"
 #include "Player.h" // The player class
@@ -7,10 +7,10 @@
 #include "Util\TileMap.h" // TileMap class we created to deal with those
 
 /**
-@brief This is the first level scene, it uses the tileMap
+@brief This is the second level scene, it uses the tileMap
 */
 
-class PrimerNivel : public TileMap { // this is the First Level Scene with the layer of TileMap
+class SegundoNivel : public TileMap { // this is the Second Level Scene with the layer of TileMap
 
 private:
 	cocos2d::Sprite *flyingPower;
@@ -19,6 +19,8 @@ public:
 	Player Tulsi;
 	Power Flying;
 	Power Freeze;
+	//Power Fire;
+	//Power   Un vector o lista de poderes la cual se importa
 
 	/**
 	@brief    We prepare our scene
@@ -43,7 +45,7 @@ public:
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
 	@param We need the class type to create the layer.
 	*/
-	CREATE_FUNC(PrimerNivel);
+	CREATE_FUNC(SegundoNivel);
 
 private:
 	/// Crea las opciones del menu, como el icono para regresar al menu del juego
@@ -67,4 +69,4 @@ private:
 
 };
 
-#endif // PrimerNivel_h
+#endif // SegundoNivel_h

@@ -1,10 +1,8 @@
 #include "TileMap.h"
-#include "PowerList.h"
 
 USING_NS_CC;
 
 //POWERS LIST
-PowerList powers;
 
 Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would be the player itself
 	cocos2d::Size winSize = Director::getInstance()->getWinSize();
@@ -74,32 +72,7 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 		log("Stoped by Fire");
 	}
 	else{
-
 		player.setPosition(position);
-		if (pathAhead == "flyPower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Fly());
-		}
-		else if (pathAhead == "icePower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Icepower());
-		}
-		else if (pathAhead == "firePower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Fireproof());
-		}
-		else if (pathAhead == "waterPower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Swim());
-		}
-		else if (pathAhead == "firePower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Fireproof());
-		}
-		else if (pathAhead == "ghostPower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Ghost());
-		}
 	}
 }
 
@@ -119,16 +92,6 @@ std::string TileMap::metaLayerChecker(Point position) {
 
 void TileMap::LayerChanger(Point position, std::string value) {
 	std::string pathAhead = this->metaLayerChecker(position);
-	if (value == "power"){
-		//ChangeMeta
-		Point tileCoord = this->tileCoordPosition(position);
-		auto tileSet = meta->getTileSet();
-		int newGID = (tileSet->_firstGid) + 8;
-		meta->setTileGID(newGID, tileCoord);
-		//ChangeForeground1
-		tileSet = foreground->getTileSet();
-		foreground->removeTileAt(tileCoord);
-	}
 	if ((value == "Ice")&&(pathAhead=="Water")){
 		//ChangeMeta
 		Point tileCoord = this->tileCoordPosition(position);
@@ -167,6 +130,7 @@ Point TileMap::tileCoordPosition(Point position) {
 	}
 
 void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
+	//put this inside keyPressed or keyReleased
 	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{ // north, up
 		log("W key was pressed");
 	}
@@ -189,31 +153,33 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 	int yy = player.getSprite()->getPositionY();
 
 	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{
-		log("W key was released");
+		log("W key was pressed");
 		this->setPlayerPosition(Point(xx+32,yy+16), player);
 		//this->update(player, 10.0f, 'y'); // por ahora se usará el 10, después se trabajará en agregarle una variable relativa al tamano del mapa o el tile
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_S) 	{ // south, down
-		log("S key was released");
+		log("S key was pressed");
 		this->setPlayerPosition(Point(xx-32,yy-16), player);
 		//this->update(player, -10.0f, 'y');
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_D) 	{ // right
-		log("D key was released");
+		log("D key was pressed");
 		this->setPlayerPosition(Point(xx + 32, yy -16), player);
 		//this->update(player, 10.0f, 'x');
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_A) 	{ // left
-		log("A key was released");
+		log("A key was pressed");
 		this->setPlayerPosition(Point(xx - 32, yy + 16),  player);
 		//this->update(player, -10.0f, 'x');
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
-		log("Q key was released");
+		log("Q key was pressed");
 	}
 	// Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
 
 	if (keyCode == EventKeyboard::KeyCode::KEY_P) 	{ // power
+		//player.setPower("Icepower", false, false, true, false);
+		player.setPower(player.getList().Icepower());
 		this->applyPower(xx, yy, player);
 		log("P key was pressed");
 	}
@@ -222,6 +188,7 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 void TileMap::applyPower(float x, float y, Player player){
 	if (player.getPower().getName() == "Icepower"){
 		log("Icepower activated");
+
 		LayerChanger(Point(x + 32, y - 16), "Ice");
 		LayerChanger(Point(x + 32, y + 16), "Ice");
 		LayerChanger(Point(x,y), "Ice");

@@ -1,5 +1,5 @@
 
-#include "PrimerNivel.h"
+#include "SegundoNivel.h"
 #include "MenuInicio.h" // Para poder regresar al menu Inicio.
 #include <SimpleAudioEngine.h>
 
@@ -7,12 +7,12 @@
 
 USING_NS_CC;
 
-Scene* PrimerNivel::createScene() {
+Scene* SegundoNivel::createScene() {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
 	// 'layer' is an autorelease object
-	auto layer = PrimerNivel::create();
+	auto layer = SegundoNivel::create();
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -22,7 +22,7 @@ Scene* PrimerNivel::createScene() {
 }
 
 // on "init" you need to initialize your instance
-bool PrimerNivel::init() {
+bool SegundoNivel::init() {
 	// 1. super init first
 	if (!Layer::init()) { // if there is a mistake then we terminate the program, it couldnt launch 
 		return false;
@@ -30,7 +30,7 @@ bool PrimerNivel::init() {
 
 	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
 
-	loadMap("TileMaps/PrimerNivel.tmx", "Background", "Foreground", "Meta", "Foreground2", "Obstacules");
+	loadMap("TileMaps/SegundoNivel.tmx", "Background", "Foreground", "Meta", "Foreground2", "Obstacules");
 	loadPlayer();
 	metaLayerChecker(Tulsi.getPosition());
 	tileMap->addChild(Tulsi.getSprite(), 1);
@@ -49,7 +49,7 @@ bool PrimerNivel::init() {
 	return true;
 }
 
-void PrimerNivel::loadPlayer(){
+void SegundoNivel::loadPlayer(){
 	//Load the object into the map.
 	auto tulsi = obstacules->getObject("Tulsi");
 	CCASSERT(!tulsi.empty(), "Tulsi object not found");
@@ -66,7 +66,7 @@ void PrimerNivel::loadPlayer(){
 	setPointOfViewCenter(Tulsi.getPosition());
 }
 
-bool PrimerNivel::loadPowers(){
+bool SegundoNivel::loadPowers(){
 	//Load the object into the map.
 	auto flying = obstacules->getObject("Flying");
 	CCASSERT(!flying.empty(), "Flying power not found");
@@ -79,32 +79,8 @@ bool PrimerNivel::loadPowers(){
 	return true;
 }
 
-	//createMenu();
-
-	// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-	// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-	// ilustrativos
-	//auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	//sound->stopBackgroundMusic();
-	//sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
-
-	//return true;
-//}
-
-//void PrimerNivel::createMenu() {
-	//Size visibleSize = Director::getInstance()->getVisibleSize();
-	//Point origin = Director::getInstance()->getVisibleOrigin();
-
-	// Boton Logo, para retornar al menu del juego, ubicado en la esquina superior izquierda (cambiar segunda imagen)
-	//auto buttonHome = MenuItemImage::create("000-Logo.png", "000-Logo.png", CC_CALLBACK_1(PrimerNivel::returnGameMenu, this));
-	//buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
-	//auto buttonHomeMenu = Menu::create(buttonHome, NULL);
-	//buttonHomeMenu->setPosition(Point::ZERO);
-	//this->addChild(buttonHomeMenu, 2);
-//}
-
-
 //void PrimerNivel::returnGameMenu(Ref* pSender) {
 	//auto newScene = MenuInicio::createScene();
 	//Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
+// Importante Idea de crear clase @crearNiveles, seria una clase de donde se heredan los niveles, es hija de Tilemaps.
 //}

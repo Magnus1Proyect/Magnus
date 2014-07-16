@@ -7,9 +7,13 @@ USING_NS_CC;
 Power playerPower;
 cocos2d::Sprite *playerSprite;
 
+Player::Player(){
+	playerPower.setPower("default", false, false, false, false);
+	playerSprite=nullptr;
+}
+
 void Player::loadSprite(const char* dir, float xStart, float yStart, float xSize, float ySize){
-	cocos2d::Sprite* temp = cocos2d::Sprite::create(dir, cocos2d::Rect(xStart, yStart, xSize, ySize));
-	playerSprite = temp;
+	playerSprite = cocos2d::Sprite::create(dir, cocos2d::Rect(xStart, yStart, xSize, ySize));	
 }
 
 void Player::setSprite(cocos2d::Sprite* s){
@@ -17,12 +21,11 @@ void Player::setSprite(cocos2d::Sprite* s){
 }
 
 void Player::setPower(Power p){
-	
-	playerPower = p;
-}
-
-void Player::setPower(const char* n, bool so, bool wa, bool ic, bool fi){
-	playerPower.setPower(n, so, wa, ic, fi);
+	playerPower.setName(p.getName());
+	playerPower.setSolid(p.getSolid());
+	playerPower.setWater(p.getWater());
+	playerPower.setIce(p.getIce());
+	playerPower.setFire(p.getFire());
 }
 
 void Player::setPosition(float x, float y){
@@ -43,4 +46,8 @@ cocos2d::Sprite* Player::getSprite(){
 
 Power Player::getPower(){
 	return playerPower;
+}
+
+PowerList Player::getList(){
+	return powers;
 }
