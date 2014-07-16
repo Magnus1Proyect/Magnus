@@ -7,6 +7,7 @@
 class Player{
 
 public:
+	Player::Player();
 	// Jugador
 	/**
 	@brief We bring and set the player Sprite.

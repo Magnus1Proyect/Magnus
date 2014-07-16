@@ -7,6 +7,11 @@ USING_NS_CC;
 Power playerPower;
 cocos2d::Sprite *playerSprite;
 
+Player::Player(){
+	playerPower.setPower("default", false, false, false, false);
+	playerSprite=nullptr;
+}
+
 void Player::loadSprite(const char* dir, float xStart, float yStart, float xSize, float ySize){
 	cocos2d::Sprite* temp = cocos2d::Sprite::create(dir, cocos2d::Rect(xStart, yStart, xSize, ySize));
 	playerSprite = temp;
@@ -17,7 +22,6 @@ void Player::setSprite(cocos2d::Sprite* s){
 }
 
 void Player::setPower(Power p){
-	
 	playerPower = p;
 }
 

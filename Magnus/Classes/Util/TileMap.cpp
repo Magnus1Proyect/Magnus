@@ -74,7 +74,6 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 		log("Stoped by Fire");
 	}
 	else{
-
 		player.setPosition(position);
 		if (pathAhead == "flyPower") {
 			LayerChanger(position, "power");
@@ -128,17 +127,17 @@ void TileMap::LayerChanger(Point position, std::string value) {
 		//ChangeForeground1
 		tileSet = foreground->getTileSet();
 		foreground->removeTileAt(tileCoord);
-	}
-	if ((value == "Ice")&&(pathAhead=="Water")){
-		//ChangeMeta
-		Point tileCoord = this->tileCoordPosition(position);
-		auto tileSet = meta->getTileSet();
-		int newGID = (tileSet->_firstGid) + 8;
-		meta->setTileGID(newGID, tileCoord);
-		//ChangeBackground
-		tileSet = background->getTileSet();
-		newGID = (background->getTileGIDAt(tileCoord))+26;
-		background->setTileGID(newGID, tileCoord);
+		if ((value == "Ice") && (pathAhead == "Water")){
+			//ChangeMeta
+			Point tileCoord = this->tileCoordPosition(position);
+			auto tileSet = meta->getTileSet();
+			int newGID = (tileSet->_firstGid) + 8;
+			meta->setTileGID(newGID, tileCoord);
+			//ChangeBackground
+			tileSet = background->getTileSet();
+			newGID = (background->getTileGIDAt(tileCoord)) + 26;
+			background->setTileGID(newGID, tileCoord);
+		}
 	}
 }
 
@@ -167,6 +166,7 @@ Point TileMap::tileCoordPosition(Point position) {
 	}
 
 void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
+	//put this inside keyPressed or keyReleased
 	if (keyCode == EventKeyboard::KeyCode::KEY_W) 	{ // north, up
 		log("W key was pressed");
 	}
@@ -214,14 +214,16 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 	// Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
 
 	if (keyCode == EventKeyboard::KeyCode::KEY_P) 	{ // power
+		//player.setPower("Icepower", false, false, true, false);
 		this->applyPower(xx, yy, player);
-		log("P key was pressed");
+		log("P key was released");
 	}
 }
 
 void TileMap::applyPower(float x, float y, Player player){
 	if (player.getPower().getName() == "Icepower"){
 		log("Icepower activated");
+
 		LayerChanger(Point(x + 32, y - 16), "Ice");
 		LayerChanger(Point(x + 32, y + 16), "Ice");
 		LayerChanger(Point(x,y), "Ice");

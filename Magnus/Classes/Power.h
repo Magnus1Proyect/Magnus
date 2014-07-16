@@ -10,6 +10,8 @@ public:
 	Power::Power();
 	Power::Power(const char* n, bool so, bool wa, bool ic, bool fi);
 
+	cocos2d::Sprite *flyingSprite;
+
 	const char* Power::getName();
 	bool Power::getSolid();
 	bool Power::getWater();
@@ -23,6 +25,16 @@ public:
 	void Power::setWater(bool b);
 	void Power::setIce(bool b);
 	void Power::setFire(bool b);
+
+	cocos2d::Point Power::getPosition();
+	cocos2d::Sprite* Power::getSprite();
+
+	void Power::loadSprite(const char* dir);
+
+	void Power::setPosition(float x, float y);
+	void Power::setPosition(cocos2d::Point pos);
+
+
 
 };
 

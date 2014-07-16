@@ -31,6 +31,13 @@ public:
 	void returnGameMenu(cocos2d::Ref* pSender);
 
 	/**
+	@brief We add labels with the devs name
+	@param cocos2d::Point origin We require this to position ourselves on the screen
+	@param cocos2d::Size we send the Size of the visible size on the screen to help us position the labels
+	*/
+	void showNames(cocos2d::Point origin, cocos2d::Size visibleSize);
+
+	/**
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
 	@param class type We need the class type to create the layer.
 	*/

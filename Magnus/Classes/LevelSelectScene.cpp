@@ -27,8 +27,6 @@ bool LevelSelectScene::init() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	/////////////////////////////
-
 	// add a label shows "Menu Inicio"
 	// create and initialize a label
 
@@ -56,7 +54,7 @@ bool LevelSelectScene::init() {
 	// ilustrativos
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	//sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
+	sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
 
 	return true;
 }

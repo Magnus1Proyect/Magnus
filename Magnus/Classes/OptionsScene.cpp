@@ -27,23 +27,23 @@ bool OptionsScene::init() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	// add a label shows "Creditos"
-	// create and initialize a label
+	// add a label shows "Creditos" create and initialize labels
 
-	auto label = LabelTTF::create("Opciones", "Tahoma", 24);
+	auto labelTitulo = LabelTTF::create("Opciones", "Tahoma", 32);
 
 	// position the label on the upper center of the screen
-	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .84f));
+	labelTitulo->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .88f));
 
 	// add the label as a child to this layer
-	this->addChild(label, 1);
+	this->addChild(labelTitulo, 1);
+
+	// We add the devs labels
+	this->showNames(origin, visibleSize);
 
 	// Creates the background of the game menu.
 	auto sprite = Sprite::create("GameMenu/0000.jpg"); // sprites are important, those are the images
-
 	// position the sprite on the center of the screen
 	sprite->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
-
 	// add the sprite as a child to this layer
 	this->addChild(sprite, 0);
 
@@ -57,6 +57,23 @@ bool OptionsScene::init() {
 	sound->playBackgroundMusic("Music/Options.mp3", true); // We use a piece of music we already have and reproduce it for the options scene.
 
 	return true; // we managed to bring frankestein alive, I mean, the game.
+}
+void OptionsScene::showNames(Point origin, Size visibleSize){
+	auto labelSubtitulo = LabelTTF::create("Desarrolladores", "'Book Antigua", 24);
+	labelSubtitulo->setPosition(Point(origin.x + visibleSize.width * 0.25f, origin.y + visibleSize.height * .78f));
+	this->addChild(labelSubtitulo, 1);
+
+	auto labelDev1 = LabelTTF::create("Gabriel Coto Barquero", "'Book Antigua", 18);
+	labelDev1->setPosition(Point(origin.x + visibleSize.width * 0.50f, origin.y + visibleSize.height * .72f));
+	this->addChild(labelDev1, 1);
+
+	auto labelDev2 = LabelTTF::create("Kenneth Fonseca Mendez", "'Book Antigua", 18);
+	labelDev2->setPosition(Point(origin.x + visibleSize.width * 0.50f, origin.y + visibleSize.height * .66f));
+	this->addChild(labelDev2, 1);
+
+	auto labelDev3 = LabelTTF::create("William Soto Martinez", "'Book Antigua", 18);
+	labelDev3->setPosition(Point(origin.x + visibleSize.width * 0.50f, origin.y + visibleSize.height * .60f));
+	this->addChild(labelDev3, 1);
 }
 
 void OptionsScene::createMenu() {
