@@ -56,7 +56,7 @@ bool LevelSelectScene::init() {
 	// ilustrativos
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
+	//sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
 
 	return true;
 }

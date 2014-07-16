@@ -30,30 +30,13 @@ bool OptionsScene::init() {
 	// add a label shows "Creditos"
 	// create and initialize a label
 
-	auto labelTitulo = LabelTTF::create("Opciones", "Tahoma", 32);
+	auto label = LabelTTF::create("Opciones", "Tahoma", 24);
 
 	// position the label on the upper center of the screen
-	labelTitulo->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .88f));
+	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .84f));
 
 	// add the label as a child to this layer
-	this->addChild(labelTitulo, 1);
-
-	// We add the devs labels
-	auto labelSubtitulo = LabelTTF::create("Desarrolladores", "'Book Antigua", 24);
-	labelSubtitulo->setPosition(Point(origin.x + visibleSize.width * 0.25f, origin.y + visibleSize.height * .78f));
-	this->addChild(labelSubtitulo, 1);
-
-	auto labelDev1 = LabelTTF::create("Gabriel Coto Barquero", "'Book Antigua", 18);
-	labelDev1->setPosition(Point(origin.x + visibleSize.width * 0.50f, origin.y + visibleSize.height * .72f));
-	this->addChild(labelDev1, 1);
-
-	auto labelDev2 = LabelTTF::create("Kenneth Fonseca Mendez", "'Book Antigua", 18);
-	labelDev2->setPosition(Point(origin.x + visibleSize.width * 0.50f, origin.y + visibleSize.height * .66f));
-	this->addChild(labelDev2, 1);
-
-	auto labelDev3 = LabelTTF::create("William Soto Martinez", "'Book Antigua", 18);
-	labelDev3->setPosition(Point(origin.x + visibleSize.width * 0.50f, origin.y + visibleSize.height * .60f));
-	this->addChild(labelDev3, 1);
+	this->addChild(label, 1);
 
 	// Creates the background of the game menu.
 	auto sprite = Sprite::create("GameMenu/0000.jpg"); // sprites are important, those are the images

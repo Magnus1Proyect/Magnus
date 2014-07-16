@@ -56,7 +56,7 @@ bool MenuInicio::init() {
 	// Reproducir la musica del menu principal
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic(); // this steps are to change tracks.
-	sound->playBackgroundMusic("Music/Magnus.mp3", true); // // We start our rock and roll, the Magnus piece of music starts reproducing for this scene.
+	//sound->playBackgroundMusic("Music/Magnus.mp3", true); // // We start our rock and roll, the Magnus piece of music starts reproducing for this scene.
 
 	return true;
 }

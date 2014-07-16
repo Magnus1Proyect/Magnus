@@ -2,8 +2,7 @@
 #define PrimerNivel_h
 
 #include "cocos2d.h"
-#include "Player.h" // The player class
-#include "Power.h" // Our power class
+#include "Player.h"
 #include "Util\TileMap.h" // TileMap class we created to deal with those
 
 /**
@@ -12,13 +11,9 @@
 
 class PrimerNivel : public TileMap { // this is the First Level Scene with the layer of TileMap
 
-private:
-	cocos2d::Sprite *flyingPower;
 public:
 
 	Player Tulsi;
-	Power Flying;
-	Power Freeze;
 
 	/**
 	@brief    We prepare our scene
@@ -57,14 +52,6 @@ private:
 	@brief We bring and set the player Sprite, Tulsi.
 	*/
 	void loadPlayer();
-
-	/**
-	@brief The powers are brought to the map and ready to be grabbed.
-	@return bool true if brought correctly
-	@return bool false if not.
-	*/
-	bool loadPowers();
-
 };
 
 #endif // PrimerNivel_h

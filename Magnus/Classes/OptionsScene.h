@@ -31,12 +31,6 @@ public:
 	void returnGameMenu(cocos2d::Ref* pSender);
 
 	/**
-	@brief If the logo is clicked then we return to the Game Menu
-	@param reference We require the reference of the game menu
-	*/
-	void showNames();
-
-	/**
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
 	@param class type We need the class type to create the layer.
 	*/

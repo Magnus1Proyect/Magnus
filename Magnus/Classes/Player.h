@@ -2,13 +2,11 @@
 #define Player_H
 
 #include "cocos2d.h"
-#include "PowerList.h"
+#include "Power.h"
 
 class Player{
 
 public:
-	Player::Player();
-	PowerList powers;
 	// Jugador
 	/**
 	@brief We bring and set the player Sprite.
@@ -24,8 +22,6 @@ public:
 	void Player::setPosition(float x, float y);
 
 	void Player::setPosition(cocos2d::Point pos);
-
-	PowerList Player::getList();
 
 	cocos2d::Point Player::getPosition();
 
