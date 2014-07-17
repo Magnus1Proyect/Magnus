@@ -28,8 +28,6 @@ bool SegundoNivel::init() {
 		return false;
 	}
 
-	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
-
 	loadMap("TileMaps/SegundoNivel.tmx", "Background", "Foreground", "Meta", "Foreground2", "Obstacules");
 	loadPlayer();
 	metaLayerChecker(Tulsi.getPosition());
@@ -45,7 +43,6 @@ bool SegundoNivel::init() {
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
 	
 	setEventHandlers(Tulsi);
-
 	return true;
 }
 
@@ -61,7 +58,7 @@ void SegundoNivel::loadPlayer(){
 	Tulsi.loadSprite("tulsi.png", 0, 0, 45, 45);
 	Tulsi.setPosition(x+160,y+16);
 
-		
+
 	setPointOfViewCenter(Tulsi.getPosition());
 }
 
@@ -78,8 +75,4 @@ bool SegundoNivel::loadPowers(){
 	return true;
 }
 
-//void PrimerNivel::returnGameMenu(Ref* pSender) {
-	//auto newScene = MenuInicio::createScene();
-	//Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 // Importante Idea de crear clase @crearNiveles, seria una clase de donde se heredan los niveles, es hija de Tilemaps.
-//}

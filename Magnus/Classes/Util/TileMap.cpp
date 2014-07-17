@@ -59,46 +59,51 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 	std::string pathAhead = this->metaLayerChecker(position);
 	
 	if (pathAhead == "Edge") {
-		log("Stoped by the Edge of the map");
+		log("Stopped by the Edge of the map");
 	}
 	else if ((pathAhead == "Solid") && (player.getPower().getSolid() == false)) {
-		log("Stoped by Solid");
+		log("Stopped by Solid");
 	}
 	else if ((pathAhead == "Water") && (player.getPower().getWater()==false)) {
-		log("Stoped by Water");
+		log("Stopped by Water");
 	}
 	else if ((pathAhead == "Ice") && (player.getPower().getIce() == false)) {
-		log("Stoped by Ice");
+		log("Stopped by Ice");
 	}
 	else if ((pathAhead == "Fire") && (player.getPower().getFire() == false)) {
-		log("Stoped by Fire");
+		log("Stopped by Fire");
 	}
 	else{
 		player.setPosition(position);
-		if (pathAhead == "flyPower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Fly());
-		}
-		else if (pathAhead == "icePower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Icepower());
-		}
-		else if (pathAhead == "firePower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Fireproof());
-		}
-		else if (pathAhead == "waterPower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Swim());
-		}
-		else if (pathAhead == "firePower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Fireproof());
-		}
-		else if (pathAhead == "ghostPower") {
-			LayerChanger(position, "power");
-			player.setPower(powers.Ghost());
-		}
+		this->loadPowers(position, player, pathAhead);
+	}
+}
+
+void TileMap::loadPowers(Point position, Player player, std::string pathAhead){
+
+	if (pathAhead == "flyPower") {
+		LayerChanger(position, "power");
+		player.setPower(powers.Fly());
+	}
+	else if (pathAhead == "icePower") {
+		LayerChanger(position, "power");
+		player.setPower(powers.Icepower());
+	}
+	else if (pathAhead == "firePower") {
+		LayerChanger(position, "power");
+		player.setPower(powers.Fireproof());
+	}
+	else if (pathAhead == "waterPower") {
+		LayerChanger(position, "power");
+		player.setPower(powers.Swim());
+	}
+	else if (pathAhead == "firePower") {
+		LayerChanger(position, "power");
+		player.setPower(powers.Fireproof());
+	}
+	else if (pathAhead == "ghostPower") {
+		LayerChanger(position, "power");
+		player.setPower(powers.Ghost());
 	}
 }
 
@@ -127,6 +132,7 @@ void TileMap::LayerChanger(Point position, std::string value) {
 		//ChangeForeground1
 		tileSet = foreground->getTileSet();
 		foreground->removeTileAt(tileCoord);
+	}
 		if ((value == "Ice") && (pathAhead == "Water")){
 			//ChangeMeta
 			Point tileCoord = this->tileCoordPosition(position);
@@ -139,7 +145,7 @@ void TileMap::LayerChanger(Point position, std::string value) {
 			background->setTileGID(newGID, tileCoord);
 		}
 	}
-}
+
 
 Point TileMap::tileCoordPosition(Point position) {
 	int x = position.x / tileMap->getTileSize().width;
@@ -164,6 +170,8 @@ Point TileMap::tileCoordPosition(Point position) {
 
 	return Point(posX, posY);
 	}
+
+
 
 void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
 	//put this inside keyPressed or keyReleased

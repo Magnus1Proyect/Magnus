@@ -2,6 +2,16 @@
 <map version="1.0" orientation="isometric" width="20" height="20" tilewidth="64" tileheight="32">
  <tileset firstgid="1" name="TilesetGround1" tilewidth="64" tileheight="32">
   <image source="TilesetGround1.png" width="384" height="768"/>
+  <tile id="54">
+   <properties>
+    <property name="Objective" value="True"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="Objective" value="True"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="145" name="meta2" tilewidth="64" tileheight="32">
   <image source="meta2.png" width="512" height="95"/>
