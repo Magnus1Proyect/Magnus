@@ -38,9 +38,9 @@ public:
 
 private:
 	/**
-	@brief This method will resume the game
+	@brief /// Crea las opciones del menu, como el icono para regresar al menu del juego
 	*/
-	void resumeLevel(); /// We resume the game
+	void createMenu();	
 };
 
 #endif // PauseScreen_h

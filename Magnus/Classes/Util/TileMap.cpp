@@ -204,8 +204,11 @@ void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event
 	if (keyCode == EventKeyboard::KeyCode::KEY_A) 	{ // left
 		log("A key was pressed");
 	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
+	if (keyCode == EventKeyboard::KeyCode::KEY_P) 	{ // power
 		log("Q key was pressed");
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE) { // pause
+		log("Escape key was pressed");
 	}
 }
 
@@ -231,17 +234,15 @@ void TileMap::keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Even
 	if (keyCode == EventKeyboard::KeyCode::KEY_A) 	{ // left
 		log("A key was released");
 		this->setPlayerPosition(Point(xx - 32, yy + 16),  player);
-		//this->update(player, -10.0f, 'x');
+		//this->update(player, -10.0f, 'x'); // Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
 	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_Q) 	{ // power
-		log("Q key was released");
-	}
-	// Se traduce: arriba es +10, abajo es -10, a la derecha es +10 a la x, a la izquierda es -10 a la x
-
 	if (keyCode == EventKeyboard::KeyCode::KEY_P) 	{ // power
-		//player.setPower("Icepower", false, false, true, false);
 		this->applyPower(xx, yy, player);
 		log("P key was released");
+	}
+	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE) { // pause
+		log("Escape key was released"); //buahaha
+		//this->openPauseMenu(); //Not available, not ready
 	}
 }
 
@@ -265,6 +266,35 @@ void TileMap::update(cocos2d::Sprite* player, float direction, char axe){
 	else if (axe == 'x'){ // if we need to move the x
 		player->setPositionX(player->getPositionX() + direction);//, player->setPositionY(player->getPositionY() + 1);
 	}
+}
+
+void TileMap::openPauseMenu(){
+	CCScene *currentScene = CCDirector::sharedDirector()->getRunningScene();
+
+	//new scene to be pushed to director
+	auto newScene = CCScene::create(); /// Here we would use the PauseScreen class
+	//CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+	//// Misssing
+
+	//Size visibleSize = Director::getInstance()->getVisibleSize();
+	//Point origin = Director::getInstance()->getVisibleOrigin();
+	// Retornar a MenuGame
+	//auto buttonReturn = MenuItemImage::create("LevelDoor.png", "LevelDoor.png", CC_CALLBACK_1(TileMap::returnGameMenu, this));
+	//buttonReturn->setPosition(Point(visibleSize.width / 3, origin.y + visibleSize.height * 0.37f));
+	//auto buttonReturnMenu = Menu::create(buttonReturn, NULL);
+	//buttonReturnMenu->setPosition(Point::ZERO);
+	//newScene->addChild(buttonReturnMenu, 2);
+	// Continue game
+	//using pop, not available yet
+
+	//push new scene (all actions will be paused automatically)
+	CCDirector::sharedDirector()->pushScene(newScene);
+}
+
+#include "MenuInicio.h"
+void TileMap::returnGameMenu(cocos2d::Ref *pSender) {
+	auto newScene = MenuInicio::createScene();
+	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }
 
 

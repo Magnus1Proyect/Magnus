@@ -74,6 +74,11 @@ protected:
 	std::string metaLayerChecker(cocos2d::Point posicion);
 
 	//Changer
+	/**
+	* @brief Changes the map according to the player movement. If the player touches a power tile then this is removed. If its water and the player has icePower then the water is changed to ice
+	* @param Position from which we want the results
+	* @param std::string value The value/property of the tile is checked and send as a string this name, according to this value the map and/or interactions may change.
+	*/
 	void LayerChanger(cocos2d::Point posicion, std::string value);
 
 	/**
@@ -81,7 +86,6 @@ protected:
 	* @param position of the tile
 	* @return cocos2d::Point
 	*/
-
 	virtual cocos2d::Point tileCoordPosition(cocos2d::Point position);
 
 	/**
@@ -99,7 +103,6 @@ protected:
 	* @param cocos2d::Event *event
 	* @param cocos2d::Sprite* player
 	*/
-
 	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, Player player);
 	
 	/**
@@ -112,12 +115,29 @@ protected:
 	http://www.cocos2d-x.org/forums/6/topics/22892
 	*/
 	virtual void update(cocos2d::Sprite* player, float direction, char axe);
-
-	//void KeyMovement(.....) { }
-
+	/**
+	* @brief  this method applies a power, right now it only aplies icePower, the other powers just react according to the obstacule they defeat
+	ApplyPower changes the map according to the power, for example changing water for ice
+	* @param float x the coord x in the map
+	* @param float y the coord y in the map
+	* @param Player player The player with the power, Tulsi
+	*/
 	void TileMap::applyPower(float x, float y, Player player);
-
+	/**
+	* @brief If the player touches a power sprite then it will be assigned to it. Loads powers to the player.
+	* @param cocos2d::Point position This param is used to check the position and compare atributes of the tile in those cords
+	* @param Player player Tulsi, the player, this param is used to change her atribute power to the one touched
+	* @param std::string pathAhead This string is used to compare the word, for example waterPower, and check the property of the touched power, then assign the power to the player.
+	*/
 	void TileMap::loadPowers(cocos2d::Point position, Player player, std::string pathAhead);
-		
+	/**
+	@brief If the logo is clicked then we return to the Game Menu
+	@param We require the reference of the game menu
+	*/
+	void TileMap::returnGameMenu(cocos2d::Ref *pSender);
+	/**
+	@brief This method will open the Pause Menu, this menu will allow to return either to the gameMenu or resume the game.
+	*/
+	void TileMap::openPauseMenu();		
 };
 #endif // TiledMap_H

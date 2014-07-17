@@ -48,6 +48,10 @@ set(GAME_SRC
   Classes/OptionsScene.cpp
   Classes/PrimerNivel.cpp
   Classes/Util/TileMap.cpp
+  Classes/Power.cpp
+  Classes/Player.cpp
+  Classes/SegundoNivel.cpp
+  Classes/PauseScreen.cpp
 
 )
 

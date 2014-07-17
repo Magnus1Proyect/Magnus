@@ -27,9 +27,6 @@ bool MenuInicio::init() {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-
-	/////////////////////////////
-
 	// create and initialize a label showing "v0.1"
 
 	auto label = LabelTTF::create("v0.1", "Book Antigua", 16);
@@ -71,21 +68,21 @@ void MenuInicio::createGameTitle() {
 	this->addChild(gameTitle, 0);
 
 	//// We animate the game tittle by making it shake and show it in time
-	//auto animation = Animation::create();
-	//for (int i = 0; i < 3; ++i)
-	//	animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
+	auto animation = Animation::create();
+	for (int i = 0; i < 3; ++i)
+		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
 	//// What we are doing is changing picture orientation, we have 3 pictures and we change them accordenly so they appear to be animated.
-	//for (int i = 2; i >= 0; --i)
-	//	animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
+	for (int i = 2; i >= 0; --i)
+		animation->addSpriteFrameWithFile(String::createWithFormat("GameMenu/002-Title%i.png", i)->getCString());
 
 	//// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
-	//animation->setDelayPerUnit(0.1333f);
+	animation->setDelayPerUnit(0.1333f);
 
 	//// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de
 	//// menu del juego este visible
-	//auto repeatAnimation = RepeatForever::create(Animate::create(animation));
-	//gameTitle->runAction(repeatAnimation);
+	auto repeatAnimation = RepeatForever::create(Animate::create(animation));
+	gameTitle->runAction(repeatAnimation);
 }
 
 void MenuInicio::createGameMenu() {
