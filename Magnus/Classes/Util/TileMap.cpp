@@ -1,4 +1,5 @@
 #include "TileMap.h"
+#include "MenuInicio.h"
 #include "SegundoNivel.h"
 #include "PowerList.h"
 
@@ -82,7 +83,17 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 		this->addChild(label1, 1);
 
 		auto newScene = SegundoNivel::createScene();
-		Director::getInstance()->replaceScene(CCTransitionFade::create(6.0f, newScene));
+		Director::getInstance()->replaceScene(CCTransitionFade::create(7.5f, newScene));
+	}
+	else if (pathAhead == "finishGame"){
+		log("Nivel1 Completado");
+		Size visibleSize = Director::getInstance()->getVisibleSize();
+		auto label1 = LabelTTF::create("Nivel2 Completado", "Book Antigua", 40);
+		label1->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
+		this->addChild(label1, 1);
+
+		auto newScene = MenuInicio::createScene();
+		Director::getInstance()->replaceScene(CCTransitionFade::create(7.5f, newScene));
 	}
 	else{
 		player.setPosition(position);
@@ -108,9 +119,9 @@ void TileMap::loadPowers(Point position, Player player, std::string pathAhead){
 		LayerChanger(position, "power");
 		player.setPower(powers.Swim());
 	}
-	else if (pathAhead == "firePower") {
+	else if (pathAhead == "ghostPower") {
 		LayerChanger(position, "power");
-		player.setPower(powers.Fireproof());
+		player.setPower(powers.Ghost());
 	}
 	else if (pathAhead == "ghostPower") {
 		LayerChanger(position, "power");
@@ -180,9 +191,7 @@ Point TileMap::tileCoordPosition(Point position) {
 	int posY = (mapHeightDiff - tilePosDiv.x + halfMapWidth);
 
 	return Point(posX, posY);
-	}
-
-
+}
 
 void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
 	//put this inside keyPressed or keyReleased

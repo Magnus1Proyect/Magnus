@@ -55,20 +55,35 @@
     <property name="Blockage" value="icePower"/>
    </properties>
   </tile>
+  <tile id="12">
+   <properties>
+    <property name="Blockage" value="firePower"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="Blockage" value="waterPower"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="Blockage" value="ghostPower"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="Background" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUwADjQDtgFIyCIQQACXAAAg==
+   eJy108EKgzAMgOE6hOFheBDZDqWyCepll73/w9myBkJIbFK08INS+hELOnf+uuV8Dt6fsd4Q9Wiv2FDh3UmPShNWQ+oq59R6WlPjeYOp9bSm5LWxFVnYg8bYV/A+TAtyPPOc+mUXgvVmWh0/F71TnPS9qVAwrV5qPrg/Oq83etTk7rTkBeZO8fnN/f9P2C950rxbPj+RfasXBKfWK3WVd+baAYa0DjQ=
   </data>
  </layer>
  <layer name="Foreground" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2DoAsaBdsAoGAUjGAAACcAAAg==
+   eJxjYBgY4DlA9g4l4D7QDhgFNAdeA+2AUTAKKAAAwXEA2w==
   </data>
  </layer>
  <layer name="Foreground2" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4B+gHGgHTAKRsEooBoAAAoQAAI=
+   eJztktsKgCAQRPerut9T//+TGilhs6BazYdo4KAPchhkiNJGsbveTgNmMIEhwONifSPoQQvqxy1XP+/XgQZUIBf4iPY9rbMEBciEPhv+DybAw+P3dIREXT8RezUdN/CVvPVvf85zd+cx9uY7Ym045WYWymsKmA==
   </data>
  </layer>
  <objectgroup name="Obstacules" width="20" height="20">
@@ -76,7 +91,7 @@
  </objectgroup>
  <layer name="Meta" width="20" height="20" opacity="0.45">
   <data encoding="base64" compression="zlib">
-   eJybysDAMJXKeCKV8Kh5o+aNmjdq3qh51DWPmhgAr4fjwQ==
+   eJyt1MEKgCAQBFD//7akgUZ9ax4UZJjRFTwMieBrV60UQkiHE1tySxxSaqzmHcZXG5dhzoiHDppGPHN6zFf13eAZZGayGovwnoXHTNbvrD48H2b2eL2V6akvQ1jvGfawe7gWHTZm7/F6rC42z/r92lOZRVjKG7OqE89sx0OT7emux85kx/P4q/uH35Dydu6zChrqf+X1lIPeyfyElOgZ
   </data>
  </layer>
 </map>

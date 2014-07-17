@@ -55,7 +55,8 @@ void SegundoNivel::loadPlayer(){
 
 	//spriteTulsi = Sprite::create("xD.png");
 	Tulsi.loadSprite("ElementalTulsi.png", 0, 0, 48, 48);
-	Tulsi.setPosition(x+160,y+16);
+	//Tulsi.setPosition(x+160,y+16);
+	Tulsi.setPosition(x-100,y+155);
 		
 	setPointOfViewCenter(Tulsi.getPosition());
 }
