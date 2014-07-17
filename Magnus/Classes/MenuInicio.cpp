@@ -32,7 +32,7 @@ bool MenuInicio::init() {
 
 	// create and initialize a label showing "v0.1"
 
-	auto label = LabelTTF::create("v0.1", "Arial", 16);
+	auto label = LabelTTF::create("v0.1", "Book Antigua", 16);
 
 	// position the label on the center of the screen
 	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .7f));
@@ -99,37 +99,37 @@ void MenuInicio::createGameMenu() {
 	buttonNewGameMenu->setPosition(Point::ZERO);
 	this->addChild(buttonNewGameMenu, 2);
 
-	// Boton de load, situado debajo del boton iniciar
-	auto buttonLoadGame = MenuItemImage::create("GameMenu/004-LoadGame.png", "GameMenu/004-LoadGame01.png", CC_CALLBACK_1(MenuInicio::loadGame, this));
-	buttonLoadGame->setPosition(Point(buttonNewGame->getPositionX(), buttonNewGame->getPositionY() - buttonNewGame->getContentSize().height - 10));
-	auto buttonLoadGameMenu = Menu::create(buttonLoadGame, NULL);
-	buttonLoadGameMenu->setPosition(Point::ZERO);
-	this->addChild(buttonLoadGameMenu, 2);
+	//	// Boton de load, situado debajo del boton iniciar
+	//	auto buttonLoadGame = MenuItemImage::create("GameMenu/004-LoadGame.png", "GameMenu/004-LoadGame01.png", CC_CALLBACK_1(MenuInicio::loadGame, this));
+	//	buttonLoadGame->setPosition(Point(buttonNewGame->getPositionX(), buttonNewGame->getPositionY() - buttonNewGame->getContentSize().height - 10));
+	//	auto buttonLoadGameMenu = Menu::create(buttonLoadGame, NULL);
+	//	buttonLoadGameMenu->setPosition(Point::ZERO);
+	// this->addChild(buttonLoadGameMenu, 2);
 
 
-	// Boton de opciones, situado debajo del boton anterior
-	auto buttonOptions = MenuItemImage::create("GameMenu/005-Options.png", "GameMenu/005-Options01.png", CC_CALLBACK_1(MenuInicio::showOptions, this));
-	buttonOptions->setPosition(Point(buttonLoadGame->getPositionX(), buttonLoadGame->getPositionY() - buttonLoadGame->getContentSize().height - 10));
-	auto buttonOptionsMenu = Menu::create(buttonOptions, NULL);
-	buttonOptionsMenu->setPosition(Point::ZERO);
-	this->addChild(buttonOptionsMenu, 2);
+	//	// Boton de opciones, situado debajo del boton anterior
+	//	auto buttonOptions = MenuItemImage::create("GameMenu/005-Options.png", "GameMenu/005-Options01.png", CC_CALLBACK_1(MenuInicio::showOptions, this));
+	//	buttonOptions->setPosition(Point(buttonLoadGame->getPositionX(), buttonLoadGame->getPositionY() - buttonLoadGame->getContentSize().height - 10));
+	//	auto buttonOptionsMenu = Menu::create(buttonOptions, NULL);
+	//	buttonOptionsMenu->setPosition(Point::ZERO);
+	//	this->addChild(buttonOptionsMenu, 2);
 
-	// Boton de Achievements, situado debajo del boton anterior
-	auto buttonAchievements = MenuItemImage::create("GameMenu/Achievements01.png", "GameMenu/Achievements02.png", CC_CALLBACK_1(MenuInicio::showAchievements, this));
-	buttonAchievements->setPosition(Point(buttonOptions->getPositionX(), buttonOptions->getPositionY() - buttonOptions->getContentSize().height - 10));
-	auto buttonAchievementsMenu = Menu::create(buttonAchievements, NULL);
-	buttonAchievementsMenu->setPosition(Point::ZERO);
-	this->addChild(buttonAchievementsMenu, 2);
+	//	// Boton de Achievements, situado debajo del boton anterior
+	//	auto buttonAchievements = MenuItemImage::create("GameMenu/Achievements01.png", "GameMenu/Achievements02.png", CC_CALLBACK_1(MenuInicio::showAchievements, this));
+	//	buttonAchievements->setPosition(Point(buttonOptions->getPositionX(), buttonOptions->getPositionY() - buttonOptions->getContentSize().height - 10));
+	//	auto buttonAchievementsMenu = Menu::create(buttonAchievements, NULL);
+	//	buttonAchievementsMenu->setPosition(Point::ZERO);
+	//	this->addChild(buttonAchievementsMenu, 2);
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX) // Se esta usando al preprocesador para que el boton de exit no se vea en otra plataforma más que en pc
+	//#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX) // Se esta usando al preprocesador para que el boton de exit no se vea en otra plataforma más que en pc
 	// Boton de exit, situado debajo del boton anterior (de ultimo)
 	auto buttonExit = MenuItemImage::create("GameMenu/006-Exit.png", "GameMenu/006-Exit01.png", CC_CALLBACK_1(MenuInicio::exitGame, this));
-	buttonExit->setPosition(Point(buttonAchievements->getPositionX(), buttonAchievements->getPositionY() - buttonAchievements->getContentSize().height - 10));
+	buttonExit->setPosition(Point(buttonNewGame->getPositionX(), buttonNewGame->getPositionY() - buttonNewGame->getContentSize().height - 10));
 	auto buttonExitMenu = Menu::create(buttonExit, NULL);
 	buttonExitMenu->setPosition(Point::ZERO);
 	this->addChild(buttonExitMenu, 1);
 
-#endif
+	//#endif
 
 	// Boton de About
 	auto buttonAbout = MenuItemImage::create("GameMenu/About01.png", "GameMenu/About02.png", CC_CALLBACK_1(MenuInicio::showAbout, this));

@@ -10,21 +10,15 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Util">
-      <UniqueIdentifier>{6fea8e1b-bdc4-431a-aa95-bc6065318490}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
+    <ClCompile Include="..\Classes\AboutScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Util\TileMap.cpp">
-      <Filter>Classes\Util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AboutScene.cpp">
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\LevelSelectScene.cpp">
@@ -45,6 +39,9 @@
     <ClCompile Include="..\Classes\PowerList.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Util\TileMap.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\PrimerNivel.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
@@ -56,13 +53,10 @@
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
+    <ClInclude Include="..\Classes\AboutScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Util\TileMap.h">
-      <Filter>Classes\Util</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AboutScene.h">
+    <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LevelSelectScene.h">
@@ -81,6 +75,9 @@
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\PowerList.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Util\TileMap.h">
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\PrimerNivel.h">

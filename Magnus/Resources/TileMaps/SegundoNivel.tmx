@@ -30,6 +30,11 @@
     <property name="Blockage" value="Edge"/>
    </properties>
   </tile>
+  <tile id="5">
+   <properties>
+    <property name="Blockage" value="finishGame"/>
+   </properties>
+  </tile>
   <tile id="8">
    <properties>
     <property name="Blockage" value="Ice"/>
@@ -53,22 +58,22 @@
  </tileset>
  <layer name="Background" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApIBwAGQAAB
+   eJxjYBgFo2AUwADjQDtgFIyCIQQACXAAAg==
   </data>
  </layer>
  <layer name="Foreground" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApIBwAGQAAB
+   eJxjYBgFo2DoAsaBdsAoGAUjGAAACcAAAg==
+  </data>
+ </layer>
+ <layer name="Foreground2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B+gHGgHTAKRsEooBoAAAoQAAI=
   </data>
  </layer>
  <objectgroup name="Obstacules" width="20" height="20">
   <object name="Tulsi" x="480" y="480" width="32" height="32"/>
  </objectgroup>
- <layer name="Foreground2" width="20" height="20">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApIBwAGQAAB
-  </data>
- </layer>
  <layer name="Meta" width="20" height="20" opacity="0.45">
   <data encoding="base64" compression="zlib">
    eJybysDAMJXKeCKV8Kh5o+aNmjdq3qh51DWPmhgAr4fjwQ==

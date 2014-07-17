@@ -2,16 +2,6 @@
 <map version="1.0" orientation="isometric" width="20" height="20" tilewidth="64" tileheight="32">
  <tileset firstgid="1" name="TilesetGround1" tilewidth="64" tileheight="32">
   <image source="TilesetGround1.png" width="384" height="768"/>
-  <tile id="54">
-   <properties>
-    <property name="Objective" value="True"/>
-   </properties>
-  </tile>
-  <tile id="58">
-   <properties>
-    <property name="Objective" value="True"/>
-   </properties>
-  </tile>
  </tileset>
  <tileset firstgid="145" name="meta2" tilewidth="64" tileheight="32">
   <image source="meta2.png" width="512" height="95"/>
@@ -38,6 +28,11 @@
   <tile id="4">
    <properties>
     <property name="Blockage" value="Edge"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="Blockage" value="segundoNivel"/>
    </properties>
   </tile>
   <tile id="8">
@@ -86,17 +81,17 @@
    eJzzYWBg8BnhmHEQuGEUj+KhgD0GgRtG8eDBAJCadnI=
   </data>
  </layer>
- <objectgroup name="Obstacules" width="20" height="20">
-  <object name="Tulsi" x="480" y="480" width="32" height="32"/>
- </objectgroup>
  <layer name="Foreground2" width="20" height="20">
   <data encoding="base64" compression="zlib">
    eJxjYKA+cAZiJyB2wKPGlQTzHIHYHohtgdiaRLe4YBGzA2IbILYCYnMSzcMFLIHYAojNqGTeUAXYwpsegJT0NBTtG0pgoNIAPe0lJv5HQhoBAEIvBbk=
   </data>
  </layer>
+ <objectgroup name="Obstacules" width="20" height="20">
+  <object name="Tulsi" x="480" y="480" width="32" height="32"/>
+ </objectgroup>
  <layer name="Meta" width="20" height="20" opacity="0.45">
   <data encoding="base64" compression="zlib">
-   eJytlEsKQCEIRd3/LKiJtNgmTwh5XpXu4ECUHD9US0QWGb0YAejM8L4sPsvTqa+C+QbJefsQE9DxIQ/yRXHz6z/z2briq+5r4kN9RTF+fj4f04fqe70vzPu3Cx5t+Jj1dd/eS31/ubyP+b8w58fkACuk5XA=
+   eJy1lMEKACEIRP3/W1B7kP3YvRSE5KirHQYi5TmKNYhoFIs3NUUotiR5Vr5V5+Tv+cndeY18PUd4SB0owkMcxNPy+uzf4q2zh+e9Z4OH+tJy5PxkvUoe8pfdl8r9ex0cDvAq/UXfXsbfqZbkZf6Cm/Or1AdF5OV1
   </data>
  </layer>
 </map>

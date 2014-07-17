@@ -30,13 +30,19 @@ bool LevelSelectScene::init() {
 	// add a label shows "Menu Inicio"
 	// create and initialize a label
 
-	auto label = LabelTTF::create("Seleccionar nivel", "Arial", 24);
+	auto label1 = LabelTTF::create("Seleccionar nivel", "Book Antigua", 50);
+	auto label2 = LabelTTF::create("Nivel 1", "Book Antigua", 20);
+	auto label3 = LabelTTF::create("Nivel 2", "Book Antigua", 20);
 
 	// position the label on the center of the screen
-	label->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .64f));
+	label1->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .64f));
+	label2->setPosition(Point(visibleSize.width / 3, origin.y + visibleSize.height * 0.18f));
+	label3->setPosition(Point(2 * visibleSize.width / 3, origin.y + visibleSize.height * 0.18f));
 
 	// add the label as a child to this layer
-	this->addChild(label, 1);
+	this->addChild(label1, 1);
+	this->addChild(label2, 1);
+	this->addChild(label3, 1);
 
 	// Crear el fondo del menu del juego
 	auto sprite = Sprite::create("GameMenu/0000.jpg");
@@ -64,12 +70,19 @@ void LevelSelectScene::createMenu() {
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
 
+	//Primer nivel
 	auto buttonFirstLevel = MenuItemImage::create("LevelDoor.png", "LevelDoor.png", CC_CALLBACK_1(LevelSelectScene::goToFirstLevel, this));
-	buttonFirstLevel->setPosition(Point(visibleSize.width / 2, origin.y + visibleSize.height * 0.37f));
+	buttonFirstLevel->setPosition(Point(visibleSize.width / 3, origin.y + visibleSize.height * 0.37f));
 	auto buttonFirstLevelMenu = Menu::create(buttonFirstLevel, NULL);
 	buttonFirstLevelMenu->setPosition(Point::ZERO);
 	this->addChild(buttonFirstLevelMenu, 2);
 
+	//Segundo nivel
+	auto buttonSecondLevel = MenuItemImage::create("LevelDoor.png", "LevelDoor.png", CC_CALLBACK_1(LevelSelectScene::goToSecondLevel, this));
+	buttonSecondLevel->setPosition(Point(2 * visibleSize.width / 3, origin.y + visibleSize.height * 0.37f));
+	auto buttonSecondLevelMenu = Menu::create(buttonSecondLevel, NULL);
+	buttonSecondLevelMenu->setPosition(Point::ZERO);
+	this->addChild(buttonSecondLevelMenu, 2);
 
 	// Boton Logo, para retornar al menu del juego, ubicado en la esquina superior izquierda (cambiar segunda imagen)
 	auto buttonHome = MenuItemImage::create("000-Logo.png", "000-Logo.png", CC_CALLBACK_1(LevelSelectScene::returnGameMenu, this));
@@ -88,5 +101,11 @@ void LevelSelectScene::returnGameMenu(Ref* pSender) {
 #include "PrimerNivel.h"
 void LevelSelectScene::goToFirstLevel(Ref* pSender) {
 	auto newScene = PrimerNivel::createScene();
+	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
+}
+
+#include "SegundoNivel.h"
+void LevelSelectScene::goToSecondLevel(Ref* pSender) {
+	auto newScene = SegundoNivel::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
 }

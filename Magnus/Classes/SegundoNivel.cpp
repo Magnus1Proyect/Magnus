@@ -28,21 +28,20 @@ bool SegundoNivel::init() {
 		return false;
 	}
 
+	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
+
 	loadMap("TileMaps/SegundoNivel.tmx", "Background", "Foreground", "Meta", "Foreground2", "Obstacules");
 	loadPlayer();
 	metaLayerChecker(Tulsi.getPosition());
 	tileMap->addChild(Tulsi.getSprite(), 1);
-	//this->addChild(tileMap, -1, 1); prueba
-	Point View = setPointOfViewCenter(Point (Tulsi.getSprite()->getPositionX(), Tulsi.getSprite() -> getPositionY()));
-	loadPowers();
-	//tileMap->addChild(Flying.getSprite()); //no encontré getFlying
-	tileMap->addChild(Flying.getSprite());
 	this->addChild(tileMap, -1, 1);
+	Point View = setPointOfViewCenter(Point (Tulsi.getSprite()->getPositionX(), Tulsi.getSprite() -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
 	
 	setEventHandlers(Tulsi);
+
 	return true;
 }
 
@@ -55,24 +54,51 @@ void SegundoNivel::loadPlayer(){
 	int y = tulsi["y"].asInt();
 
 	//spriteTulsi = Sprite::create("xD.png");
-	Tulsi.loadSprite("tulsi.png", 0, 0, 45, 45);
+	Tulsi.loadSprite("ElementalTulsi.png", 0, 0, 48, 48);
 	Tulsi.setPosition(x+160,y+16);
-
-
+		
 	setPointOfViewCenter(Tulsi.getPosition());
 }
 
-bool SegundoNivel::loadPowers(){
-	//Load the object into the map.
-	auto flying = obstacules->getObject("Flying");
-	CCASSERT(!flying.empty(), "Flying power not found");
 
-	int x = flying["x"].asInt(); // probando valores para que este en el mapa, antes habia un +1000 en el otro mapa, averiguar problema y corregirlo
-	int y = flying["y"].asInt();
+	// add the label as a child to this layer
+	//this->addChild(label, 1);
 
-	Flying.loadSprite("flyingPower.png");
-	Flying.setPosition(x, y-200);
-	return true;
-}
+	// Crear el fondo del menu del juego
+	//auto sprite = Sprite::create("GameMenu/0000.jpg");
 
-// Importante Idea de crear clase @crearNiveles, seria una clase de donde se heredan los niveles, es hija de Tilemaps.
+	// position the sprite on the center of the screen
+	//sprite->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+
+	// add the sprite as a child to this layer
+	//this->addChild(sprite, 0);
+
+	//createMenu();
+
+	// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
+	// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
+	// ilustrativos
+	//auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	//sound->stopBackgroundMusic();
+	//sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
+
+	//return true;
+//}
+
+//void SegundoNivel::createMenu() {
+	//Size visibleSize = Director::getInstance()->getVisibleSize();
+	//Point origin = Director::getInstance()->getVisibleOrigin();
+
+	// Boton Logo, para retornar al menu del juego, ubicado en la esquina superior izquierda (cambiar segunda imagen)
+	//auto buttonHome = MenuItemImage::create("000-Logo.png", "000-Logo.png", CC_CALLBACK_1(SegundoNivel::returnGameMenu, this));
+	//buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
+	//auto buttonHomeMenu = Menu::create(buttonHome, NULL);
+	//buttonHomeMenu->setPosition(Point::ZERO);
+	//this->addChild(buttonHomeMenu, 2);
+//}
+
+
+//void SegundoNivel::returnGameMenu(Ref* pSender) {
+	//auto newScene = MenuInicio::createScene();
+	//Director::getInstance()->replaceScene(CCTransitionFade::create(0.60f, newScene));
+//}

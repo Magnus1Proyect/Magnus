@@ -2,25 +2,18 @@
 #define SegundoNivel_h
 
 #include "cocos2d.h"
-#include "Player.h" // The player class
-#include "Power.h" // Our power class
+#include "Player.h"
 #include "Util\TileMap.h" // TileMap class we created to deal with those
 
 /**
-@brief This is the second level scene, it uses the tileMap
+@brief This is the first level scene, it uses the tileMap
 */
 
-class SegundoNivel : public TileMap { // this is the Second Level Scene with the layer of TileMap
+class SegundoNivel : public TileMap { // this is the First Level Scene with the layer of TileMap
 
-private:
-	cocos2d::Sprite *flyingPower;
 public:
 
 	Player Tulsi;
-	Power Flying;
-	Power Freeze;
-	//Power Fire;
-	//Power   Un vector o lista de poderes la cual se importa
 
 	/**
 	@brief    We prepare our scene
@@ -59,14 +52,6 @@ private:
 	@brief We bring and set the player Sprite, Tulsi.
 	*/
 	void loadPlayer();
-
-	/**
-	@brief The powers are brought to the map and ready to be grabbed.
-	@return bool true if brought correctly
-	@return bool false if not.
-	*/
-	bool loadPowers();
-
 };
 
 #endif // SegundoNivel_h

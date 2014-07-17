@@ -34,12 +34,8 @@ bool PrimerNivel::init() {
 	loadPlayer();
 	metaLayerChecker(Tulsi.getPosition());
 	tileMap->addChild(Tulsi.getSprite(), 1);
-	//this->addChild(tileMap, -1, 1); prueba
-	Point View = setPointOfViewCenter(Point (Tulsi.getSprite()->getPositionX(), Tulsi.getSprite() -> getPositionY()));
-	//loadPowers();
-	//tileMap->addChild(Flying.getSprite()); //no encontré getFlying
-	//tileMap->addChild(Flying.getSprite());
 	this->addChild(tileMap, -1, 1);
+	Point View = setPointOfViewCenter(Point (Tulsi.getSprite()->getPositionX(), Tulsi.getSprite() -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
@@ -59,24 +55,23 @@ void PrimerNivel::loadPlayer(){
 
 	//spriteTulsi = Sprite::create("xD.png");
 	Tulsi.loadSprite("ElementalTulsi.png", 0, 0, 48, 48);
-	//Tulsi.loadSprite("tulsi.png", 0, 0, 45, 45);
 	Tulsi.setPosition(x+160,y+16);
-
+		
 	setPointOfViewCenter(Tulsi.getPosition());
 }
 
-bool PrimerNivel::loadPowers(){
-	//Load the object into the map.
-	auto flying = obstacules->getObject("Flying");
-	CCASSERT(!flying.empty(), "Flying power not found");
 
-	int x = flying["x"].asInt(); // probando valores para que este en el mapa, antes habia un +1000 en el otro mapa, averiguar problema y corregirlo
-	int y = flying["y"].asInt();
+	// add the label as a child to this layer
+	//this->addChild(label, 1);
 
-	Flying.loadSprite("flyingPower.png");
-	Flying.setPosition(x, y-200);
-	return true;
-}
+	// Crear el fondo del menu del juego
+	//auto sprite = Sprite::create("GameMenu/0000.jpg");
+
+	// position the sprite on the center of the screen
+	//sprite->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+
+	// add the sprite as a child to this layer
+	//this->addChild(sprite, 0);
 
 	//createMenu();
 

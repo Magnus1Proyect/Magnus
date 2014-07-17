@@ -1,4 +1,5 @@
 #include "TileMap.h"
+#include "SegundoNivel.h"
 #include "PowerList.h"
 
 USING_NS_CC;
@@ -72,6 +73,16 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 	}
 	else if ((pathAhead == "Fire") && (player.getPower().getFire() == false)) {
 		log("Stopped by Fire");
+	}
+	else if (pathAhead == "segundoNivel"){
+		log("Nivel1 Completado");
+		Size visibleSize = Director::getInstance()->getVisibleSize();
+		auto label1 = LabelTTF::create("Nivel1 Completado", "Book Antigua", 40);
+		label1->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
+		this->addChild(label1, 1);
+
+		auto newScene = SegundoNivel::createScene();
+		Director::getInstance()->replaceScene(CCTransitionFade::create(6.0f, newScene));
 	}
 	else{
 		player.setPosition(position);
