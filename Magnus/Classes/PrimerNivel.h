@@ -52,6 +52,15 @@ private:
 	@brief We bring and set the player Sprite, Tulsi.
 	*/
 	void loadPlayer();
+	/**
+	@brief This pauses the game
+	*/
+	void pauseGame();
+	/**
+	@brief This resumes the game
+	*/
+	void resumeGame();
+
 };
 
 #endif // PrimerNivel_h

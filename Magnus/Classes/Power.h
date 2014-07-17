@@ -8,9 +8,9 @@ class Power{
 public:
 
 	Power::Power();
-	Power::Power(const char* n, bool so, bool wa, bool ic, bool fi);
+	Power::Power(const char* powerName, bool solid, bool water, bool ice, bool fire);
 
-	cocos2d::Sprite *flyingSprite;
+	cocos2d::Sprite *powerSprite;
 
 	const char* Power::getName();
 	bool Power::getSolid();
@@ -19,7 +19,7 @@ public:
 	bool Power::getFire();
 
 	void Power::setName(const char* n);
-	void Power::setPower(const char* n, bool so, bool wa, bool ic, bool fi);
+	void Power::setPower(const char* powerName, bool solid, bool water, bool ice, bool fire);
 	void Power::setPower(Power p);
 	void Power::setSolid(bool b);
 	void Power::setWater(bool b);
@@ -33,8 +33,6 @@ public:
 
 	void Power::setPosition(float x, float y);
 	void Power::setPosition(cocos2d::Point pos);
-
-
 
 };
 

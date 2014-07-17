@@ -28,8 +28,6 @@ bool SegundoNivel::init() {
 		return false;
 	}
 
-	//auto fileMap = String::createWithContentsOfFile(FileUtils::getInstance()->fullPathForFilename(file.c_str()).c_str());
-
 	loadMap("TileMaps/SegundoNivel.tmx", "Background", "Foreground", "Meta", "Foreground2", "Obstacules");
 	loadPlayer();
 	metaLayerChecker(Tulsi.getPosition());
@@ -37,10 +35,12 @@ bool SegundoNivel::init() {
 	this->addChild(tileMap, -1, 1);
 	Point View = setPointOfViewCenter(Point (Tulsi.getSprite()->getPositionX(), Tulsi.getSprite() -> getPositionY()));
 	tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
-	//tileMap = TMXTiledMap::createWithXML(fileMap->getCString(), "");
 	//this->addChild(tileMap, -1); //  http://www.cocos2d-x.org/forums/6/topics/51024
 	
 	setEventHandlers(Tulsi);
+	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	sound->stopBackgroundMusic();
+	sound->playBackgroundMusic("Music/SecondLevelSound.wav", true);
 
 	return true;
 }
@@ -53,10 +53,8 @@ void SegundoNivel::loadPlayer(){
 	int x = tulsi["x"].asInt(); // probando valores para que este en el mapa, antes habia un +1000 en el otro mapa, averiguar problema y corregirlo
 	int y = tulsi["y"].asInt();
 
-	//spriteTulsi = Sprite::create("xD.png");
 	Tulsi.loadSprite("ElementalTulsi.png", 0, 0, 48, 48);
-	//Tulsi.setPosition(x+160,y+16);
-	Tulsi.setPosition(x-100,y+155);
+	Tulsi.setPosition(x-100, y+155);
 		
 	setPointOfViewCenter(Tulsi.getPosition());
 }
@@ -73,16 +71,7 @@ void SegundoNivel::loadPlayer(){
 
 	// add the sprite as a child to this layer
 	//this->addChild(sprite, 0);
-
 	//createMenu();
-
-	// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-	// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-	// ilustrativos
-	//auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	//sound->stopBackgroundMusic();
-	//sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
-
 	//return true;
 //}
 

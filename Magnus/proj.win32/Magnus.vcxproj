@@ -140,6 +140,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\LevelSelectScene.cpp" />
     <ClCompile Include="..\Classes\MenuInicio.cpp" />
     <ClCompile Include="..\Classes\OptionsScene.cpp" />
+    <ClCompile Include="..\Classes\PauseScreen.cpp" />
     <ClCompile Include="..\Classes\Player.cpp" />
     <ClCompile Include="..\Classes\Power.cpp" />
     <ClCompile Include="..\Classes\PowerList.cpp" />
@@ -154,6 +155,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\LevelSelectScene.h" />
     <ClInclude Include="..\Classes\MenuInicio.h" />
     <ClInclude Include="..\Classes\OptionsScene.h" />
+    <ClInclude Include="..\Classes\PauseScreen.h" />
     <ClInclude Include="..\Classes\Player.h" />
     <ClInclude Include="..\Classes\Power.h" />
     <ClInclude Include="..\Classes\PowerList.h" />

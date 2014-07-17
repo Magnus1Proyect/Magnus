@@ -60,30 +60,11 @@ void PrimerNivel::loadPlayer(){
 	setPointOfViewCenter(Tulsi.getPosition());
 }
 
+void PrimerNivel::pauseGame() { /// pending
+}
 
-	// add the label as a child to this layer
-	//this->addChild(label, 1);
-
-	// Crear el fondo del menu del juego
-	//auto sprite = Sprite::create("GameMenu/0000.jpg");
-
-	// position the sprite on the center of the screen
-	//sprite->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
-
-	// add the sprite as a child to this layer
-	//this->addChild(sprite, 0);
-
-	//createMenu();
-
-	// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-	// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-	// ilustrativos
-	//auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	//sound->stopBackgroundMusic();
-	//sound->playBackgroundMusic("Music/LevelSelect.mp3", true);
-
-	//return true;
-//}
+void PrimerNivel::resumeGame() { //// pending
+}
 
 //void PrimerNivel::createMenu() {
 	//Size visibleSize = Director::getInstance()->getVisibleSize();

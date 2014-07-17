@@ -42,6 +42,8 @@ bool AboutScene::init() {
 	auto label11 = LabelTTF::create("Espada....Vecto2000", "Book Antigua", 20);
 	auto label12 = LabelTTF::create("Tulsi....Radomir Dopieralski", "Book Antigua", 20);
 	auto label13 = LabelTTF::create("Tileset....William Soto", "Book Antigua", 20);
+	auto label14 = LabelTTF::create("SecondLevelMusic....Setuniman-FreeSound", "Book Antigua", 20);
+	/// Pending, add the new sounds for the second level and the ice power.
 
 	// position the label on the center of the screen
 	label1->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .72f));
@@ -56,6 +58,7 @@ bool AboutScene::init() {
 	label11->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .20f));
 	label12->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .16f));
 	label13->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .12f));
+	label14->setPosition(Point(origin.x + visibleSize.width * 0.5f, origin.y + visibleSize.height * .08f));
 	// add the label as a child to this layer
 	this->addChild(label1, 1);
 	this->addChild(label2, 1);
@@ -69,7 +72,7 @@ bool AboutScene::init() {
 	this->addChild(label11, 1);
 	this->addChild(label12, 1);
 	this->addChild(label13, 1);
-
+	this->addChild(label14, 1);
 	// Creates the background of the game menu.
 	auto sprite = Sprite::create("GameMenu/0000.jpg"); // sprites are important, those are the images
 

@@ -6,7 +6,7 @@
 #include "Util\TileMap.h" // TileMap class we created to deal with those
 
 /**
-@brief This is the first level scene, it uses the tileMap
+@brief This is the second level scene, it uses the tileMap
 */
 
 class SegundoNivel : public TileMap { // this is the First Level Scene with the layer of TileMap

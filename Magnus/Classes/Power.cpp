@@ -6,16 +6,15 @@ bool water;
 bool ice;
 bool fire;
 
-Power::Power(){  };
+Power::Power(){ };
 
-Power::Power(const char* n, bool so, bool wa, bool ic, bool fi){
-	name = n;
+Power::Power(const char* powerName, bool so, bool wa, bool ic, bool fi){
+	name = powerName;
 	solid = so;
 	water = wa;
 	ice = ic;
 	fire = fi;
 };
-
 
 const char* Power::getName(){
 	return name;
@@ -67,21 +66,21 @@ void Power::setFire(bool b){
 };
 
 cocos2d::Point Power::getPosition(){
-	return flyingSprite->getPosition();
+	return powerSprite->getPosition();
 }
 
 cocos2d::Sprite* Power::getSprite(){
-	return flyingSprite;
+	return powerSprite;
 }
 
 void Power::loadSprite(const char* dir){
-	flyingSprite = cocos2d::Sprite::create(dir);
+	powerSprite = cocos2d::Sprite::create(dir);
 }
 
 void Power::setPosition(float x, float y){
-	flyingSprite->setPosition(x, y);
+	powerSprite->setPosition(x, y);
 }
 
 void Power::setPosition(cocos2d::Point pos){
-	flyingSprite->setPosition(pos);
+	powerSprite->setPosition(pos);
 }

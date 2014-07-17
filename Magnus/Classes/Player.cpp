@@ -25,8 +25,8 @@ void Player::setPower(Power p){
 	playerPower = p;
 }
 
-void Player::setPower(const char* n, bool so, bool wa, bool ic, bool fi){
-	playerPower.setPower(n, so, wa, ic, fi);
+void Player::setPower(const char* powerName, bool solid, bool water, bool ice, bool fire){
+	playerPower.setPower(powerName, solid, water, ice, fire);
 }
 
 void Player::setPosition(float x, float y){

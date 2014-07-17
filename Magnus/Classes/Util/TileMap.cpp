@@ -1,6 +1,6 @@
 #include "TileMap.h"
-#include "MenuInicio.h"
 #include "SegundoNivel.h"
+#include "MenuInicio.h"
 #include "PowerList.h"
 
 USING_NS_CC;
@@ -20,7 +20,6 @@ Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would b
 	cocos2d::Point centerOfView = Point(winSize.width / 2, winSize.height / 2);
 	cocos2d::Point viewPoint = centerOfView - actualPosition; // ccp(actual.x - center.x, actual.y - center.y); deprecated
 	return viewPoint;
-
 }
 
 void TileMap::setEventHandlers(Player player){
@@ -59,7 +58,6 @@ void TileMap::loadMap(const std::string& mapFile, const std::string& backgroundL
 
 void TileMap::setPlayerPosition(Point position, Player player) {
 	std::string pathAhead = this->metaLayerChecker(position);
-	
 	if (pathAhead == "Edge") {
 		log("Stopped by the Edge of the map");
 	}
@@ -97,6 +95,8 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 	}
 	else{
 		player.setPosition(position);
+		Point View = setPointOfViewCenter(position);
+		tileMap->setPosition(CC_POINT_PIXELS_TO_POINTS(View));
 		this->loadPowers(position, player, pathAhead);
 	}
 }
@@ -118,10 +118,6 @@ void TileMap::loadPowers(Point position, Player player, std::string pathAhead){
 	else if (pathAhead == "waterPower") {
 		LayerChanger(position, "power");
 		player.setPower(powers.Swim());
-	}
-	else if (pathAhead == "ghostPower") {
-		LayerChanger(position, "power");
-		player.setPower(powers.Ghost());
 	}
 	else if (pathAhead == "ghostPower") {
 		LayerChanger(position, "power");
@@ -191,7 +187,8 @@ Point TileMap::tileCoordPosition(Point position) {
 	int posY = (mapHeightDiff - tilePosDiv.x + halfMapWidth);
 
 	return Point(posX, posY);
-}
+	}
+
 
 void TileMap::keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event) {
 	//put this inside keyPressed or keyReleased

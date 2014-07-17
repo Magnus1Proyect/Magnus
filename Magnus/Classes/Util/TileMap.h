@@ -24,7 +24,6 @@ protected:
 	cocos2d::Sprite* player; // Tulsi
 
 	
-
 	//float direction; // We are using this to move the sprite, it will be 10
 	
 	/**
