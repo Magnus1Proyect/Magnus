@@ -41,6 +41,12 @@ public:
 	void goToSecondLevel(cocos2d::Ref* pSender);
 
 	/**
+	@brief If the logo is clicked then we go to Tercer Nivel.
+	@param We require the reference of the Tercer Nivel
+	*/
+	void goToThirdLevel(cocos2d::Ref* pSender);
+
+	/**
 	@brief We create a function, basically we will do a layer above the background, this will allow us to use it.
 	@param We need the class type to create the layer.
 	*/

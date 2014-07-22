@@ -1,5 +1,6 @@
 #include "TileMap.h"
 #include "SegundoNivel.h"
+#include "TercerNivel.h"
 #include "MenuInicio.h"
 #include "PowerList.h"
 
@@ -83,10 +84,20 @@ void TileMap::setPlayerPosition(Point position, Player player) {
 		auto newScene = SegundoNivel::createScene();
 		Director::getInstance()->replaceScene(CCTransitionFade::create(7.5f, newScene));
 	}
-	else if (pathAhead == "finishGame"){
-		log("Nivel1 Completado");
+	else if (pathAhead == "tercerNivel"){
+		log("Nivel2 Completado");
 		Size visibleSize = Director::getInstance()->getVisibleSize();
 		auto label1 = LabelTTF::create("Nivel2 Completado", "Book Antigua", 40);
+		label1->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
+		this->addChild(label1, 1);
+
+		auto newScene = TercerNivel::createScene();
+		Director::getInstance()->replaceScene(CCTransitionFade::create(7.5f, newScene));
+
+	}else if (pathAhead == "finishGame"){
+		log("Nivel3 Completado");
+		Size visibleSize = Director::getInstance()->getVisibleSize();
+		auto label1 = LabelTTF::create("Nivel3 Completado", "Book Antigua", 40);
 		label1->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
 		this->addChild(label1, 1);
 

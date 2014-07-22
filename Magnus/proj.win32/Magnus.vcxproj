@@ -146,6 +146,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\PowerList.cpp" />
     <ClCompile Include="..\Classes\PrimerNivel.cpp" />
     <ClCompile Include="..\Classes\SegundoNivel.cpp" />
+    <ClCompile Include="..\Classes\TercerNivel.cpp" />
     <ClCompile Include="..\Classes\Util\TileMap.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -161,6 +162,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\PowerList.h" />
     <ClInclude Include="..\Classes\PrimerNivel.h" />
     <ClInclude Include="..\Classes\SegundoNivel.h" />
+    <ClInclude Include="..\Classes\TercerNivel.h" />
     <ClInclude Include="..\Classes\Util\TileMap.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
