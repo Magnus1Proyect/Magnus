@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "Player.h"
-#include "Util\TileMap.h" // TileMap class we created to deal with those
+#include "TileMap.h" // TileMap class we created to deal with those
 
 /**
 @brief This is the first level scene, it uses the tileMap

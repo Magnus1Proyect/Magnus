@@ -2,7 +2,7 @@
 #define TiledMap_H
 
 #include "cocos2d.h"
-#include "Player.h"
+#include "../Player.h"
 
 /**
 @brief  This class is going to handle the TileMaps, it deals with the interactions with the TileMap.
@@ -16,16 +16,16 @@ protected:
 	cocos2d::TMXLayer* foreground;
 	cocos2d::TMXLayer* foreground2; // a second layer over the first foreground
 	cocos2d::TMXLayer* meta; // Upper layer with the properties
-	
-	cocos2d::TMXTiledMap* tileMap; // The tilemap handler, we will use this to parse and render the tileMap 
-	
+
+	cocos2d::TMXTiledMap* tileMap; // The tilemap handler, we will use this to parse and render the tileMap
+
 	cocos2d::TMXObjectGroup* obstacules; // This will be the objects Tulsi will have to deal with. Example: river
-	
+
 	cocos2d::Sprite* player; // Tulsi
 
-	
+
 	//float direction; // We are using this to move the sprite, it will be 10
-	
+
 	/**
 	* @brief Sets the Point of View using an element as reference.
 	* It will handle with view changes, size and kind of map.
@@ -56,13 +56,13 @@ protected:
 		, const std::string& metaLayerName, const std::string& frontLayer2Name, const std::string& objectContainerName);
 
 	/**
-	* @brief 
+	* @brief
 	* @param cocos2d::Point position, its the x and y we are sending, its the Point in the map where
 	we want our player.
 	* @param cocos2d:Sprite* player, we send the pointer to the player.
 	*/
 	virtual void setPlayerPosition(cocos2d::Point position, Player player);
-	
+
 	/**
 	* @brief Checks the properties (meta) of the touched tile
 	* He takes the properties, reads them and returns the result.
@@ -104,7 +104,7 @@ protected:
 	* @param cocos2d::Sprite* player
 	*/
 	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *event, Player player);
-	
+
 	/**
 	* @brief Este metodo va a refrescar la vista despues de cada keyreleased, ahi es llamado. También llamará el
 
@@ -122,22 +122,22 @@ protected:
 	* @param float y the coord y in the map
 	* @param Player player The player with the power, Tulsi
 	*/
-	void TileMap::applyPower(float x, float y, Player player);
+	void applyPower(float x, float y, Player player);
 	/**
 	* @brief If the player touches a power sprite then it will be assigned to it. Loads powers to the player.
 	* @param cocos2d::Point position This param is used to check the position and compare atributes of the tile in those cords
 	* @param Player player Tulsi, the player, this param is used to change her atribute power to the one touched
 	* @param std::string pathAhead This string is used to compare the word, for example waterPower, and check the property of the touched power, then assign the power to the player.
 	*/
-	void TileMap::loadPowers(cocos2d::Point position, Player player, std::string pathAhead);
+	void loadPowers(cocos2d::Point position, Player player, std::string pathAhead);
 	/**
 	@brief If the logo is clicked then we return to the Game Menu
 	@param We require the reference of the game menu
 	*/
-	void TileMap::returnGameMenu(cocos2d::Ref *pSender);
+	void returnGameMenu(cocos2d::Ref *pSender);
 	/**
 	@brief This method will open the Pause Menu, this menu will allow to return either to the gameMenu or resume the game.
 	*/
-	void TileMap::openPauseMenu();		
+	void openPauseMenu();
 };
 #endif // TiledMap_H

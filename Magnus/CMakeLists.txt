@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-set(APP_NAME MyGame)
+set(APP_NAME Magnus)
 project (${APP_NAME})
 
 include(cocos2d/build/BuildHelpers.CMakeLists.txt)
@@ -40,19 +40,20 @@ endif()
 
 
 set(GAME_SRC
-  proj.linux/main.cpp
-  Classes/AppDelegate.cpp
-  Classes/AboutScene.cpp
-  Classes/LevelSelectScene.cpp
-  Classes/MenuInicio.cpp
-  Classes/OptionsScene.cpp
-  Classes/PrimerNivel.cpp
-  Classes/Util/TileMap.cpp
-  Classes/Power.cpp
-  Classes/Player.cpp
-  Classes/SegundoNivel.cpp
-  Classes/PauseScreen.cpp
-
+	proj.linux/main.cpp
+	Classes/AboutScene.cpp
+	Classes/AppDelegate.cpp
+	Classes/LevelSelectScene.cpp
+	Classes/MenuInicio.cpp
+	Classes/OptionsScene.cpp
+	Classes/PauseScreen.cpp
+	Classes/Player.cpp
+	Classes/Power.cpp
+	Classes/PowerList.cpp
+	Classes/PrimerNivel.cpp
+	Classes/SegundoNivel.cpp
+	Classes/TercerNivel.cpp
+	Classes/Util/TileMap.cpp
 )
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
@@ -68,6 +69,7 @@ include_directories(
   ${COCOS2D_ROOT}/cocos/2d/platform/desktop
   ${COCOS2D_ROOT}/cocos/2d/platform/linux
   ${COCOS2D_ROOT}/cocos/base
+  ${COCOS2D_ROOT}/cocos/deprecated
   ${COCOS2D_ROOT}/cocos/physics
   ${COCOS2D_ROOT}/cocos/editor-support
   ${COCOS2D_ROOT}/cocos/math/kazmath
@@ -84,6 +86,9 @@ include_directories(
   ${COCOS2D_ROOT}/external/websockets/include/linux
   ${COCOS2D_ROOT}/external/spidermonkey/include/linux
   ${COCOS2D_ROOT}/external/linux-specific/fmod/include/${ARCH_DIR}
+  ${COCOS2D_ROOT}/external/xxhash
+  Classes
+  Classes/Util
 )
 
 link_directories(
@@ -114,6 +119,9 @@ add_subdirectory(${COCOS2D_ROOT}/external/tinyxml2)
 
 # audio
 add_subdirectory(${COCOS2D_ROOT}/cocos/audio)
+
+# xxhash library
+add_subdirectory(${COCOS2D_ROOT}/external/xxhash)
 
 # cocos base library
 add_subdirectory(${COCOS2D_ROOT}/cocos/base)
@@ -170,10 +178,9 @@ target_link_libraries(${APP_NAME}
 set(APP_BIN_DIR "${CMAKE_BINARY_DIR}/bin")
 
 set_target_properties(${APP_NAME} PROPERTIES
-     RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
+	 RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
 
 pre_build(${APP_NAME}
   COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
   COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
   )
-

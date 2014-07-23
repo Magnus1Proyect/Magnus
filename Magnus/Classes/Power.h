@@ -7,32 +7,32 @@ class Power{
 
 public:
 
-	Power::Power();
-	Power::Power(const char* powerName, bool solid, bool water, bool ice, bool fire);
+	Power();
+	Power(const char* powerName, bool solid, bool water, bool ice, bool fire);
 
 	cocos2d::Sprite *powerSprite;
 
-	const char* Power::getName();
-	bool Power::getSolid();
-	bool Power::getWater();
-	bool Power::getIce();
-	bool Power::getFire();
+	const char* getName();
+	bool getSolid();
+	bool getWater();
+	bool getIce();
+	bool getFire();
 
-	void Power::setName(const char* n);
-	void Power::setPower(const char* powerName, bool solid, bool water, bool ice, bool fire);
-	void Power::setPower(Power p);
-	void Power::setSolid(bool b);
-	void Power::setWater(bool b);
-	void Power::setIce(bool b);
-	void Power::setFire(bool b);
+	void setName(const char* n);
+	void setPower(const char* powerName, bool solid, bool water, bool ice, bool fire);
+	void setPower(Power p);
+	void setSolid(bool b);
+	void setWater(bool b);
+	void setIce(bool b);
+	void setFire(bool b);
 
-	cocos2d::Point Power::getPosition();
-	cocos2d::Sprite* Power::getSprite();
+	cocos2d::Point getPosition();
+	cocos2d::Sprite* getSprite();
 
-	void Power::loadSprite(const char* dir);
+	void loadSprite(const char* dir);
 
-	void Power::setPosition(float x, float y);
-	void Power::setPosition(cocos2d::Point pos);
+	void setPosition(float x, float y);
+	void setPosition(cocos2d::Point pos);
 
 };
 

@@ -28,3 +28,6 @@
 /Doxy/man
 /Doxy/html
 /Doxy/doxygen_log.txt
+
+*.user*
+*-build*

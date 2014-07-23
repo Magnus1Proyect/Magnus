@@ -11,7 +11,7 @@ PowerList powers;
 
 Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would be the player itself
 	cocos2d::Size winSize = Director::getInstance()->getWinSize();
-	
+
 	int x = MAX(element.x, winSize.width / 2);
 	int y = MAX(element.y, winSize.height / 2);
 	x = MIN(x, (tileMap->getContentSize().width* this->tileMap->getContentSize().width) - winSize.width / 2);
@@ -26,10 +26,10 @@ Point TileMap::setPointOfViewCenter(cocos2d::Point element) { // element would b
 void TileMap::setEventHandlers(Player player){
 	//Create an event listener. It will listen to the keyboard input.
 	auto keyboardListener = EventListenerKeyboard::create();
-	
+
 	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
 	//listener->setSwallowTouches(true);
-	// The method who handles when a key is pressed. 
+	// The method who handles when a key is pressed.
 	keyboardListener->onKeyPressed = CC_CALLBACK_2(TileMap::keyPressed, this);
 
 	// The method who handles when a key is released. We are using this as the one who actually does something
@@ -268,7 +268,7 @@ void TileMap::applyPower(float x, float y, Player player){
 		LayerChanger(Point(x - 32, y - 16), "Ice");
 	}
 }
-	
+
 void TileMap::update(cocos2d::Sprite* player, float direction, char axe){
 
 	if (axe == 'y'){ // if we need to move the y

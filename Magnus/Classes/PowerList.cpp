@@ -1,11 +1,11 @@
-#include "Powerlist.h"
+#include "PowerList.h"
 
 Power thisPower;
 
 PowerList::PowerList(){
 	thisPower.setPower("def",false,false,false,false);
 }
-	
+
 Power PowerList::Normal(){
 	thisPower.setPower("Normal",false,false,false,false);
 	return thisPower;
